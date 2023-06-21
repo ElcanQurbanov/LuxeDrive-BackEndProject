@@ -1,0 +1,709 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Final-Project-RentApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Final-Project-RentApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\about\\about.css",
+      "PackagePath": "staticwebassets\\assets\\css\\about\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\about\\about.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\about\\about.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\about\\about.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\about\\about.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog-detail\\blog-detail.css",
+      "PackagePath": "staticwebassets\\assets\\css\\blog-detail\\blog-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog-detail\\blog-detail.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\blog-detail\\blog-detail.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog-detail\\blog-detail.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\blog-detail\\blog-detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog\\blog.css",
+      "PackagePath": "staticwebassets\\assets\\css\\blog\\blog.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog\\blog.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\blog\\blog.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\blog\\blog.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\blog\\blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\cart\\cart.css",
+      "PackagePath": "staticwebassets\\assets\\css\\cart\\cart.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\cart\\cart.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\cart\\cart.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\cart\\cart.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\cart\\cart.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\components\\_transparent-header.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\components\\_transparent-header.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\contact\\contact.css",
+      "PackagePath": "staticwebassets\\assets\\css\\contact\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\contact\\contact.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\contact\\contact.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\contact\\contact.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\contact\\contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\home\\home.css",
+      "PackagePath": "staticwebassets\\assets\\css\\home\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\home\\home.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\home\\home.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\home\\home.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\home\\home.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\layout\\_up.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\layout\\_up.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\login\\login.css",
+      "PackagePath": "staticwebassets\\assets\\css\\login\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\login\\login.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\login\\login.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\login\\login.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\login\\login.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\product-detail\\product-detail.css",
+      "PackagePath": "staticwebassets\\assets\\css\\product-detail\\product-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\product-detail\\product-detail.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\product-detail\\product-detail.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\product-detail\\product-detail.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\product-detail\\product-detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\register\\register.css",
+      "PackagePath": "staticwebassets\\assets\\css\\register\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\register\\register.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\register\\register.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\register\\register.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\register\\register.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\shop\\shop.css",
+      "PackagePath": "staticwebassets\\assets\\css\\shop\\shop.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\shop\\shop.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\shop\\shop.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\shop\\shop.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\shop\\shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\about-us.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about-us.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\about-us2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\about-us2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\merc.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\merc.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\onlythebest-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\onlythebest-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\question-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\question-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\question-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\question-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\question-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\question-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\rolls-royce.htm",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\rolls-royce.htm"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\rolls-royce.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\rolls-royce.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\about\\rolls-royce2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about\\rolls-royce2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-detail-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-detail-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-detail-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-detail-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\recent-post-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\recent-post-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\recent-post-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\recent-post-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\recent-post-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\recent-post-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\202202091711274071.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\202202091711274071.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\2024-mercedes-benz-e-class_100882805.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\2024-mercedes-benz-e-class_100882805.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\5a277373-6193-4e87-861c-0717f6e8be27.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\5a277373-6193-4e87-861c-0717f6e8be27.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\E15A973B-C33D-452A-875F-C4FF648FCC16_SHOT-6-Ghost-F34-Dynamic-Final_OPT.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\E15A973B-C33D-452A-875F-C4FF648FCC16_SHOT-6-Ghost-F34-Dynamic-Final_OPT.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\contact-us5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\contact-us5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\contact\\edit.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact\\edit.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\best1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\best1.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\best2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\best2.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\best3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\best3.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\best4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\best4.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\car6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\car6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\earphone.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\earphone.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\h1-img-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\h1-img-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\info-success-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\info-success-img.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\lamborghini.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\lamborghini.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\location.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\logo-gold.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\logo-gold.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\person1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\person1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\person2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\person2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\person3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\person3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\premium-rental-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\premium-rental-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\premium-rental-img2.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\premium-rental-img2.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\product-detail-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\product-detail-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\product-detail-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\product-detail-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\product-detail-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\product-detail-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\product-detail-img4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\product-detail-img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\rolls royce.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\rolls royce.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\rolls-royce-png.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\rolls-royce-png.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\rolls-royce3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\rolls-royce3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\sale-car-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\sale-car-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\slider1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\slider2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\slider3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\slider4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\slider4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\speedometer.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\speedometer.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\x5.JPG",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\x5.JPG"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\icon\\icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icon\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\popular-product-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\popular-product-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\popular-product-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\popular-product-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\popular-product-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\popular-product-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\product-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\product-img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\product-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\product-img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\product-img4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\product-img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\shop\\product-img5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\shop\\product-img5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\js\\account.js",
+      "PackagePath": "staticwebassets\\assets\\js\\account.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\js\\cart.js",
+      "PackagePath": "staticwebassets\\assets\\js\\cart.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\js\\home.js",
+      "PackagePath": "staticwebassets\\assets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\js\\scroll-to-up.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scroll-to-up.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Final-Project-RentApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Final-Project-RentApp.props",
+      "PackagePath": "build\\Final-Project-RentApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Final-Project-RentApp.props",
+      "PackagePath": "buildMultiTargeting\\Final-Project-RentApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Final-Project-RentApp.props",
+      "PackagePath": "buildTransitive\\Final-Project-RentApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Login - LuxeDrive";
+}
+
+@section Style{
+
+    <link rel="stylesheet" href="~/assets/css/login/login.css" />
+
+}
+
+<main>
+
+    <section id="login">
+        <div class="form-box">
+            <div class="form-value">
+                <form action="">
+                    <h2>Login</h2>
+
+                    <div class="inputbox">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" required>
+                        <label for="">Email or Username</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+                    </div>
+
+                    <button>Log in</button>
+
+                    <div class="register">
+                        <p>Don't have a account? <a href="register.html">Sign up</a></p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
