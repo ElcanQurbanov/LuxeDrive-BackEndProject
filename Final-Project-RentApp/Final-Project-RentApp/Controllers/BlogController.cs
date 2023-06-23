@@ -8,5 +8,10 @@ namespace Final_Project_RentApp.Controllers
         {
             return View();
         }
+
+        public IActionResult Detail(int? id)
+        {
+            return View(id);
+        }
     }
 }

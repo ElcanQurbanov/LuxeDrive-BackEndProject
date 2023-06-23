@@ -4,7 +4,7 @@
 
 @section Style{
 
-    <link rel="stylesheet" href="~/assets/css/register/register.css" />
+    <link rel="stylesheet" href="~/assets/css/register/register.css">
 
 }
 
@@ -42,7 +42,6 @@
 
                     <div class="inputbox">
                         <i class="fa-solid fa-shield-halved"></i>
-                        <!-- <i class="fa-solid fa-lock"></i> -->
                         <input type="password" required>
                         <label for="">Repeat Your Password</label>
                     </div>
@@ -50,7 +49,7 @@
                     <button>Log in</button>
 
                     <div class="register">
-                        <p>Already have an account? <a href="login.html">Sign in</a></p>
+                        <p>Already have an account? <a asp-action="Login">Sign in</a></p>
                     </div>
 
                 </form>
@@ -62,3 +61,5 @@
 
 
 </main>
+
+

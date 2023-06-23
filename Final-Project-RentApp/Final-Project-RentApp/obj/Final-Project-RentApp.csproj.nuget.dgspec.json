@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj": {}
+    "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj": {
+    "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj",
+        "projectUniqueName": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj",
         "projectName": "Final-Project-RentApp",
-        "projectPath": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj",
+        "projectPath": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\Final-Project-RentApp.csproj",
         "packagesPath": "C:\\Users\\cavid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cavid\\Desktop\\Final-Project-RentApp\\Final-Project-RentApp\\obj\\",
+        "outputPath": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cavid\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.14, )"

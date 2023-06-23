@@ -5,6 +5,7 @@
 @section Style{
 
     <link rel="stylesheet" href="~/assets/css/home/home.css" />
+    <link rel="stylesheet" href="~/assets/slick/slick.css">
 
 }
 
@@ -97,7 +98,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car3.jpg" alt=""></a>
+                            <a asp-controller="CarDetail" asp-action="Index"><img src="~/assets/img/home/car3.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -123,7 +124,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Rolls Royce Phantom</h5>
                             </a>
 
@@ -151,7 +152,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car6.jpg" alt=""></a>
+                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car6.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -177,7 +178,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Nissan GT-R</h5>
                             </a>
 
@@ -205,7 +206,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car5.jpg" alt=""></a>
+                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car5.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -231,7 +232,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Mercedes G-Class</h5>
                             </a>
 
@@ -258,7 +259,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car4.jpg" alt=""></a>
+                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car4.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -284,7 +285,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Bmw M4 G82 </h5>
                             </a>
 
@@ -311,7 +312,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car2.jpg" alt=""></a>
+                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car2.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -337,7 +338,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Aston Martin DB9</h5>
                             </a>
 
@@ -365,7 +366,7 @@
                     <div class="product">
 
                         <div class="product-img">
-                            <a href="product-detail.html"><img src="~/assets/img/home/car1.jpg" alt=""></a>
+                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car1.jpg" alt=""></a>
                         </div>
 
                         <div class="image-inner">
@@ -391,7 +392,7 @@
 
                         <div class="content">
 
-                            <a href="product-detail.html">
+                            <a asp-controller="Shop" asp-action="Detail">
                                 <h5>Mercedes G-Class Brabus</h5>
                             </a>
 
@@ -818,7 +819,7 @@
 
 
                     <div class="button">
-                        <a href="product-detail.html"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
+                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
                     </div>
 
 
@@ -865,7 +866,7 @@
                     </div>
 
                     <div class="button">
-                        <a href="product-detail.html"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
+                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
                     </div>
 
 
@@ -913,7 +914,7 @@
                     </div>
 
                     <div class="button">
-                        <a href="product-detail.html"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
+                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
                     </div>
 
 
@@ -961,7 +962,7 @@
 
 
                     <div class="button">
-                        <a href="product-detail.html"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
+                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
                     </div>
 
 
@@ -1003,5 +1004,9 @@
 @section Scripts{
 
     <script src="~/assets/js/home.js"></script>
+    @*  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/assets/slick/slick.min.js"></script>*@
 
 }
