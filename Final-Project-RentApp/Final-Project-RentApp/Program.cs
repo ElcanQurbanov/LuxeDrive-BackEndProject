@@ -1,3 +1,8 @@
+using Final_Project_RentApp.Data;
+using Final_Project_RentApp.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,12 +10,12 @@ builder.Services.AddControllersWithViews();
 
 //builder.Services.AddSession();
 
-//builder.Services.AddDbContext<AppDbContext>(option =>
-//{
-//    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));  // confuragsiya qurur 
-//});
+builder.Services.AddDbContext<AppDbContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));  // confuragsiya qurur 
+});
 
-//builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 //builder.Services.Configure<IdentityOptions>(opt =>
 //{
@@ -48,13 +53,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-//app.UseAuthentication();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
-//app.MapControllerRoute(
-//      name: "areas",
-//      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+app.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
