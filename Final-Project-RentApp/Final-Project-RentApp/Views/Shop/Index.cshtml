@@ -8,6 +8,30 @@
 
 }
 
+@section NavBar{
+
+    <ul class="menu">
+
+        <li>
+            <a asp-controller="Home" asp-action="Index">
+                <i class="fa-solid fa-circle"></i><span>HOME</span>
+            </a>
+        </li>
+
+        <li><a asp-controller="About" asp-action="Index"><i class="fa-solid fa-circle"></i><span>ABOUT</span></a></li>
+
+        <li>
+            <a asp-controller="Contact" asp-action="Index"><i class="fa-solid fa-circle"></i><span>CONTACT</span></a>
+        </li>
+
+        <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
+
+        <li><a asp-controller="Shop"><i class="fa-solid fa-circle active-icon"></i><span class="active-word">SHOP</span></a></li>
+
+    </ul>
+
+}
+
 
 <main>
 
@@ -416,4 +440,18 @@
     </section>
 
 
+    <section id="up">
+
+        <span>TOP</span>
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </section>
+
+
 </main>
+
+@section Scripts{
+
+    <script src="~/assets/js/scroll-to-up.js"></script>
+
+}

@@ -6,6 +6,7 @@
         public string Description { get; set; }
         public decimal Price { get; set; }
         public int CarClassId { get; set; }
+        public CarClass CarClass { get; set; }
         public ICollection<CarImage> CarImages { get; set; }
     }
 }

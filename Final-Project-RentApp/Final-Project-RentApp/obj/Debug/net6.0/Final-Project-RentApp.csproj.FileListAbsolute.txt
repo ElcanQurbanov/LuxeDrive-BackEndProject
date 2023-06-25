@@ -476,3 +476,4 @@ C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-Ren
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\obj\Debug\net6.0\Final-Project-RentApp.pdb
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\obj\Debug\net6.0\Final-Project-RentApp.genruntimeconfig.cache
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\obj\Debug\net6.0\ref\Final-Project-RentApp.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
