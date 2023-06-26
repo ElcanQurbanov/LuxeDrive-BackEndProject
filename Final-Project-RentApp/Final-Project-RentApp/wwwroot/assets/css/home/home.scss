@@ -1,8 +1,11 @@
+@use "../layout/header";
+@use "../components/transparent-header";
+@use "../layout/footer";
+@use "../layout/up";
 
-@use "~/components/transparent-header";
-@use "~/layout/footer";
-@use "~/layout/up";
-
+body{
+    background-color: #141A1C;
+}
 
 #page-title {
     // background-color: #0c1315;
@@ -28,18 +31,6 @@
         }
     }
 }
-
-
-header {
-    position: fixed;
-    width: 100%;
-
-    #navbar {
-        background-color: transparent;
-        transition: 0.3s all;
-    }
-}
-
 
 
 #slider {
@@ -475,13 +466,12 @@ header {
             object-fit: cover;
         }
 
-        &-left {
-            transition: 1.5s;
-        }
+        
+       
+    }
 
-        &-right {
-            transition: 2.5s;
-        }
+    .right{
+        transition-delay: 0.6s;
     }
 
 }
@@ -624,12 +614,14 @@ header {
     background-color: #141A1C;
     // padding-top: 7rem;
     padding-top: 7%;
+    margin-bottom: 7rem;
+    
 
     .img {
         width: 100%;
-        margin-bottom: 7rem;
         transition: 2s all;
         overflow: hidden;
+        height: 0;
 
         img {
             width: 100%;
@@ -640,6 +632,10 @@ header {
 
     .img2 {
         width: 100%;
+        transition: 2s all;
+        overflow: hidden;
+        height: 0;
+        transition-delay: 0.6s;
 
         img {
             width: 100%;

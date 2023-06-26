@@ -1,5 +1,7 @@
 using Final_Project_RentApp.Data;
 using Final_Project_RentApp.Models;
+using Final_Project_RentApp.Services;
+using Final_Project_RentApp.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -34,6 +36,14 @@ builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<A
 //});
 
 //builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+
+builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<IComfortService, ComfortService>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IAdvantageService, AdvantageService>();
+builder.Services.AddScoped<IQuaranteeService, QuaranteeService>();
+builder.Services.AddScoped<IPremiumRentalService, PremiumRentalService>();
 
 var app = builder.Build();
 

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HomeVM
+
+@{
     ViewData["Title"] = "LuxeDrive";
 }
 
@@ -39,11 +41,15 @@
 
         <div class="slider">
 
-            <div class="slider-img">
-                <img src="~/assets/img/home/slider4.jpg" alt="">
-            </div>
+            @foreach (var slider in Model.Sliders)
+            {
+                <div class="slider-img">
+                    <img src="~/assets/img/home/@slider.Image" alt="">
+                </div>
 
-            <div class="slider-img">
+            }
+
+           @* <div class="slider-img">
                 <img src="~/assets/img/home/slider2.jpg" alt="">
             </div>
 
@@ -53,7 +59,7 @@
 
             <div class="slider-img">
                 <img src="~/assets/img/home/slider1.jpg" alt="">
-            </div>
+            </div>*@
 
         </div>
 
@@ -71,7 +77,7 @@
                     <div class="product-title">
 
                         <div class="title">
-                            <h2>What We Provide Is The Luxury Transport And Most Comfortable Experience </h2>
+                            <h2>@Model.Comfort.Title</h2>
                         </div>
 
                     </div>
@@ -86,13 +92,7 @@
                         <div class="widget">
 
                             <p>
-                                Vivamus arcu felis bibendum ut tristique et egestas. Ultricies leo intege in
-                                malesuada
-                                nunc vel risus commodo. Sapien nec sagittis aliquam male bibendum arcu vitae. In
-                                ornare
-                                quam viverra orci sagittis eu volutpat odio facilisis. Fringilla est ullamcorper
-                                eget
-                                nulla facilisi nul.
+                               @Model.Comfort.Description
                             </p>
 
                         </div>
@@ -104,7 +104,7 @@
                             </div>
 
                             <div class="call-number">
-                                <a href=""> CALL CENTER: +1234 5678 901</a>
+                                <a href=""> CALL CENTER: @Model.Comfort.Phone</a>
                             </div>
 
                         </div>
@@ -116,326 +116,64 @@
 
                 </div>
 
+                @foreach (var car in Model.Cars)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12">
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="product">
 
-                    <div class="product">
+                            <div class="product-img">
+                                <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/@car.CarImages.FirstOrDefault(ci => ci.IsMain).Image" alt=""></a>
+                            </div>
 
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car3.jpg" alt=""></a>
-                        </div>
+                            <div class="image-inner">
 
-                        <div class="image-inner">
+                                <a href="">
+                                    <h4>@car.CarClass.Name</h4>
+                                </a>
 
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
+                                <div class="price-info">
+                                    <div class="price">
+                                        <span class="label">from</span>
+                                        <span class="currency">$</span>
+                                        <span>@car.Price</span>
+                                        <span class="price-label">/ day</span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
-                            </div>
-
-                        </div>
-
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Rolls Royce Phantom</h5>
-                            </a>
-
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="product">
-
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car6.jpg" alt=""></a>
-                        </div>
-
-                        <div class="image-inner">
-
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
+                                <div class="description">
+                                    <p>@car.Description</p>
                                 </div>
+
                             </div>
 
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
+                            <div class="content">
+
+                                <a asp-controller="Shop" asp-action="Detail">
+                                    <h5>@car.Name</h5>
+                                </a>
+
+
+                                <!-- <div class="star-icon">
+                                    <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
+                                    <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
+                                    <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
+                                    <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
+                                    <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
+                                </div> -->
+
                             </div>
 
                         </div>
 
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Nissan GT-R</h5>
-                            </a>
 
 
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
 
                     </div>
 
+                }
 
 
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="product">
-
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car5.jpg" alt=""></a>
-                        </div>
-
-                        <div class="image-inner">
-
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
-                            </div>
-
-                        </div>
-
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Mercedes G-Class</h5>
-                            </a>
-
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="product">
-
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car4.jpg" alt=""></a>
-                        </div>
-
-                        <div class="image-inner">
-
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
-                            </div>
-
-                        </div>
-
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Bmw M4 G82 </h5>
-                            </a>
-
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="product">
-
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car2.jpg" alt=""></a>
-                        </div>
-
-                        <div class="image-inner">
-
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
-                            </div>
-
-                        </div>
-
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Aston Martin DB9</h5>
-                            </a>
-
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div class="col-lg-4 col-md-6 col-sm-12">
-
-                    <div class="product">
-
-                        <div class="product-img">
-                            <a asp-controller="Shop" asp-action="Detail"><img src="~/assets/img/home/car1.jpg" alt=""></a>
-                        </div>
-
-                        <div class="image-inner">
-
-                            <a href="">
-                                <h4>Sport</h4>
-                            </a>
-
-                            <div class="price-info">
-                                <div class="price">
-                                    <span class="label">from</span>
-                                    <span class="currency">$</span>
-                                    <span>180</span>
-                                    <span class="price-label">/ day</span>
-                                </div>
-                            </div>
-
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit do amet, consectetur, adipiscing elit, sed </p>
-                            </div>
-
-                        </div>
-
-                        <div class="content">
-
-                            <a asp-controller="Shop" asp-action="Detail">
-                                <h5>Mercedes G-Class Brabus</h5>
-                            </a>
-
-
-                            <!-- <div class="star-icon">
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                                <i class="fa-solid fa-star" style="color: #bfa37c;"></i>
-                            </div> -->
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
 
             </div>
 
@@ -467,47 +205,55 @@
 
                 <div class="col-lg-6 col-md-12 col-sm-12">
 
-                    <div class="widget">
+                    @foreach (var advantage in Model.Advantages.Take(2))
+                    {
+                        <div class="widget">
 
-                        <h5 style="color: #fff;">No Delays</h5>
+                            <h5 style="color: #fff;">@advantage.Title</h5>
 
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
+                            <p>
+                                @advantage.Description
+                            </p>
 
-                    </div>
+                        </div>
+                    }
 
-                    <div class="widget">
+                  
+
+                  @*  <div class="widget">
                         <h5 style="color: #fff;">Premium Support</h5>
 
                         <p>
                             Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
                             Faucibus turpis in eun mi bibendum.
                         </p>
-                    </div>
+                    </div>*@
 
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12">
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">High Quality</h5>
+                    @foreach (var advantage in Model.Advantages.Skip(2).Take(2))
+                    {
+                        <div class="widget">
+                            <h5 style="color: #fff;">@advantage.Title</h5>
 
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
-                    </div>
+                            <p>
+                                @advantage.Description
+                            </p>
+                        </div>
+                    }
 
-                    <div class="widget">
+                  
+
+                 @*   <div class="widget">
                         <h5 style="color: #fff;">A Diverse Selection</h5>
 
                         <p>
                             Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
                             Faucibus turpis in eun mi bibendum.
                         </p>
-                    </div>
+                    </div>*@
 
                 </div>
             </div>
@@ -528,17 +274,13 @@
                     <div class="widget">
 
                         <h3>
-                            We Care Of Your Safety
-                            <br>
-                            And Convenience
+                            @Html.Raw(Model.Quarantee.Title)
                         </h3>
 
-                        <span>Premium drivers</span>
+                        <span>@Model.Quarantee.SubTitle</span>
 
                         <p>
-                            Facilisi cras fermentum odio eu feugiat. In fermentum et sollicitudin ac ori accumsan sit
-                            amet nulla facilisi morbi tempus iaculis urna id. Aenean euismod elementum nisi quis
-                            eleifend quam adipiscing vitae dipiscing.
+                            @Model.Quarantee.Description
                         </p>
 
                     </div>
@@ -549,16 +291,20 @@
 
                     <div class="row">
 
-                        <div class="col-lg-6 col-md-12 col-sm-12 ">
+                        @foreach (var quarantee in Model.Quarantee.QuaranteeImages)
+                        {
+                            <div class="col-lg-6 col-md-12 col-sm-12 ">
 
-                            <div class="car-img car-img-left">
+                                <div class="car-img car-img-left">
 
-                                <img src="~/assets/img/home/rolls royce.jpg" alt="">
+                                    <img src="~/assets/img/home/@quarantee.Image" alt="">
+
+                                </div>
 
                             </div>
-
-                        </div>
-
+                        }
+                        
+@*
                         <div class="col-lg-6 col-md-12 col-sm-12">
 
                             <div class="car-img car-img-right">
@@ -567,7 +313,7 @@
 
                             </div>
 
-                        </div>
+                        </div>*@
 
                     </div>
 

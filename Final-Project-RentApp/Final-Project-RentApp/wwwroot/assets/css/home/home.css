@@ -321,6 +321,10 @@ footer #down-footer .footer-bottom-area .content {
   border: 2px solid #bfa37c;
 }
 
+body {
+  background-color: #141A1C;
+}
+
 #page-title {
   background-color: #141A1C;
 }
@@ -605,11 +609,8 @@ footer #down-footer .footer-bottom-area .content {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#guarantee .car-img-left {
-  transition: 1.5s;
-}
-#guarantee .car-img-right {
-  transition: 2.5s;
+#guarantee .right {
+  transition-delay: 0.6s;
 }
 
 #fav-car .background-img {
@@ -706,12 +707,13 @@ footer #down-footer .footer-bottom-area .content {
 #premium-rental {
   background-color: #141A1C;
   padding-top: 7%;
+  margin-bottom: 7rem;
 }
 #premium-rental .img {
   width: 100%;
-  margin-bottom: 7rem;
   transition: 2s all;
   overflow: hidden;
+  height: 0;
 }
 #premium-rental .img img {
   width: 100%;
@@ -720,6 +722,10 @@ footer #down-footer .footer-bottom-area .content {
 }
 #premium-rental .img2 {
   width: 100%;
+  transition: 2s all;
+  overflow: hidden;
+  height: 0;
+  transition-delay: 0.6s;
 }
 #premium-rental .img2 img {
   width: 100%;

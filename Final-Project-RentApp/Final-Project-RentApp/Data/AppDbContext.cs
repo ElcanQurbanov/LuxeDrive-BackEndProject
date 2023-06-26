@@ -25,5 +25,30 @@ namespace Final_Project_RentApp.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Slider>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Comfort>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Car>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<CarImage>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Advantage>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Quarantee>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<QuaranteeImage>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Team>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<PremiumRental>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<PremiumRentalImage>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<CarClass>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<CarClassInfo>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Experience>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Faq>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Blog>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<BlogImage>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Contact>().HasQueryFilter(s => !s.SoftDelete);
+        }
+
     }
 }

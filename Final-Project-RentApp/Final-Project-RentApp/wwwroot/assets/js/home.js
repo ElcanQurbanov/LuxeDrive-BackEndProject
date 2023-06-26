@@ -46,10 +46,9 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   let scrollposition = window.pageYOffset;
-  console.log(scrollposition);
 
-  if (scrollposition > 5200) {
-    let rentalImages = document.querySelectorAll("#premium-rental .img");
+  if (scrollposition > 5000) {
+    let rentalImages = document.querySelectorAll("#premium-rental .rental-img");
 
     for (const rentalImage of rentalImages) {
       rentalImage.style.height = "448.56px";
