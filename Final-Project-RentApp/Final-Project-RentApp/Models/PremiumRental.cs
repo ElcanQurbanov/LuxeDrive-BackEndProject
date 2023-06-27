@@ -7,6 +7,8 @@
         public string Description { get; set; }
         public string ExperienceTitle { get; set; }
         public int ExperienceCount { get; set; }
+        public int ClientNumber { get; set; }
+        public string Clients { get; set; }
         public ICollection<PremiumRentalImage> PremiumRentalImages { get; set; }
     }
 }

@@ -43,7 +43,11 @@ builder.Services.AddScoped<IComfortService, ComfortService>();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddScoped<IAdvantageService, AdvantageService>();
 builder.Services.AddScoped<IQuaranteeService, QuaranteeService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
 builder.Services.AddScoped<IPremiumRentalService, PremiumRentalService>();
+builder.Services.AddScoped<ICarClassService, CarClassService>();
+builder.Services.AddScoped<IExperienceService, ExperienceService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 var app = builder.Build();
 

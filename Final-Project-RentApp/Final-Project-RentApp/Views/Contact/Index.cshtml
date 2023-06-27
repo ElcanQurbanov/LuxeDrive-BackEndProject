@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ContactVM
+
+@{
     ViewData["Title"] = "Contact Us - LuxeDrive";
 }
 
@@ -74,48 +76,45 @@
 
                 <div class="col-6">
 
-                    <div class="widget">
+                    @foreach (var contact in Model.Contacts.Take(2))
+                    {
+                      <div class="widget">
 
-                        <h5 style="color: #fff;">Amesterdam </h5>
-
-
-                        <p>Schoonboomstraat 109, Nederland</p>
-                        <p>Office: +234 5678 9012</p>
-                        <p>Mon-Sat 9:00-23:00; Sunday closed</p>
+                        <h5 style="color: #fff;">@contact.City</h5>
 
 
-                    </div>
+                        <p>@contact.Street</p>
+                        <p>Office: @contact.Phone</p>
+                        <p>@contact.WorkTime</p>
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">Milan</h5>
 
-                        <p>Via Sebastiano Caboto 2, Italy</p>
-                        <p>Office: +234 5678 9012</p>
-                        <p>Mon-Sat 9:00-23:00; Sunday closed</p>
+                      </div>
+                        
+                    }
 
-                    </div>
+
 
                 </div>
 
                 <div class="col-6">
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">London</h5>
+                    @foreach (var contact in Model.Contacts.Skip(2).Take(2))
+                    {
+                        <div class="widget">
 
-                        <p>9 Stockwell Park Rd, United Kingdom</p>
-                        <p>Office: +234 5678 9012</p>
-                        <p>Mon-Sat 9:00-23:00; Sunday closed</p>
+                            <h5 style="color: #fff;">@contact.City</h5>
 
-                    </div>
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">Barcelona</h5>
+                            <p>@contact.Street</p>
+                            <p>Office: @contact.Phone</p>
+                            <p>@contact.WorkTime</p>
 
-                        <p>C. del Consell de Cent 549, Spain</p>
-                        <p>Office: +234 5678 9012</p>
-                        <p>Mon-Sat 9:00-23:00; Sunday closed</p>
 
-                    </div>
+                        </div>
+
+                    }
+
+                
 
 
 
@@ -145,19 +144,25 @@
                 <div class="col-6">
 
                     <div class="row">
-                        <div class="col-6">
 
-                            <div class="img">
-                                <img src="~/assets/img/home/premium-rental-img1.jpg" alt="">
+                        @foreach (var premium in Model.PremiumRental.PremiumRentalImages)
+                        {
+                            <div class="col-6">
+
+
+                                <div class="img">
+                                    <img src="~/assets/img/home/@premium.Image" alt="">
+                                </div>
+
                             </div>
-
-                        </div>
-
+                        }
+                       
+@*
                         <div class="col-6">
                             <div class="img2">
-                                <img src="~/assets/img/home/h1-img-6.jpg" alt="">
+                                <img src="~/assets/img/home/premium-rental2.jpg" alt="">
                             </div>
-                        </div>
+                        </div>*@
 
                     </div>
 
@@ -178,8 +183,7 @@
                         </div>
 
                         <p>
-                            Praesent elementum facilisis leo vel fringilla est. Vest bulum lectus a urise ultrices
-                            eros in cursus turpi uto.
+                            @Model.PremiumRental.Description
                         </p>
 
 

@@ -1,4 +1,5 @@
-﻿
+﻿@model AboutVM
+
 @{
     ViewData["Title"] = "About Us - LuxeDrive";
 }
@@ -71,47 +72,34 @@
 
                 <div class="col-6">
 
-                    <div class="widget">
+                    @foreach (var experience in Model.Experiences.Take(2))
+                    {
+                        <div class="widget">
 
-                        <h5 style="color: #fff;">Clean & Comfortable </h5>
+                            <h5 style="color: #fff;">@experience.Title </h5>
 
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
+                            <p>
+                                @experience.Description
+                            </p>
 
-                    </div>
-
-                    <div class="widget">
-                        <h5 style="color: #fff;">Smooth Car Transport</h5>
-
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
-                    </div>
+                        </div>
+                    }
 
                 </div>
 
                 <div class="col-6">
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">Best Price Is Assured</h5>
+                    @foreach (var experience in Model.Experiences.Skip(2).Take(2))
+                    {
+                        <div class="widget">
+                            <h5 style="color: #fff;">@experience.Title</h5>
 
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
-                    </div>
+                            <p>
+                                @experience.Description
+                            </p>
+                        </div>
+                    }
 
-                    <div class="widget">
-                        <h5 style="color: #fff;">Diverse Selection</h5>
-
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
-                    </div>
 
                 </div>
             </div>
@@ -275,29 +263,29 @@
                         </div>
 
                         <p>
-                            Praesent elementum facilisis leo vel fringilla est. Vest bulum lectus a urise ultrices eros in cursus.
+                            @Model.PremiumRental.Description
                         </p>
 
                         <div class="items">
                             <div>
                                 <div class="digit-wrapper">
-                                    <span>21</span>
+                                    <span>@Model.PremiumRental.ExperienceCount</span>
                                     <span class="digit-label">+</span>
                                 </div>
 
                                 <div class="content">
-                                    <p class="text">Years of experience</p>
+                                    <p class="text">@Model.PremiumRental.ExperienceTitle</p>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="digit-wrapper">
-                                    <span>157</span>
+                                    <span>@Model.PremiumRental.ClientNumber</span>
                                     <span class="digit-label">k</span>
                                 </div>
 
                                 <div class="content">
-                                    <p class="text">Satisfied clients</p>
+                                    <p class="text">@Model.PremiumRental.Clients</p>
                                 </div>
                             </div>
                         </div>

@@ -373,10 +373,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\gtr.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\h1-img-6.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\h1-img-6.jpg"
-    },
-    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\info-success-img.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\info-success-img.png"
     },
@@ -415,6 +411,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\premium-rental-img2.webp",
       "PackagePath": "staticwebassets\\assets\\img\\home\\premium-rental-img2.webp"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\premium-rental2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\premium-rental2.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\product-detail-img1.jpg",

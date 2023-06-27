@@ -15,21 +15,27 @@ namespace Final_Project_RentApp.Controllers
         private readonly ICarService _carService;
         private readonly IAdvantageService _advantageService;
         private readonly IQuaranteeService _quaranteeService;
+        private readonly ITeamService _teamService;
         private readonly IPremiumRentalService _premiumRentalService;
+        private readonly ICarClassService _carClassService;
 
         public HomeController(ISliderService sliderService,
                               IComfortService comfortService,
                               ICarService carService,
                               IAdvantageService advantageService,
                               IQuaranteeService quaranteeService,
-                              IPremiumRentalService premiumRentalService)
+                              IPremiumRentalService premiumRentalService,
+                              ITeamService teamService,
+                              ICarClassService carClassService)
         {
             _sliderService = sliderService;
             _comfortService = comfortService;
             _carService = carService;
             _advantageService = advantageService;
             _quaranteeService = quaranteeService;
+            _teamService = teamService;
             _premiumRentalService = premiumRentalService;
+            _carClassService = carClassService;
 
         }
 
@@ -40,7 +46,9 @@ namespace Final_Project_RentApp.Controllers
             IEnumerable<Car> cars = await _carService.GetAllAsync();
             IEnumerable<Advantage> advantages = await _advantageService.GetAllAsync();
             Quarantee quarantee = await _quaranteeService.GetQuaranteeAsync();
+            IEnumerable<Team> teams = await _teamService.GetAllAsync();
             PremiumRental premiumRental = await _premiumRentalService.GetPremiumRentalAsync();
+            IEnumerable<CarClass> carClasses = await _carClassService.GetAllAsync();
 
             HomeVM model = new()
             {
@@ -49,7 +57,9 @@ namespace Final_Project_RentApp.Controllers
                 Cars = cars,
                 Advantages = advantages,
                 Quarantee = quarantee,
-                PremiumRental = premiumRental
+                Teams = teams,
+                PremiumRental = premiumRental,
+                CarClasses = carClasses
             };
 
             return View(model);

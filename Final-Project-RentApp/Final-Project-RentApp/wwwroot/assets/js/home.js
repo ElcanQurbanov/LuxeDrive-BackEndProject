@@ -44,15 +44,20 @@ window.addEventListener("scroll", function () {
   }
 });
 
+document.querySelector("#guarantee .car-img").parentNode.parentNode.children[0].children[0].classList.add("left");
+document.querySelector("#guarantee .car-img").parentNode.parentNode.children[1].children[0].classList.add("right");
+
+document.querySelector("#premium-rental .rental-img").parentNode.parentNode.children[0].children[0].classList.add("img");
+document.querySelector("#premium-rental .rental-img").parentNode.parentNode.children[1].children[0].classList.add("img2");
+
 window.addEventListener("scroll", function () {
   let scrollposition = window.pageYOffset;
 
   if (scrollposition > 5000) {
     let rentalImages = document.querySelectorAll("#premium-rental .rental-img");
 
-    for (const rentalImage of rentalImages) {
-      rentalImage.style.height = "448.56px";
-    }
+      for (const rentalImage of rentalImages) {
+          rentalImage.style.height = "448.56px";
+      }
   }
 });
-

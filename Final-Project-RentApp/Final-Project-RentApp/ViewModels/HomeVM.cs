@@ -9,6 +9,8 @@ namespace Final_Project_RentApp.ViewModels
         public IEnumerable<Car> Cars { get; set; }
         public IEnumerable<Advantage> Advantages { get; set; }
         public Quarantee Quarantee { get; set; }
+        public IEnumerable<Team> Teams { get; set; }
         public PremiumRental PremiumRental { get; set; }
+        public IEnumerable<CarClass> CarClasses { get; set; }
     }
 }

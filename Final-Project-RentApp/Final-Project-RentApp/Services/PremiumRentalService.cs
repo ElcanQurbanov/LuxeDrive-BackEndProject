@@ -16,7 +16,7 @@ namespace Final_Project_RentApp.Services
 
         public async Task<PremiumRental> GetByIdAsync(int id) => await _context.PremiumRentals.FindAsync(id);
 
-        public async Task<PremiumRental> GetPremiumRentalAsync() => await _context.PremiumRentals.FirstOrDefaultAsync();
+        public async Task<PremiumRental> GetPremiumRentalAsync() => await _context.PremiumRentals.Include(i => i.PremiumRentalImages).FirstOrDefaultAsync();
 
     }
 }

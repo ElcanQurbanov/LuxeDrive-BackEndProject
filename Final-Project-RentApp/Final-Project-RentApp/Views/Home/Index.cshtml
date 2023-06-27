@@ -295,7 +295,7 @@
                         {
                             <div class="col-lg-6 col-md-12 col-sm-12 ">
 
-                                <div class="car-img car-img-left">
+                                <div class="car-img">
 
                                     <img src="~/assets/img/home/@quarantee.Image" alt="">
 
@@ -370,67 +370,33 @@
 
                     <div class="row">
 
-                        <div class="col-4">
+                        @foreach (var team in Model.Teams)
+                        {
+                            <div class="col-4">
 
-                            <div class="person-img">
-                                <img src="~/assets/img/home/person1.jpg" alt="">
-                            </div>
+                                <div class="person-img">
+                                    <img src="~/assets/img/home/@team.Image" alt="">
+                                </div>
 
-                            <div class="content">
+                                <div class="content">
 
-                                <h5 style="color: #fff;">
-                                    Marco Watkivi
-                                </h5>
+                                    <h5 style="color: #fff;">
+                                        @team.Name
+                                    </h5>
 
-                                <div class="icon">
-                                    <i class="fa-solid fa-phone " style="color: #bfa37c;"></i>
-                                    <span>+1234 5678 901</span>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-phone " style="color: #bfa37c;"></i>
+                                        <span>@team.Phone</span>
+                                    </div>
+
                                 </div>
 
                             </div>
 
-                        </div>
+                        }
 
-                        <div class="col-4">
 
-                            <div class="person-img">
-                                <img src="~/assets/img/home/person2.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-
-                                <h5 style="color: #fff;">
-                                    Marily Sulli
-                                </h5>
-
-                                <div class="icon">
-                                    <i class="fa-solid fa-phone " style="color: #bfa37c;"></i>
-                                    <span>+2345 6789 012</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-4">
-
-                            <div class="person-img">
-                                <img src="~/assets/img/home/person3.jpg" alt="">
-                            </div>
-
-                            <div class="content">
-
-                                <h5 style="color: #fff;">
-                                    Zakary Tapun
-                                </h5>
-
-                                <div class="icon">
-                                    <i class="fa-solid fa-phone " style="color: #bfa37c;"></i>
-                                    <span>+3456 7890 123</span>
-                                </div>
-
-                            </div>
-                        </div>
+                      
                     </div>
                 </div>
 
@@ -449,19 +415,24 @@
                 <div class="col-6">
 
                     <div class="row">
-                        <div class="col-6">
 
-                            <div class="img">
-                                <img src="~/assets/img/home/premium-rental-img1.jpg" alt="">
+                        @foreach (var premium in Model.PremiumRental.PremiumRentalImages)
+                        {
+                            <div class="col-6">
+
+                                <div class="img rental-img">
+                                    <img src="~/assets/img/home/@premium.Image" alt="">
+                                </div>
+
                             </div>
+                        }
+                       
 
-                        </div>
-
-                        <div class="col-6">
-                            <div class="img2">
+                       @* <div class="col-6">
+                            <div class="img2 rental-img">
                                 <img src="~/assets/img/home/h1-img-6.jpg" alt="">
                             </div>
-                        </div>
+                        </div>*@
 
                     </div>
 
@@ -474,38 +445,37 @@
                     <div class="widget">
 
                         <div class="title">
-                            <h2>Premium Cars Rental</h2>
+                            <h2>@Model.PremiumRental.Title</h2>
                         </div>
 
                         <div class="subtitle">
-                            <span>Only the best</span>
+                            <span>@Model.PremiumRental.SubTitle</span>
                         </div>
 
                         <p>
-                            Praesent elementum facilisis leo vel fringilla est. Vest bulum lectus a urise ultrices
-                            eros in cursus turpi uto.
+                           @Model.PremiumRental.Description
                         </p>
 
                         <div class="items">
                             <div>
                                 <div class="digit-wrapper">
-                                    <span>21</span>
+                                    <span>@Model.PremiumRental.ExperienceCount</span>
                                     <span class="digit-label">+</span>
                                 </div>
 
                                 <div class="content">
-                                    <p class="text">Years of experience</p>
+                                    <p class="text">@Model.PremiumRental.ExperienceTitle</p>
                                 </div>
                             </div>
 
                             <div>
                                 <div class="digit-wrapper">
-                                    <span>157</span>
+                                    <span>@Model.PremiumRental.ClientNumber</span>
                                     <span class="digit-label">k</span>
                                 </div>
 
                                 <div class="content">
-                                    <p class="text">Satisfied clients</p>
+                                    <p class="text">@Model.PremiumRental.Clients</p>
                                 </div>
                             </div>
                         </div>
@@ -550,195 +520,62 @@
             <div class="line">
             </div>
 
-            <div class="information">
-                <div class="box">
+            @foreach (var carClass in Model.CarClasses)
+            {
+                <div class="information">
+                    <div class="box">
 
-                    <div class="car-img">
-                        <img src="~/assets/img/home/best1.png" alt="">
-                    </div>
-
-                    <div class="title-price-wrapper">
-
-                        <div class="title">
-                            <h4>Premium</h4>
+                        <div class="car-img">
+                            <img src="~/assets/img/home/@carClass.Image" alt="">
                         </div>
 
-                        <div class="price-info">
+                        <div class="title-price-wrapper">
 
-                            <span>from</span>
 
-                            <div class="price-inner">
-                                <span class="value">40</span>
-                                <span class="currency">$</span>
+
+                            <div class="title">
+                                <h4>@carClass.Name</h4>
                             </div>
 
-                            <span class="price-period">/d</span>
+                            <div class="price-info">
+
+                                <span>from</span>
+
+                                <div class="price-inner">
+                                    <span class="value">@carClass.StartPrice</span>
+                                    <span class="currency">$</span>
+                                </div>
+
+                                <span class="price-period">/d</span>
+
+                            </div>
+                        </div>
+
+                        <div class="content">
+
+                            <ul>
+                                @foreach (var carInfo in carClass.CarClassInfos)
+                                {
+                                    <li><i class="fa-solid fa-check"></i>@carInfo.Info</li>
+                                }
+                            
+                            </ul>
 
                         </div>
-                    </div>
 
-                    <div class="content">
 
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Leo urna molestie at elem</li>
-                            <li><i class="fa-solid fa-check"></i>Quisque non tellu si</li>
-                            <li><i class="fa-solid fa-check"></i>Pretium lectus quam id li</li>
-                        </ul>
+                        <div class="button">
+                            <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
+                        </div>
+
 
                     </div>
-
-
-                    <div class="button">
-                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
-                    </div>
-
 
                 </div>
 
-            </div>
+            }
 
 
-            <div class="information">
-                <div class="box">
-
-                    <div class="car-img">
-                        <img src="~/assets/img/home/best2.png" alt="">
-                    </div>
-
-                    <div class="title-price-wrapper">
-
-                        <div class="title">
-                            <h4>Super</h4>
-                        </div>
-
-                        <div class="price-info">
-
-                            <span>from</span>
-
-                            <div class="price-inner">
-                                <span class="value">50</span>
-                                <span class="currency">$</span>
-                            </div>
-
-                            <span class="price-period">/d</span>
-
-                        </div>
-                    </div>
-
-                    <div class="content">
-
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Leo urna molestie at elem</li>
-                            <li><i class="fa-solid fa-check"></i>Quisque non tellu si</li>
-                            <li><i class="fa-solid fa-check"></i>Pretium lectus quam id li</li>
-                        </ul>
-
-                    </div>
-
-                    <div class="button">
-                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="information">
-                <div class="box">
-
-                    <div class="car-img">
-                        <img src="~/assets/img/home/best3.png" alt="">
-                    </div>
-
-                    <div class="title-price-wrapper">
-
-                        <div class="title">
-                            <h4>Luxury</h4>
-                        </div>
-
-                        <div class="price-info">
-
-                            <span>from</span>
-
-                            <div class="price-inner">
-                                <span class="value">70</span>
-                                <span class="currency">$</span>
-                            </div>
-
-                            <span class="price-period">/d</span>
-
-                        </div>
-                    </div>
-
-                    <div class="content">
-
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Leo urna molestie at elem</li>
-                            <li><i class="fa-solid fa-check"></i>Quisque non tellu si</li>
-                            <li><i class="fa-solid fa-check"></i>Pretium lectus quam id li</li>
-                        </ul>
-
-                    </div>
-
-                    <div class="button">
-                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-            <div class="information">
-                <div class="box">
-
-                    <div class="car-img">
-                        <img src="~/assets/img/home/best4.png" alt="">
-                    </div>
-
-                    <div class="title-price-wrapper">
-
-                        <div class="title">
-                            <h4>Business</h4>
-                        </div>
-
-                        <div class="price-info">
-
-                            <span>from</span>
-
-                            <div class="price-inner">
-                                <span class="value">80</span>
-                                <span class="currency">$</span>
-                            </div>
-
-                            <span class="price-period">/d</span>
-
-                        </div>
-                    </div>
-
-                    <div class="content">
-
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Leo urna molestie at elem</li>
-                            <li><i class="fa-solid fa-check"></i>Quisque non tellu si</li>
-                            <li><i class="fa-solid fa-check"></i>Pretium lectus quam id li</li>
-                        </ul>
-
-                    </div>
-
-
-                    <div class="button">
-                        <a asp-controller="Shop" asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Book now</span></a>
-                    </div>
-
-
-                </div>
-
-            </div>
 
         </div>
     </section>
