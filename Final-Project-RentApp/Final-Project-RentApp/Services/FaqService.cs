@@ -5,18 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_RentApp.Services
 {
-    public class BlogService : IBlogService
+    public class FaqService : IFaqService
     {
         private readonly AppDbContext _context;
 
-        public BlogService(AppDbContext context)
+        public FaqService(AppDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<Blog>> GetAllAsync() => await _context.Blogs.Include(i => i.BlogImages).ToListAsync();
+        public async Task<IEnumerable<Faq>> GetAllAsync() => await _context.Faqs.ToListAsync();
 
-        public async Task<Blog> GetByIdAsync(int id) => await _context.Blogs.FindAsync(id);
+        public async Task<Faq> GetByIdAsync(int id) => await _context.Faqs.FindAsync(id);
 
     }
 }

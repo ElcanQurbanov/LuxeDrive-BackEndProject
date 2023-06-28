@@ -49,6 +49,8 @@ builder.Services.AddScoped<IPremiumRentalService, PremiumRentalService>();
 builder.Services.AddScoped<ICarClassService, CarClassService>();
 builder.Services.AddScoped<IExperienceService, ExperienceService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<IFaqService, FaqService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<EmailSettings>();
 
