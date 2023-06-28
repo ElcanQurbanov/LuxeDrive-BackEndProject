@@ -129,13 +129,7 @@ namespace Final_Project_RentApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CarClassId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
@@ -144,9 +138,10 @@ namespace Final_Project_RentApp.Migrations
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
-                    b.HasKey("Id");
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("CarClassId");
+                    b.HasKey("Id");
 
                     b.ToTable("Blogs");
                 });
@@ -167,6 +162,9 @@ namespace Final_Project_RentApp.Migrations
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
@@ -710,17 +708,6 @@ namespace Final_Project_RentApp.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Final_Project_RentApp.Models.Blog", b =>
-                {
-                    b.HasOne("Final_Project_RentApp.Models.CarClass", "CarClass")
-                        .WithMany("Blogs")
-                        .HasForeignKey("CarClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("CarClass");
-                });
-
             modelBuilder.Entity("Final_Project_RentApp.Models.BlogImage", b =>
                 {
                     b.HasOne("Final_Project_RentApp.Models.Blog", "Blog")
@@ -850,8 +837,6 @@ namespace Final_Project_RentApp.Migrations
 
             modelBuilder.Entity("Final_Project_RentApp.Models.CarClass", b =>
                 {
-                    b.Navigation("Blogs");
-
                     b.Navigation("CarClassInfos");
                 });
 

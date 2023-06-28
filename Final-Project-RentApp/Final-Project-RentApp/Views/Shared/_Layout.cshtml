@@ -56,6 +56,7 @@
                             <a href="cart.html"><i class="fa-solid fa-car"></i></a>
                             <i class="fa-solid fa-user user"></i>
 
+
                             <div class="login-register d-none">
                                 <ul>
                                     <li><a asp-controller="Account" asp-action="Login">Login</a></li>
@@ -163,7 +164,7 @@
                     <div class="col-4">
 
                         <div class="logo-gold">
-
+                            
                             <a asp-controller="Home" asp-action="Index"><img src="~/assets/img/home/logo-gold.png" alt=""></a>
 
                         </div>
@@ -193,13 +194,9 @@
                             <h5>Quick links</h5>
 
                             <div class="footer-menu">
-                                <ul>
-                                    <li><a href="#"><i class="fa-solid fa-circle active-icon"></i><span class="active-word">HOME</span></a></li>
-                                    <li><a href="about.html"><i class="fa-solid fa-circle"></i><span>ABOUT</span></a></li>
-                                    <li><a href="contact.html"><i class="fa-solid fa-circle"></i><span>CONTACT</span></a></li>
-                                    <li><a href="blog.html"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
-                                    <li><a href="shop.html"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
-                                </ul>
+
+                               @RenderSection("Menu", false);
+                               
                             </div>
                         </div>
 

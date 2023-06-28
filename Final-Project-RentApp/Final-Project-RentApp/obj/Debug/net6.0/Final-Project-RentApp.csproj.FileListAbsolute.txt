@@ -477,3 +477,11 @@ C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-Ren
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\obj\Debug\net6.0\Final-Project-RentApp.genruntimeconfig.cache
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\obj\Debug\net6.0\ref\Final-Project-RentApp.dll
 C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\MailKit.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\MimeKit.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\System.Formats.Asn1.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\cavid\Desktop\LuxeDrive-RentApp\Final-Project-RentApp\Final-Project-RentApp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

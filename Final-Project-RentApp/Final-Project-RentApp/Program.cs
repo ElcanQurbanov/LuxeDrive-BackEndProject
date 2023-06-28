@@ -1,4 +1,5 @@
 using Final_Project_RentApp.Data;
+using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services;
 using Final_Project_RentApp.Services.Interfaces;
@@ -10,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//builder.Services.AddSession();
+builder.Services.AddSession();
 
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
@@ -19,23 +20,23 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 
 builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
-//builder.Services.Configure<IdentityOptions>(opt =>
-//{
-//    opt.Password.RequiredLength = 8;
-//    opt.Password.RequireDigit = true;
-//    opt.Password.RequireLowercase = true;
-//    opt.Password.RequireUppercase = true;
-//    opt.Password.RequireNonAlphanumeric = true;
+builder.Services.Configure<IdentityOptions>(opt =>
+{
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireDigit = true;
+    opt.Password.RequireLowercase = true;
+    opt.Password.RequireUppercase = true;
+    opt.Password.RequireNonAlphanumeric = true;
 
-//    opt.User.RequireUniqueEmail = true;
-//    opt.SignIn.RequireConfirmedEmail = true;
+    opt.User.RequireUniqueEmail = true;
+    opt.SignIn.RequireConfirmedEmail = true;
 
-//    opt.Lockout.MaxFailedAccessAttempts = 3;
-//    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
-//    opt.Lockout.AllowedForNewUsers = true;
-//});
+    opt.Lockout.MaxFailedAccessAttempts = 3;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+    opt.Lockout.AllowedForNewUsers = true;
+});
 
-//builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
 
 builder.Services.AddScoped<ISliderService, SliderService>();
@@ -48,6 +49,9 @@ builder.Services.AddScoped<IPremiumRentalService, PremiumRentalService>();
 builder.Services.AddScoped<ICarClassService, CarClassService>();
 builder.Services.AddScoped<IExperienceService, ExperienceService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<EmailSettings>();
+
 
 var app = builder.Build();
 
@@ -63,7 +67,7 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
-//app.UseSession();
+app.UseSession();
 
 app.UseRouting();
 

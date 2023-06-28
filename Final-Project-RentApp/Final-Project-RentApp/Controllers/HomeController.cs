@@ -36,7 +36,6 @@ namespace Final_Project_RentApp.Controllers
             _teamService = teamService;
             _premiumRentalService = premiumRentalService;
             _carClassService = carClassService;
-
         }
 
         public async Task<IActionResult> Index()
