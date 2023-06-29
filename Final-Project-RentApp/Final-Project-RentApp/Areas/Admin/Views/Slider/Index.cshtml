@@ -12,33 +12,23 @@
             <thead>
                 <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">BackGroundImage</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Offer</th>
+                    @*<th scope="col">BackGroundImage</th>*@
                     <th scope="col">Operation</th>
                 </tr>
             </thead>
             <tbody>
-               @* @foreach (var slider in Model)
+                @foreach (var slider in Model)
                 {
 
                     <tr>
 
                         <td class="py-1">
-                            <img src="~/assets/images/website-images/@slider.Image" style="width:70px; height:70px; border-radius:50%" alt="image">
+                            <img src="~/assets/img/home/@slider.Image" style="width:110px; height:110px; border-radius:50%" alt="image">
                         </td>
 
-                        <td class="py-1">
+                    @*    <td class="py-1">
                             <img src="~/assets/images/website-images/@slider.BackgroundImage" style="width:70px; height:70px; border-radius:50%" alt="image">
-                        </td>
-
-                        <td class="py-1">
-                            @slider.Title
-                        </td>
-
-                        <td class="py-1">
-                            @slider.Offer
-                        </td>
+                        </td>*@
 
 
                         <td>
@@ -61,7 +51,7 @@
 
                     </tr>
                 }
-*@
+
 
             </tbody>
         </table>

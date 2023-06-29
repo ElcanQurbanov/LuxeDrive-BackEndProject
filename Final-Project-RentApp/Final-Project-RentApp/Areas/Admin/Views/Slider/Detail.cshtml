@@ -1,0 +1,32 @@
+﻿@model Slider
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container my-5">
+
+    <h1 style="color:darkcyan;">Slider detail</h1>
+
+    <div class="slider-content mt-5">
+        <h4 style="color:darkcyan" class="my-3">Image</h4>
+        <img style="width:400px; height:200px;" src="~/assets/img/home/@Model.Image" />
+        @*<img style="width:400px; height:200px;" src="~/assets/images/website-images/@Model.BackgroundImage" />*@
+    </div>
+@*
+    <h4 style="color:darkcyan;" class="my-3">Title</h4>
+    <input type="text" class="form-control" id="customFile" asp-for="Title" disabled="disabled" />
+
+    <h4 style="color:darkcyan" class="my-3">Description</h4>
+    <input type="text" class="form-control" id="customFile" asp-for="Description" disabled="disabled" />
+
+    <h4 style="color:darkcyan" class="my-3">Offer</h4>
+    <input type="text" class="form-control" id="customFile" asp-for="Offer" disabled="disabled" />*@
+
+
+
+    <a class="btn btn-info mt-3" asp-action="Index">
+        Back
+    </a>
+</div>
+
