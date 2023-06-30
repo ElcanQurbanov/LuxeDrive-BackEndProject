@@ -1,4 +1,5 @@
 ﻿using Final_Project_RentApp.Areas.Admin.ViewModels;
+using Final_Project_RentApp.Data;
 using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services.Interfaces;
@@ -10,12 +11,15 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class SliderController : Controller
     {
+        private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
         private readonly ISliderService _sliderService;
 
-        public SliderController(IWebHostEnvironment env,
+        public SliderController(AppDbContext context,
+                                IWebHostEnvironment env,
                                 ISliderService sliderService)
         {
+            _context = context;
             _env = env;
             _sliderService = sliderService;
         }
@@ -75,23 +79,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 await FileHelper.SaveFileAsync(path, slider.Photo);
 
 
-                if (!slider.BackGroundImage.CheckFileType("image/"))
-                {
-                    ModelState.AddModelError("Photo", "File type must be image");
-                    return View();
-                }
-
-                if (!slider.BackGroundImage.CheckFileSize(200))
-                {
-                    ModelState.AddModelError("Photo", "Image size must be max 200kb");
-                    return View();
-                }
-
-                string fileBackGroundName = Guid.NewGuid().ToString() + "-" + slider.BackGroundImage.FileName;
-
-                string pathBackGround = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", fileBackGroundName);
-
-                await FileHelper.SaveFileAsync(pathBackGround, slider.BackGroundImage);
 
                 Slider newSlider = new()
                 {
@@ -99,9 +86,9 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     //BackgroundImage = fileBackGroundName
                 };
 
-                //await _context.Sliders.AddAsync(newSlider);
+                await _context.Sliders.AddAsync(newSlider);
 
-                //await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
 

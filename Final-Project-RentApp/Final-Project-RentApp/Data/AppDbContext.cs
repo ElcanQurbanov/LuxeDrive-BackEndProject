@@ -26,6 +26,13 @@ namespace Final_Project_RentApp.Data
         public DbSet<BlogImage> BlogImages { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<CarCategory> CarCategories { get; set; }
+        public DbSet<CarTag> CarTags { get; set; }
+        public DbSet<SectionHeader> SectionHeaders { get; set; }
+
+        //public DbSet<Quality> Qualities { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

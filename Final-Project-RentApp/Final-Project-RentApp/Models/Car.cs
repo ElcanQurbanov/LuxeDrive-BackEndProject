@@ -8,6 +8,7 @@
         public int CarClassId { get; set; }
         public CarClass CarClass { get; set; }
         public ICollection<CarImage> CarImages { get; set; }
-        //public ICollection<Category> Categories { get; set; }
+        public ICollection<CarTag> CarTags { get; set; }
+        public ICollection<CarCategory> CarCategories { get; set; }
     }
 }

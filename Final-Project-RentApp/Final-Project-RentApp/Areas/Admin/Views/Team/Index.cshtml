@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Team>
+
+@{
+    ViewData["Title"] = "Team";
+}
+
+
+<div class="container my-5">
+    <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Operation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var team in Model)
+                {
+
+                    <tr>
+
+                        <td class="py-1">
+                            <img src="~/assets/img/home/@team.Image" style="width:70px; height:70px; border-radius:50%" alt="image">
+                        </td>
+
+                        <td class="py-1">
+                            @team.Name
+                        </td>
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@team.Id">
+                                Info
+                            </a>
+
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@team.Id">
+                                Edit
+                            </a>
+
+                            <form asp-action="Delete" asp-route-id="@team.Id" style="display:inline-block;" method="post">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+
+
+
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>

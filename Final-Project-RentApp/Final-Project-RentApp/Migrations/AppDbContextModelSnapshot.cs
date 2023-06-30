@@ -66,10 +66,7 @@ namespace Final_Project_RentApp.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
+                    b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -209,6 +206,35 @@ namespace Final_Project_RentApp.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("CarCategories");
+                });
+
             modelBuilder.Entity("Final_Project_RentApp.Models.CarClass", b =>
                 {
                     b.Property<int>("Id")
@@ -292,6 +318,57 @@ namespace Final_Project_RentApp.Migrations
                     b.HasIndex("CarId");
 
                     b.ToTable("CarImages");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("CarTags");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.Comfort", b =>
@@ -525,6 +602,56 @@ namespace Final_Project_RentApp.Migrations
                     b.ToTable("PremiumRentalImages");
                 });
 
+            modelBuilder.Entity("Final_Project_RentApp.Models.SectionHeader", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SectionHeaders");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Key")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("Final_Project_RentApp.Models.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -545,6 +672,28 @@ namespace Final_Project_RentApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.Team", b =>
@@ -730,6 +879,25 @@ namespace Final_Project_RentApp.Migrations
                     b.Navigation("CarClass");
                 });
 
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarCategory", b =>
+                {
+                    b.HasOne("Final_Project_RentApp.Models.Car", "Car")
+                        .WithMany("CarCategories")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final_Project_RentApp.Models.Category", "Category")
+                        .WithMany("CarCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Final_Project_RentApp.Models.CarClassInfo", b =>
                 {
                     b.HasOne("Final_Project_RentApp.Models.CarClass", "CarClass")
@@ -750,6 +918,25 @@ namespace Final_Project_RentApp.Migrations
                         .IsRequired();
 
                     b.Navigation("Car");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarTag", b =>
+                {
+                    b.HasOne("Final_Project_RentApp.Models.Car", "Car")
+                        .WithMany("CarTags")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Final_Project_RentApp.Models.Tag", "Tag")
+                        .WithMany("CarTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
+
+                    b.Navigation("Tag");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.QuaranteeImage", b =>
@@ -832,12 +1019,21 @@ namespace Final_Project_RentApp.Migrations
 
             modelBuilder.Entity("Final_Project_RentApp.Models.Car", b =>
                 {
+                    b.Navigation("CarCategories");
+
                     b.Navigation("CarImages");
+
+                    b.Navigation("CarTags");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.CarClass", b =>
                 {
                     b.Navigation("CarClassInfos");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.Category", b =>
+                {
+                    b.Navigation("CarCategories");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.Quarantee", b =>
@@ -848,6 +1044,11 @@ namespace Final_Project_RentApp.Migrations
             modelBuilder.Entity("Final_Project_RentApp.Models.PremiumRental", b =>
                 {
                     b.Navigation("PremiumRentalImages");
+                });
+
+            modelBuilder.Entity("Final_Project_RentApp.Models.Tag", b =>
+                {
+                    b.Navigation("CarTags");
                 });
 #pragma warning restore 612, 618
         }

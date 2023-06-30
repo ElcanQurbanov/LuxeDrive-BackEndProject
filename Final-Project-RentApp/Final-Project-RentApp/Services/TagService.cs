@@ -1,19 +1,22 @@
-﻿using Final_Project_RentApp.Models;
+﻿using Final_Project_RentApp.Data;
+using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_RentApp.Services
 {
     public class TagService : ITagService
     {
-        
-        public Task<IEnumerable<Tag>> GetAllAsync()
+        private readonly AppDbContext _context;
+
+        public TagService(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<Tag> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Include(t => t.CarTags).ThenInclude(c => c.Car).ToListAsync();
+
+        public async Task<Tag> GetByIdAsync(int id) => await _context.Tags.FirstOrDefaultAsync(t => t.Id == id);
+
     }
 }

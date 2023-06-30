@@ -37,14 +37,13 @@ namespace Final_Project_RentApp.Controllers
                 return View(model);
             }
 
-            Random rnd = new Random();
+            //Random rnd = new Random();
 
             AppUser newUser = new()
             {
-                FirstName = model.FirstName,
-                LastName = model.Lastname,
+                FullName = model.FullName,
                 Email = model.Email,
-                UserName = model.FirstName + "-" + model.Lastname + rnd.Next(1000, 10000),
+                UserName = model.Username
             };
 
             var result = await _userManager.CreateAsync(newUser, model.Password);

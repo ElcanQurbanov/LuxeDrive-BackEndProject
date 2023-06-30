@@ -5,10 +5,9 @@ namespace Final_Project_RentApp.ViewModels.Account
     public class RegisterVM
     {
         [Required]
-        public string FirstName { get; set; }
+        public string Username { get; set; }
         [Required]
-        public string Lastname { get; set; }
-        [Required]
+        public string FullName { get; set; }
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         [Required]

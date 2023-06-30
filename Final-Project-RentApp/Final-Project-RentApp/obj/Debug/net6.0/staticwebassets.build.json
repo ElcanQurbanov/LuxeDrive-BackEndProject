@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XK9CSIjgAEynNcK86kyo4Ua2/nMvnTz1DOyTWG+Nc+U=",
+  "Hash": "2Q3uYUNY/f09GiQCOksWHHF0GmaXiq8wW+FgsAiKpA4=",
   "Source": "Final-Project-RentApp",
   "BasePath": "_content/Final-Project-RentApp",
   "Mode": "Default",
@@ -3245,6 +3245,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\templates\\verify.html",
+      "SourceId": "Final-Project-RentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\",
+      "BasePath": "_content/Final-Project-RentApp",
+      "RelativePath": "templates/verify.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\verify.html"
     }
   ]
 }
