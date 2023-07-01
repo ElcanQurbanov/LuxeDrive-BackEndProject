@@ -1,0 +1,26 @@
+﻿@model TagEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container my-5">
+
+    <h1 style="color:darkcyan;">Tag edit</h1>
+
+
+
+    <form class="form-sample" asp-action="Edit" asp-route-id="@Model.Id" method="post">
+
+        <h4 class="my-3">Name</h4>
+        <input class="form-control" id="customFile" asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+
+    </form>
+
+</div>

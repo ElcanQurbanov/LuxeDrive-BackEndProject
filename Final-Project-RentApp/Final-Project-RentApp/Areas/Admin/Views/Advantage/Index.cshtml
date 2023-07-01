@@ -13,7 +13,7 @@
                 <tr>
                     <th scope="col">Title</th>
                     @*<th scope="col">Name</th>*@
-                    <th scope="col">Operation</th>
+                    <th scope="col">Operations</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,9 +26,9 @@
                             @advantage.Title
                         </td>
 
-                        <td class="py-1">
-                            @*@advantage.Name*@
-                        </td>
+                    @*    <td class="py-1">
+                            @advantage.Name
+                        </td>*@
 
                         <td>
                             <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@advantage.Id">

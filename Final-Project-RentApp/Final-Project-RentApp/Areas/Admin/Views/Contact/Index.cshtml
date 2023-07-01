@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Contact>
+
+@{
+    ViewData["Title"] = "Team";
+}
+
+
+<div class="container my-5">
+    <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    @*<th scope="col">Name</th>*@
+                    <th scope="col">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var contact in Model)
+                {
+
+                    <tr>
+
+                        <td class="py-1">
+                            @contact.City
+                        </td>
+
+                        @*    <td class="py-1">
+                    @advantage.Name
+                    </td>*@
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@contact.Id">
+                                Info
+                            </a>
+
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@contact.Id">
+                                Edit
+                            </a>
+
+                            <form asp-action="Delete" asp-route-id="@contact.Id" style="display:inline-block;" method="post">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+
+
+
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+

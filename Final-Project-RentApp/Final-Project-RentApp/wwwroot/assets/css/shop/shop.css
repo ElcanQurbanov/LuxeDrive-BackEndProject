@@ -430,14 +430,14 @@ footer #down-footer .footer-bottom-area .content {
 #shop .products .product-list .product-info .image-inner .button a span i {
   margin-right: 5px;
 }
-#shop .popular-product {
+#shop .recent-post {
   margin-top: 5rem;
 }
-#shop .popular-product .widget {
+#shop .recent-post .widget {
   margin-left: 15%;
 }
-#shop .popular-product .widget h5 {
-  padding-top: 7rem;
+#shop .recent-post .widget h5 {
+  padding-top: 6rem;
   color: #fff;
   font-weight: 400;
   font-family: "Times New Roman", Times, serif;
@@ -445,30 +445,30 @@ footer #down-footer .footer-bottom-area .content {
   line-height: 1.45455em;
   margin: 25px 0;
 }
-#shop .popular-product .information {
+#shop .recent-post .information {
   display: flex;
 }
-#shop .popular-product .information .media {
+#shop .recent-post .information .media {
   margin-left: 15%;
   display: flex;
 }
-#shop .popular-product .information .media .media-img {
+#shop .recent-post .information .media .media-img {
   width: 115px;
   height: 130px;
   margin-bottom: 25px;
 }
-#shop .popular-product .information .media .media-img img {
+#shop .recent-post .information .media .media-img img {
   width: 100%;
   height: 100%;
 }
-#shop .popular-product .information .content .text h6 {
+#shop .recent-post .information .content .text h6 {
   margin-left: 15px;
 }
-#shop .popular-product .information .content .text h6 a {
+#shop .recent-post .information .content .text h6 a {
   text-decoration: none;
   color: #fff;
 }
-#shop .popular-product .information .content .info a {
+#shop .recent-post .information .content .info a {
   margin-left: 15px;
   text-decoration: none;
   color: #bfa37c;

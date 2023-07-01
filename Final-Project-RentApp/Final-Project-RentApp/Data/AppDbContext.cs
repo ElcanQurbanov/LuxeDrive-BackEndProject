@@ -56,6 +56,12 @@ namespace Final_Project_RentApp.Data
             modelBuilder.Entity<Blog>().HasQueryFilter(s => !s.SoftDelete);
             modelBuilder.Entity<BlogImage>().HasQueryFilter(s => !s.SoftDelete);
             modelBuilder.Entity<Contact>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Tag>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Category>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<Setting>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<CarCategory>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<CarTag>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<SectionHeader>().HasQueryFilter(s => !s.SoftDelete);
         }
 
     }

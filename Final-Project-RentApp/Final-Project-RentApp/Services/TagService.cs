@@ -14,7 +14,7 @@ namespace Final_Project_RentApp.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Include(t => t.CarTags).ThenInclude(c => c.Car).ToListAsync();
+        public async Task<IEnumerable<Tag>> GetAllAsync() => await _context.Tags.Include(ct => ct.CarTags).ThenInclude(c => c.Car).ToListAsync();
 
         public async Task<Tag> GetByIdAsync(int id) => await _context.Tags.FirstOrDefaultAsync(t => t.Id == id);
 

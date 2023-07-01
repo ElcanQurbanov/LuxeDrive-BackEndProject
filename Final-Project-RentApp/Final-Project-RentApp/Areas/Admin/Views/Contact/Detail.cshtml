@@ -1,0 +1,37 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="container my-5">
+
+    <h1 style="color:darkcyan">Contact detail</h1>
+
+    @*  <div class="slider-content mt-5">
+    <h4 class="my-3">Image</h4>
+    <img style="width:300px; height:200px;" src="~/assets/images/website-images/@Model.Image" />
+    </div>*@
+
+    <div class="my-3">
+
+        <h4>City</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="City" disabled="disabled" />
+
+        <h4 class="my-3">Phone</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Phone" disabled="disabled" />
+
+        <h4>Street</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Street" disabled="disabled" />
+
+        <h4 class="my-3">WorkTime</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="WorkTime" disabled="disabled" />
+
+    </div>
+    <a class="btn btn-info mt-3" asp-action="Index">
+        Back
+    </a>
+
+</div>
+

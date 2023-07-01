@@ -1,45 +1,49 @@
-﻿@{
+﻿@model Comfort
+
+@{
     ViewData["Title"] = "Comfort";
 }
 
-@*<h1>Slider index</h1>*@
 
 <div class="container my-5">
     <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
-                <tr>    
-                    <th scope="col">Image</th>
-                    @*<th scope="col">BackGroundImage</th>*@
-                    <th scope="col">Operation</th>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Operations</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var comfort in Model)
-                {
-
+               
                     <tr>
 
                         <td class="py-1">
-                            <img src="~/assets/img/home/@comfort.Image" style="width:110px; height:110px; border-radius:50%" alt="image">
+                            @Model.Title
                         </td>
 
+                    <td class="py-1">
+                        @Model.Phone
+                    </td>
+
+
+
                         @*    <td class="py-1">
-                    <img src="~/assets/images/website-images/@slider.BackgroundImage" style="width:70px; height:70px; border-radius:50%" alt="image">
+                    @advantage.Name
                     </td>*@
 
-
                         <td>
-                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@comfort.Id">
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@Model.Id">
                                 Info
                             </a>
 
-                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@comfort.Id">
+                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">
                                 Edit
                             </a>
 
-                            <form asp-action="Delete" asp-route-id="@comfort.Id" style="display:inline-block;" method="post">
+                            <form asp-action="Delete" asp-route-id="@Model.Id" style="display:inline-block;" method="post">
                                 <button type="submit" class="btn btn-outline-danger">
                                     Delete
                                 </button>
@@ -49,7 +53,7 @@
 
 
                     </tr>
-                }
+                
 
 
             </tbody>
