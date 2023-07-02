@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Q3uYUNY/f09GiQCOksWHHF0GmaXiq8wW+FgsAiKpA4=",
+  "Hash": "1zY6ZidUfN/iwxiaKlsSZcX3isf+GscqthdaW9pe/yo=",
   "Source": "Final-Project-RentApp",
   "BasePath": "_content/Final-Project-RentApp",
   "Mode": "Default",
@@ -1088,6 +1088,40 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\about\\rolls-royce2.jpg"
     },
     {
+      "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg",
+      "SourceId": "Final-Project-RentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\",
+      "BasePath": "_content/Final-Project-RentApp",
+      "RelativePath": "assets/img/blog/1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg",
+      "SourceId": "Final-Project-RentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\",
+      "BasePath": "_content/Final-Project-RentApp",
+      "RelativePath": "assets/img/blog/a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg"
+    },
+    {
       "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-detail-img1.jpg",
       "SourceId": "Final-Project-RentApp",
       "SourceType": "Discovered",
@@ -1154,6 +1188,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\blog-img2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg",
+      "SourceId": "Final-Project-RentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\",
+      "BasePath": "_content/Final-Project-RentApp",
+      "RelativePath": "assets/img/blog/ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog\\ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg"
     },
     {
       "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\recent-post-img1.jpg",

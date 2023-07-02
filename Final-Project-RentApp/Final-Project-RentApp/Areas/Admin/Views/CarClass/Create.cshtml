@@ -1,0 +1,38 @@
+﻿@model CarClassCreateVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container my-5">
+    <h1 style="color:darkcyan; text-align:center">Team create</h1>
+
+    <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <h4 class="my-3" style="color:darkcyan">Images</h4>
+            <input class="form-control " id="customFile" asp-for="Photos" />
+            <span class="text-danger" asp-validation-for="Photos"></span>
+        </div>
+
+        <div class="form-group">
+            <h4 class="my-3" style="color:darkcyan">Name</h4>
+            <input type="text" placeholder="Name" class="form-control" id="customFile" asp-for="Name" />
+            <span class="text-danger" asp-validation-for="Name"></span>
+        </div>
+
+        <div class="form-group">
+            <h4 class="my-3" style="color:darkcyan">StartPrice</h4>
+            <input type="text" placeholder="StartPrice" class="form-control" id="customFile" asp-for="StartPrice" />
+            <span class="text-danger" asp-validation-for="StartPrice"></span>
+        </div>
+
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+
+    </form>
+</div>
+

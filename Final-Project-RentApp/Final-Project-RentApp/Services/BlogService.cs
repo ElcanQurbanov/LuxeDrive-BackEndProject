@@ -16,7 +16,7 @@ namespace Final_Project_RentApp.Services
 
         public async Task<IEnumerable<Blog>> GetAllAsync() => await _context.Blogs.Include(i => i.BlogImages).ToListAsync();
 
-        public async Task<Blog> GetByIdAsync(int id) => await _context.Blogs.FindAsync(id);
+        public async Task<Blog> GetByIdAsync(int id) => await _context.Blogs.Include(b=>b.BlogImages).FirstOrDefaultAsync(b => b.Id == id);
 
     }
 }

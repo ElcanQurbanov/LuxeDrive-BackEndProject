@@ -74,11 +74,9 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
                 string fileName = Guid.NewGuid().ToString() + "-" + slider.Photo.FileName;
 
-                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", fileName);
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", fileName);
 
                 await FileHelper.SaveFileAsync(path, slider.Photo);
-
-
 
                 Slider newSlider = new()
                 {
@@ -113,7 +111,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
         //        if (slider is null) return NotFound();
 
-        //        string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", slider.Image);
+        //        string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", slider.Image);
 
         //        FileHelper.DeleteFile(path);
 
