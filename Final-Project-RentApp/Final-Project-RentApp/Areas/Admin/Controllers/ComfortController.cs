@@ -31,57 +31,26 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
+        public async Task<IActionResult> Detail()
         {
-            if (id == null) return BadRequest();
-
-            Comfort comfort = await _comfortService.GetByIdAsync((int)id);
+            Comfort comfort = await _comfortService.GetComfortAsync();
 
             if (comfort is null) return NotFound();
 
             return View(comfort);
         }
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ComfortCreateVM model)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-
-            Comfort comfort = new()
-            {
-                Title = model.Title,
-                Phone = model.Phone,
-                Description = model.Description,
-            };
-
-            await _context.Comforts.AddAsync(comfort);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
-
-        }
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int id)
+        public async Task<IActionResult> Edit()
         {
-            Comfort comfort = await _comfortService.GetByIdAsync(id);
+            Comfort comfort = await _comfortService.GetComfortAsync();
 
             ComfortEditVM model = new()
             {
                 Title = comfort.Title,
                 Phone = comfort.Phone,
                 Description = comfort.Description,
-                Id = id
             };
 
             return View(model);
@@ -90,13 +59,12 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(ComfortEditVM model, int id)
+        public async Task<IActionResult> Edit(ComfortEditVM model)
         {
-            if (id == null) return BadRequest();
 
             //Tag tag = await _context.Tags.AsNoTracking().FirstOrDefaultAsync(m => m.Id == id);
 
-            Comfort comfort = await _comfortService.GetByIdAsync(id);
+            Comfort comfort = await _comfortService.GetComfortAsync();
 
             if (comfort == null) return NotFound();
 
@@ -117,29 +85,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
         }
 
-        public async Task<IActionResult> Delete(int? id)
-        {
-            try
-            {
-                if (id == null) return BadRequest();
-
-                Comfort comfort = await _comfortService.GetByIdAsync((int)id);
-
-                if (comfort is null) return NotFound();
-
-                _context.Comforts.Remove(comfort);
-
-                await _context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
 
 
 

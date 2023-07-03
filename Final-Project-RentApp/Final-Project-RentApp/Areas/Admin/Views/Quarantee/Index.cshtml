@@ -6,7 +6,6 @@
 
 
 <div class="container my-5">
-    <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -18,8 +17,6 @@
             </thead>
             <tbody>
                 
-                
-
                     <tr>
 
                         <td class="py-1">
@@ -31,21 +28,15 @@
                         </td>
 
                         <td>
-                        <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@Model.Id">
+                        <a class="btn btn-outline-info" asp-action="Detail">
                                 Info
                             </a>
 
-                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@Model.Id">
+                        <a class="btn btn-outline-primary" asp-action="Edit">
                                 Edit
                             </a>
 
-                        <form asp-action="Delete" asp-route-id="@Model.Id" style="display:inline-block;" method="post">
-                                <button type="submit" class="btn btn-outline-danger">
-                                    Delete
-                                </button>
-                            </form>
                         </td>
-
 
 
                     </tr>

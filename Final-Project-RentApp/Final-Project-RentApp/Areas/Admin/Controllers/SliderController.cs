@@ -99,34 +99,34 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
         }
 
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    try
-        //    {
-        //        if (id == null) return BadRequest();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            try
+            {
+                if (id == null) return BadRequest();
 
-        //        Slider slider = await _sliderService.GetByIdAsync((int)id);
+                Slider slider = await _sliderService.GetByIdAsync((int)id);
 
-        //        if (slider is null) return NotFound();
+                if (slider is null) return NotFound();
 
-        //        string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", slider.Image);
+                string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", slider.Image);
 
-        //        FileHelper.DeleteFile(path);
+                FileHelper.DeleteFile(path);
 
-        //        _context.Sliders.Remove(slider);
+                _context.Sliders.Remove(slider);
 
-        //        await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
 
-        //        return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
 
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
 
         [HttpGet]
@@ -187,13 +187,13 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                         return View(dbSlider);
                     }
 
-                    string oldPath = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", dbSlider.Image);
+                    string oldPath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", dbSlider.Image);
 
                     FileHelper.DeleteFile(oldPath);
 
                     string fileName = Guid.NewGuid().ToString() + "-" + slider.Photo.FileName;
 
-                    string newPath = FileHelper.GetFilePath(_env.WebRootPath, "assets/images/website-images", fileName);
+                    string newPath = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", fileName);
 
                     await FileHelper.SaveFileAsync(newPath, slider.Photo);
 
@@ -211,7 +211,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 //dbSlider.Title = slider.Title;
 
 
-                //await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception)

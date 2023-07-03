@@ -5,6 +5,5 @@ namespace Final_Project_RentApp.Services.Interfaces
     public interface IQuaranteeService
     {
         Task<Quarantee> GetQuaranteeAsync();
-        Task<Quarantee> GetByIdAsync(int id);
     }
 }

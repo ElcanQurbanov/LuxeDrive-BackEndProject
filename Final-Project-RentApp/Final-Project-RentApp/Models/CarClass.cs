@@ -6,6 +6,5 @@
         public string Image { get; set; }
         public string Name { get; set; }
         public ICollection<CarClassInfo> CarClassInfos { get; set; }
-        //public ICollection<Blog> Blogs { get; set; }
     }
 }

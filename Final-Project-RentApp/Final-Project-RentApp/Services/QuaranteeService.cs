@@ -14,8 +14,6 @@ namespace Final_Project_RentApp.Services
             _context = context;
         }
 
-        public async Task<Quarantee> GetByIdAsync(int id) => await _context.Quarantees.FindAsync(id);
-
         public async Task<Quarantee> GetQuaranteeAsync() => await _context.Quarantees.Include(i => i.QuaranteeImages).FirstOrDefaultAsync();
 
     }

@@ -52,91 +52,93 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create(QuaranteeCreateVM quarantee)
-        //{
-        //    try
-        //    {
-        //        if (!ModelState.IsValid)
-        //        {
-        //            return View();
-        //        }
+        [HttpGet]
+        public async Task<IActionResult> Edit()
+        {
+            Quarantee quarantee = await _quaranteeService.GetQuaranteeAsync();
 
-        //        foreach (var photo in quarantee.Photos)
-        //        {
-        //            if (!photo.CheckFileType("image/"))
-        //            {
-        //                ModelState.AddModelError("Photo", "File type must be image");
-        //                return View();
-        //            }
+            List<string> imagesNames = new();
 
-        //            if (!photo.CheckFileSize(200))
-        //            {
-        //                ModelState.AddModelError("Photo", "Image size must be max 200kb");
-        //                return View();
-        //            }
-        //        }
+            foreach (var image in quarantee.QuaranteeImages)
+            {
+                imagesNames.Add(image.Image);
+            }
 
-        //        foreach (var photo in quarantee.Photos)
-        //        {
-        //            string fileName = Guid.NewGuid().ToString() + "-" + photo.FileName;
-
-        //            string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", fileName);
-
-        //            await FileHelper.SaveFileAsync(path, photo);
-
-        //            Quarantee newQuarantee = new()
-        //            {
-        //                QuaranteeImages = fileName,
-        //                Name = team.Name,
-        //                //Position = team.Position,
-        //            };
-
-        //            await _context.Teams.AddAsync(newTeam);
-        //        }
-
-        //        await _context.SaveChangesAsync();
+            QuaranteeEditVM model = new()
+            {
+                Id = quarantee.Id,
+                Title = quarantee.Title,
+                SubTitle = quarantee.SubTitle,
+                Description = quarantee.Description,
+                Image = imagesNames
+			};
 
 
-        //        return RedirectToAction(nameof(Index));
+            return View(model);
+        }
 
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(QuaranteeEditVM quarantee)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
 
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+                foreach (var photo in quarantee.Photos)
+                {
+                    if (!photo.CheckFileType("image/"))
+                    {
+                        ModelState.AddModelError("Photo", "File type must be image");
+                        return View();
+                    }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    try
-        //    {
-        //        if (id == null) return BadRequest();
+                    if (!photo.CheckFileSize(200))
+                    {
+                        ModelState.AddModelError("Photo", "Image size must be max 200kb");
+                        return View();
+                    }
+                }
 
-        //        Quarantee quarantee = await _quaranteeService.GetByIdAsync((int)id);
+                List<QuaranteeImage> images = new();
 
-        //        if (quarantee is null) return NotFound();
+                foreach (var photo in quarantee.Photos)
+                {
+                    string fileName = Guid.NewGuid().ToString() + "-" + photo.FileName;
 
-        //        string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", quarantee.Image);
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", fileName);
 
-        //        FileHelper.DeleteFile(path);
+                    await FileHelper.SaveFileAsync(path, photo);
 
-        //        _context.Teams.Remove(team);
+                    images.Add(new QuaranteeImage { Image = fileName });
+                }
 
-        //        await _context.SaveChangesAsync();
+                Quarantee newQuarantee = new()
+                {
+                    Id = quarantee.Id,
+                    QuaranteeImages = images,
+                    Title = quarantee.Title,
+                    SubTitle = quarantee.SubTitle,
+                    Description = quarantee.Description,
+                };
 
-        //        return RedirectToAction(nameof(Index));
+                _context.Quarantees.Update(newQuarantee);
 
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //}
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Index));
+
+            }
+
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
 
 

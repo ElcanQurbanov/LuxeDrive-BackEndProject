@@ -72,10 +72,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Comfort/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tZm9ydFxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Comfort/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tZm9ydFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -128,12 +124,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJlbWl1bVJlbnRhbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Quarantee/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhcmFudGVlXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Quarantee/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhcmFudGVlXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Quarantee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVhcmFudGVlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/Quarantee/Index.cshtml]
@@ -226,6 +222,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Views/Shared/_UserLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Views/Shared/_ValidationScriptsPartial.cshtml]

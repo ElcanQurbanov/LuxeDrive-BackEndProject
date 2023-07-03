@@ -76,6 +76,8 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     }
                 }
 
+                decimal convertedPrice = decimal.Parse(carClass.StartPrice.Replace(".",","));
+
                 foreach (var photo in carClass.Photos)
                 {
                     string fileName = Guid.NewGuid().ToString() + "-" + photo.FileName;
@@ -87,9 +89,8 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     CarClass newCarClass = new()
                     {
                         Image = fileName,
-                        //StartPrice = carClass.StartPrice,
+                        StartPrice = convertedPrice,
                         Name = carClass.Name,
-                        //Position = team.Position,
                     };
 
                     await _context.CarClasses.AddAsync(newCarClass);
@@ -150,7 +151,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             {
                 Id = carClass.Id,
                 Name = carClass.Name,
-                //StartPrice = carClass.StartPrice,
+                StartPrice = carClass.StartPrice.ToString(),
                 Image = carClass.Image
             };
 
@@ -176,12 +177,15 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
                     return View(carClass);
                 }
+                decimal convertedPrice = decimal.Parse(carClass.StartPrice.Replace(".", ","));
 
                 CarClassEditVM model = new()
                 {
                     Id = carClass.Id,
                     Name = carClass.Name,
-                    Image = carClass.Image
+                    Image = carClass.Image,
+                    StartPrice=convertedPrice.ToString(),
+                    
                 };
 
                 if (carClass.Photo != null)
@@ -219,6 +223,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 }
 
                 dbCarClass.Name = carClass.Name;
+                dbCarClass.StartPrice = convertedPrice;
                 //dbCarClass.StartPrice = carClass.StartPrice;
 
                 await _context.SaveChangesAsync();

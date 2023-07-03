@@ -6,7 +6,5 @@ namespace Final_Project_RentApp.Areas.Admin.ViewModels
     {
         [Required]
         public IFormFile Photo { get; set; }
-        [Required]
-        public IFormFile BackGroundImage { get; set; }
     }
 }

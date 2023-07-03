@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Car
+
+@{
     ViewData["Title"] = "Car Detail - LuxeDrive";
 }
 
@@ -80,7 +82,7 @@
                         <div class="content">
 
                             <div class="title">
-                                <h2>Rolls Royce Overview </h2>
+                                <h2>@Model.Name</h2>
                             </div>
 
                             <div class="info">
@@ -143,7 +145,7 @@
                     </div>
 
                     <div class="product-name">
-                        <h4>Rolls Royce Phantom</h4>
+                        <h4>@Model.Name</h4>
                     </div>
 
                     <div class="tags">

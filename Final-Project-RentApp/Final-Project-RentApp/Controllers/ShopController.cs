@@ -26,9 +26,15 @@ namespace Final_Project_RentApp.Controllers
             return View(model);
         }
 
-        public IActionResult Detail(int id)
+        public async Task<IActionResult> Detail(int? id)
         {
-            return View();
+            if (id == null) return BadRequest();
+
+            Car car = await _carService.GetByIdAsync((int)id);
+
+            if (car == null) return NotFound();
+
+            return View(car);
         }
     }
 }

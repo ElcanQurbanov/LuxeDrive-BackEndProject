@@ -1,0 +1,47 @@
+﻿@model QuaranteeEditVM
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container my-5">
+
+    <h1 style="color:darkcyan;">Team edit</h1>
+
+
+
+    <form class="form-sample" asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
+
+        <h4 class="my-3">Image</h4>
+        <div class="slider-content my-5">
+            @foreach (var image in Model.Image)
+            {
+                <img style="width:400px; height:200px;" src="~/assets/img/home/@image" />
+            }
+        </div>
+
+        <input class="form-control" id="customFile" asp-for="Photos" />
+        <span class="text-danger" asp-validation-for="Photos"></span>
+
+        <h4 class="my-3">Title</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+
+        <h4 class="my-3">SubTitle</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="SubTitle" />
+        <span class="text-danger" asp-validation-for="SubTitle"></span>
+
+
+        <h4 class="my-3">Description</h4>
+        <input type="text" class="form-control" id="customFile" asp-for="Description" />
+        <span class="text-danger" asp-validation-for="Description"></span>
+
+        <div class="buttons my-3">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <a class="btn btn-light" asp-action="Index">Cancel</a>
+        </div>
+
+    </form>
+
+</div>
+

@@ -86,7 +86,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     {
                         Image = fileName,
                         Name = team.Name,
-                        //Position = team.Position,
+                        Phone = team.Phone
                     };
 
                     await _context.Teams.AddAsync(newTeam);
