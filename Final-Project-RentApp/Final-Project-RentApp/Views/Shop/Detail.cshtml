@@ -61,20 +61,26 @@
 
                     <div class="product-detail-info">
 
-                        <img src="~/assets/img/home/product-detail-img1.jpg" alt="">
+
+
+                        <img src="~/assets/img/home/@Model.CarImages.FirstOrDefault(m => !m.IsMain && !m.IsPreview).Image" alt="">
 
                         <div class="row">
-                            <div class="col-4">
-                                <img src="~/assets/img/home/product-detail-img2.jpg" alt="">
-                            </div>
 
-                            <div class="col-4">
+                            @foreach (var car in Model.CarImages.Where(m => !m.IsMain && !m.IsPreview).Skip(1))
+                            {
+                                <div class="col-4">
+                                    <img src="~/assets/img/home/@car.Image" alt="">
+                                </div>
+                            }
+
+                           @* <div class="col-4">
                                 <img src="~/assets/img/home/product-detail-img3.jpg" alt="">
                             </div>
 
                             <div class="col-4">
                                 <img src="~/assets/img/home/product-detail-img4.jpg" alt="">
-                            </div>
+                            </div>*@
 
 
                         </div>
@@ -194,7 +200,7 @@
                         <div class="price">
 
                             <span class="currency">$</span>
-                            <span>360</span>
+                            <span>@Model.Price.ToString("0.####")</span>
 
                             <div class="price-label">
                                 <span>/</span>

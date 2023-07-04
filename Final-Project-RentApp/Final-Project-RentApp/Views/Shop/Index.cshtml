@@ -99,14 +99,14 @@
                                         <div class="product-info">
 
                                             <div class="product-img">
-                                                <a asp-action="Detail"><img src="~/assets/img/home/@car.CarImages.FirstOrDefault(ci => ci.IsMain).Image" alt=""></a>
+                                                <a asp-action="Detail" asp-route-id="@car.Id"><img src="~/assets/img/home/@car.CarImages.FirstOrDefault(ci => ci.IsMain).Image" alt=""></a>
                                             </div>
 
                                             <div class="content">
 
                                                 <div class="top-holder">
 
-                                                    <a href=""><h5>@car.Name</h5></a>
+                                                    <a asp-action="Detail" asp-route-id="@car.Id"><h5>@car.Name</h5></a>
 
                                                     <div class="price">
                                                         <del>$180.00</del>
@@ -124,7 +124,7 @@
                                             <div class="image-inner">
 
                                                 <div class="button">
-                                                    <a asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Place order</span></a>
+                                                    <a asp-action="Detail" asp-route-id="@car.Id"><span><i class="fa-solid fa-plus"></i>Place order</span></a>
                                                 </div>
 
                                             </div>
@@ -152,29 +152,32 @@
                             <h5>Recent Posts</h5>
                         </div>
 
-                        <div class="information">
-                            <div class="media">
+                        @foreach (var car in Model.Cars)
+                        {
+                            <div class="information">
+                                <div class="media">
 
-                                <div class="media-img">
-                                    <a asp-action="Detail"><img src="~/assets/img/shop/popular-product-img1.jpg" alt=""></a>
+                                    <div class="media-img">
+                                        <a asp-action="Detail" asp-route-id="@car.Id"><img src="~/assets/img/home/@car.CarImages.FirstOrDefault().Image" alt=""></a>
+                                    </div>
+
+
                                 </div>
 
+                                <div class="content">
+                                    <div class="text">
+                                        <h6><a asp-action="Detail" asp-route-id="@car.Id">@car.Name</a></h6>
+                                    </div>
 
+                                    <div class="info">
+                                        <a asp-action="Detail" asp-route-id="@car.Id">$@car.Price</a>
+                                    </div>
+
+                                </div>
                             </div>
+                        }
 
-                            <div class="content">
-                                <div class="text">
-                                    <h6><a href="">Mercedes Benz</a></h6>
-                                </div>
-
-                                <div class="info">
-                                    <a href="">$170.00</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
+                      @*
                         <div class="information">
                             <div class="media">
 
@@ -219,7 +222,7 @@
 
                             </div>
                         </div>
-
+*@
 
 
 

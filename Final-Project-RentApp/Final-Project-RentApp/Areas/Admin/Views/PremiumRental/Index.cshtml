@@ -1,66 +1,52 @@
 ﻿@model PremiumRental
 
 @{
-    ViewData["Title"] = "PremiumRental";
+    ViewData["Title"] = "Quarantee";
 }
 
 
 <div class="container my-5">
-    <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Image</th>
-                    <th scope="col">BackGroundImage</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Offer</th>
+                    <th scope="col">ExperienceCount</th>
                     <th scope="col">Operation</th>
                 </tr>
             </thead>
             <tbody>
-                @*@foreach (var premiumRental in Model.PremiumRentalImages)
-                {
 
-                    <tr>
+                <tr>
 
-                        <td class="py-1">
-                            <img src="~/assets/images/website-images/@premiumRental.Image" style="width:70px; height:70px; border-radius:50%" alt="image">
-                        </td>
+                    <td class="py-1">
+                        <img src="~/assets/img/home/@Model.PremiumRentalImages.FirstOrDefault().Image" style="width:70px; height:70px; border-radius:50%" alt="image">
+                    </td>
 
-                        <td class="py-1">
-                            <img src="~/assets/images/website-images/@premiumRental.BackgroundImage" style="width:70px; height:70px; border-radius:50%" alt="image">
-                        </td>
+                    <td class="py-1">
+                        @*@Html.Raw(Model.Title)*@
+                        @Model.Title
+                    </td>
 
-                        <td class="py-1">
-                            @premiumRental.Title
-                        </td>
+                    <td class="py-1">
+                        @Model.ExperienceCount
+                    </td>
 
-                        <td class="py-1">
-                            @premiumRental.Offer
-                        </td>
+                    <td>
+                        <a class="btn btn-outline-info" asp-action="Detail">
+                            Info
+                        </a>
 
+                        <a class="btn btn-outline-primary" asp-action="Edit">
+                            Edit
+                        </a>
 
-                        <td>
-                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@premiumRental.Id">
-                                Info
-                            </a>
-
-                            <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@premiumRental.Id">
-                                Edit
-                            </a>
-
-                            <form asp-action="Delete" asp-route-id="@premiumRental.Id" style="display:inline-block;" method="post">
-                                <button type="submit" class="btn btn-outline-danger">
-                                    Delete
-                                </button>
-                            </form>
-                        </td>
+                    </td>
 
 
+                </tr>
 
-                    </tr>
-                }*@
 
 
             </tbody>

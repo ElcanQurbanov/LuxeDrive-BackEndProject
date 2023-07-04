@@ -120,6 +120,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRXhwZXJpZW5jZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/PremiumRental/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJlbWl1bVJlbnRhbFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/PremiumRental/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJlbWl1bVJlbnRhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cavid/Desktop/LuxeDrive-RentApp/Final-Project-RentApp/Final-Project-RentApp/Areas/Admin/Views/PremiumRental/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJlbWl1bVJlbnRhbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

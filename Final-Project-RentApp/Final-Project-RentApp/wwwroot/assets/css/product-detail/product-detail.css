@@ -306,11 +306,14 @@ footer #down-footer .footer-bottom-area .content {
 }
 #product-detail .product-detail-info {
   width: 100%;
-  height: 100%;
+  height: 550px;
 }
 #product-detail .product-detail-info img {
   margin-bottom: 20px;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #product-detail .product-detail-info .content .title h2 {
   color: #fff;

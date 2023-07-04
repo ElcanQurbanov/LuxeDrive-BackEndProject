@@ -33,11 +33,9 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
+        public async Task<IActionResult> Detail()
         {
-            if (id == null) return BadRequest();
-
-            Quarantee quarantee = await _context.Quarantees.Include(qi => qi.QuaranteeImages).FirstOrDefaultAsync(m => m.Id == id);
+            Quarantee quarantee = await _context.Quarantees.Include(qi => qi.QuaranteeImages).FirstOrDefaultAsync();
 
             //Quarantee quarantee = await _quaranteeService.GetByIdAsync((int)id);
 
@@ -46,11 +44,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             return View(quarantee);
         }
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
 
         [HttpGet]
         public async Task<IActionResult> Edit()

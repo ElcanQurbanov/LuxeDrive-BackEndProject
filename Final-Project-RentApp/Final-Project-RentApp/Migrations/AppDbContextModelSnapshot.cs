@@ -190,11 +190,17 @@ namespace Final_Project_RentApp.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Extra")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ShortDescription")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
@@ -308,6 +314,9 @@ namespace Final_Project_RentApp.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPreview")
                         .HasColumnType("bit");
 
                     b.Property<bool>("SoftDelete")
