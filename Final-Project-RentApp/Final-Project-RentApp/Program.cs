@@ -53,6 +53,8 @@ builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IFaqService, FaqService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IStaticDataService, StaticDataService>();
+
 
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<EmailSettings>();

@@ -374,7 +374,7 @@ footer #down-footer .footer-bottom-area .content {
   margin-top: 10rem;
 }
 #blog-detail .recent-post .widget {
-  margin-left: 15%;
+  margin-left: 12%;
 }
 #blog-detail .recent-post .widget h5 {
   padding-top: 6rem;
@@ -390,7 +390,7 @@ footer #down-footer .footer-bottom-area .content {
   display: flex;
 }
 #blog-detail .recent-post .information .media {
-  margin-left: 15%;
+  margin-left: 12%;
   display: flex;
 }
 #blog-detail .recent-post .information .media .media-img {
@@ -415,6 +415,6 @@ footer #down-footer .footer-bottom-area .content {
   color: #bfa37c;
   text-transform: uppercase;
   letter-spacing: 0.25em;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Times New Roman", Times, serif;
 }/*# sourceMappingURL=blog-detail.css.map */

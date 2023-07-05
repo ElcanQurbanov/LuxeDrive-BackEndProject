@@ -1,4 +1,5 @@
 ﻿using Final_Project_RentApp.Models;
+using Final_Project_RentApp.Services;
 using Final_Project_RentApp.Services.Interfaces;
 using Final_Project_RentApp.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -26,9 +27,17 @@ namespace Final_Project_RentApp.Controllers
             return View(model);
         }
 
-        public IActionResult Detail(int? id)
+        public async Task<IActionResult> Detail(int? id)
         {
-            return View(id);
+            if (id == null) return BadRequest();
+
+            Blog blog = await _blogService.GetByIdAsync((int)id);
+
+            if (blog == null) return NotFound();
+
+            return View(blog);
         }
+
+       
     }
 }

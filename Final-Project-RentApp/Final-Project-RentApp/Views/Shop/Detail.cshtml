@@ -147,7 +147,7 @@
                     </div> -->
 
                     <div class="img">
-                        <img src="~/assets/img/home/Rolls-Royce-PNG-Pic.png" alt="">
+                        <img style="object-fit:cover" src="~/assets/img/home/@Model.CarImages.FirstOrDefault(i => i.IsPreview).Image" alt="">
                     </div>
 
                     <div class="product-name">
@@ -155,12 +155,17 @@
                     </div>
 
                     <div class="tags">
-                        <a href="">4 Persons</a>
-                        <a href="">Automatic</a>
+
+                        @foreach (var tag in Model.CarTags.Select(ct => ct.Tag))
+                        {
+                            <a href="">@tag.Name</a>
+                        }
+
+                       @* <a href="">Automatic</a>
                         <a href="">Black Lether Interior</a>
                         <a href="">Fast</a>
                         <a href="">Lux</a>
-                        <a href="">Wi-Fi</a>
+                        <a href="">Wi-Fi</a>*@
                     </div>
 
                     <div class="extra-info">

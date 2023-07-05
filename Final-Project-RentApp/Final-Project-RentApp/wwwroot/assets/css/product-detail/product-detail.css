@@ -315,6 +315,9 @@ footer #down-footer .footer-bottom-area .content {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#product-detail .product-detail-info .content {
+  margin-top: 3rem;
+}
 #product-detail .product-detail-info .content .title h2 {
   color: #fff;
   font-weight: 400;

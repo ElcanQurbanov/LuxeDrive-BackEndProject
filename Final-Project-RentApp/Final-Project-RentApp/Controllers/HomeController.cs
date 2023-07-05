@@ -18,6 +18,7 @@ namespace Final_Project_RentApp.Controllers
         private readonly ITeamService _teamService;
         private readonly IPremiumRentalService _premiumRentalService;
         private readonly ICarClassService _carClassService;
+        private readonly IStaticDataService _staticDataService;
 
         public HomeController(ISliderService sliderService,
                               IComfortService comfortService,
@@ -26,7 +27,8 @@ namespace Final_Project_RentApp.Controllers
                               IQuaranteeService quaranteeService,
                               IPremiumRentalService premiumRentalService,
                               ITeamService teamService,
-                              ICarClassService carClassService)
+                              ICarClassService carClassService,
+                              IStaticDataService staticDataService)
         {
             _sliderService = sliderService;
             _comfortService = comfortService;
@@ -36,6 +38,7 @@ namespace Final_Project_RentApp.Controllers
             _teamService = teamService;
             _premiumRentalService = premiumRentalService;
             _carClassService = carClassService;
+            _staticDataService = staticDataService;
         }
 
         public async Task<IActionResult> Index()
@@ -48,6 +51,7 @@ namespace Final_Project_RentApp.Controllers
             IEnumerable<Team> teams = await _teamService.GetAllAsync();
             PremiumRental premiumRental = await _premiumRentalService.GetPremiumRentalAsync();
             IEnumerable<CarClass> carClasses = await _carClassService.GetAllAsync();
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeader();
 
             HomeVM model = new()
             {
@@ -58,7 +62,8 @@ namespace Final_Project_RentApp.Controllers
                 Quarantee = quarantee,
                 Teams = teams,
                 PremiumRental = premiumRental,
-                CarClasses = carClasses
+                CarClasses = carClasses,
+                SectionHeaders = sectionHeaders
             };
 
             return View(model);

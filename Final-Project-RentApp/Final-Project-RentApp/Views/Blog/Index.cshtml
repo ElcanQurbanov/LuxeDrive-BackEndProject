@@ -77,7 +77,7 @@
                         <div class="blog">
 
                             <div class="title">
-                                <h2><a asp-action="Detail">@blog.Title</a></h2>
+                                <h2><a asp-action="Detail" asp-route-id="@blog.Id">@blog.Title</a></h2>
                             </div>
 
                             <div class="subtitle">
@@ -87,7 +87,7 @@
                             <div class="content">
 
                                 <div class="img">
-                                    <a asp-action="Detail"> <img src="~/assets/img/blog/@blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Image" alt=""></a>
+                                    <a asp-action="Detail" asp-route-id="@blog.Id"><img src="~/assets/img/blog/@blog.BlogImages.FirstOrDefault(bi => bi.IsMain).Image" alt=""></a>
                                 </div>
 
                                 <div class="text">
@@ -97,86 +97,13 @@
                                 </div>
 
                                 <div class="button">
-                                    <a asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Discover</span></a>
+                                    <a asp-action="Detail" asp-route-id="@blog.Id" ><span><i class="fa-solid fa-plus"></i>Discover</span></a>
                                 </div>
 
                             </div>
                         </div>
 
                     }
-
-
-
-                 @*   <div class="blog">
-
-                        <div class="title">
-                            <h2><a asp-action="Detail"> Sports Car Interior And Equipment And How To Enjoy It</a></h2>
-                        </div>
-
-                        <div class="subtitle">
-                            <span>Jan 16. 2022.</span>
-                        </div>
-
-                        <div class="content">
-
-                            <div class="img">
-                                <a asp-action="Detail"> <img src="~/assets/img/blog/blog-img2.jpg" alt=""></a>
-                            </div>
-
-                            <div class="text">
-                                <p>
-                                    Nisl condimentum id venenatis a condimentum vitae sapien pellent esque habitant.
-                                    Massa id neque aliquam vestibulum. Diam quam nulla porttitor massa id neque aliquam.
-                                    Tortor at auctor urna nunc id cursus metus aliquam eleifend. At tellus at urna
-                                    condimentum mattis pellentesque. Tristique sollicitudin nibh sit amet commodo nulla.
-                                    Erat nam at lectus urna duis convallis. Vestibulum lectus mauris ultrices eros in
-                                    cursus turpis. Volutpat commodo
-                                </p>
-                            </div>
-
-                            <div class="button">
-                                <a asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Discover</span></a>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="blog">
-
-                        <div class="title">
-                            <h2><a asp-action="Detail"> Sports Car Interior And Equipment And How To Enjoy It</a></h2>
-                        </div>
-
-                        <div class="subtitle">
-                            <span>Jan 16. 2022.</span>
-                        </div>
-
-                        <div class="content">
-
-                            <div class="img">
-                                <a asp-action="Detail"> <img src="~/assets/img/blog/recent-post-img1.jpg" alt=""></a>
-                            </div>
-
-                            <div class="text">
-                                <p>
-                                    Nisl condimentum id venenatis a condimentum vitae sapien pellent esque habitant.
-                                    Massa id neque aliquam vestibulum. Diam quam nulla porttitor massa id neque aliquam.
-                                    Tortor at auctor urna nunc id cursus metus aliquam eleifend. At tellus at urna
-                                    condimentum mattis pellentesque. Tristique sollicitudin nibh sit amet commodo nulla.
-                                    Erat nam at lectus urna duis convallis. Vestibulum lectus mauris ultrices eros in
-                                    cursus turpis. Volutpat commodo
-                                </p>
-                            </div>
-
-                            <div class="button">
-                                <a asp-action="Detail"><span><i class="fa-solid fa-plus"></i>Discover</span></a>
-                            </div>
-
-                        </div>
-                    </div>*@
-
-
 
 
 
@@ -190,11 +117,13 @@
                             <h5>Recent Posts </h5>
                         </div>
 
-                        <div class="information">
+                        @foreach (var blog in Model.Blogs)
+                        {
+                              <div class="information">
                             <div class="media">
 
                                 <div class="media-img">
-                                    <a href=""><img src="~/assets/img/blog/recent-post-img1.jpg" alt=""></a>
+                                    <a asp-action="Detail" asp-route-id="@blog.Id" ><img src="~/assets/img/blog/@blog.BlogImages.FirstOrDefault().Image" alt=""></a>
                                 </div>
 
 
@@ -202,62 +131,18 @@
 
                             <div class="content">
                                 <div class="text">
-                                    <h6><a href=""> Manage Time The Best Way</a></h6>
+                                    <h6><a asp-action="Detail" asp-route-id="@blog.Id"> Manage Time The Best Way</a></h6>
                                 </div>
 
                                 <div class="info">
-                                    <a href=""> Jun 30. 2022.</a>
+                                        <a asp-action="Detail" asp-route-id="@blog.Id">@blog.CreateDate.ToString("MMMM dd. yyyy.", new CultureInfo("en"))</a>
                                 </div>
 
                             </div>
                         </div>
+                        }
 
-
-                        <div class="information">
-                            <div class="media">
-
-                                <div class="media-img">
-                                    <a href=""><img src="~/assets/img/blog/recent-post-img2.jpg" alt=""></a>
-                                </div>
-
-
-                            </div>
-
-                            <div class="content">
-                                <div class="text">
-                                    <h6><a href=""> The New Tech In Cars Now	</a></h6>
-                                </div>
-
-                                <div class="info">
-                                    <a href=""> Jun 25. 2022.</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="information">
-                            <div class="media">
-
-                                <div class="media-img">
-                                    <a href=""><img src="~/assets/img/blog/recent-post-img3.jpg" alt=""></a>
-                                </div>
-
-
-                            </div>
-
-                            <div class="content">
-                                <div class="text">
-                                    <h6><a href=""> Services That Come On Time	</a></h6>
-                                </div>
-
-                                <div class="info">
-                                    <a href=""> Jun 5. 2022.</a>
-                                </div>
-
-                            </div>
-                        </div>
-
+                      
 
 
 

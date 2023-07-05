@@ -160,7 +160,7 @@
                             </div>
 
                             <div class="content">
-
+                                
                                 <a asp-controller="Shop" asp-action="Detail" asp-route-id="@car.Id">
                                     <h5>@car.Name</h5>
                                 </a>
@@ -200,14 +200,12 @@
 
             <div class="title">
                 <h2>
-                    Ride To Destinations
-                    <br>
-                    With Maximum Comfort
+                    @Html.Raw(Model.SectionHeaders["HomeComfort"])
                 </h2>
             </div>
 
             <div class="subtitle">
-                <span>finest transport</span>
+                <span>@Model.SectionHeaders["HomeComfortSlogan"]</span>
             </div>
 
             <div class="line">

@@ -155,5 +155,81 @@ namespace Final_Project_RentApp.Controllers
         }
 
 
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM forgotPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            AppUser existUser = await _userManager.FindByEmailAsync(forgotPassword.Email);
+
+            if (existUser == null)
+            {
+                ModelState.AddModelError("Email", "User not found");
+                return View();
+            }
+
+            string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
+
+            string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
+
+            string subject = "Verify password reset email";
+
+            string html = string.Empty;
+
+            using (StreamReader reader = new StreamReader("wwwroot/templates/verify.html"))
+            {
+                html = reader.ReadToEnd();
+            }
+
+            html = html.Replace("{{link}}", link);
+            html = html.Replace("{{headerText}}", "Hello");
+
+            _emailService.Send(existUser.Email, subject, html);
+
+            return RedirectToAction(nameof(VerifyEmail));
+
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string userId, string token) => View(new ResetPasswordVM { Token = token, UserId = userId, });
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+        {
+            if (!ModelState.IsValid)
+            {
+                return  View(resetPassword);
+            }
+
+            AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);
+
+            if (existUser == null) return NotFound();
+
+            if (await _userManager.CheckPasswordAsync(existUser, resetPassword.Password))
+            {
+                ModelState.AddModelError("Email", "New password cant be same with old password");
+
+                return View(resetPassword);
+            }
+
+            await _userManager.ResetPasswordAsync(existUser, resetPassword.Token, resetPassword.Password);
+            
+            return RedirectToAction(nameof(Login));
+        }
+        
+
+
     }
 }

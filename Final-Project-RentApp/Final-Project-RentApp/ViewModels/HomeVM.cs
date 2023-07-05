@@ -12,5 +12,6 @@ namespace Final_Project_RentApp.ViewModels
         public IEnumerable<Team> Teams { get; set; }
         public PremiumRental PremiumRental { get; set; }
         public IEnumerable<CarClass> CarClasses { get; set; }
+        public Dictionary<string, string> SectionHeaders { get; set; }
     }
 }
