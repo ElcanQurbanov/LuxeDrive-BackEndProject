@@ -418,22 +418,38 @@ footer #down-footer .footer-bottom-area .content {
 }
 #product-detail .price-info .rezerv label {
   color: #fff;
-  padding: 7px 12px;
+  padding: 12px 12px;
 }
 #product-detail .price-info .rezerv input {
+  background-color: #141A1C;
+  border: 1px solid #bfa37c;
   outline: none;
-  height: 34px;
-  padding: 6px 12px;
-  background-color: #fff;
+  height: 40px;
+  padding: 18px 18px;
   background-image: none;
-  border: 1px solid #ccc;
+  color: #fff;
   border-radius: 4px;
 }
-#product-detail .price-info .button a {
+#product-detail .price-info .rezerv input::-moz-placeholder {
+  color: #fff;
+}
+#product-detail .price-info .rezerv input::placeholder {
+  color: #fff;
+}
+#product-detail .price-info .rezerv input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+#product-detail .price-info .items {
+  display: flex;
+  gap: 22px;
+}
+#product-detail .price-info .items .button a {
+  border-radius: 4px;
+  cursor: pointer;
   border: 1px solid #bfa37c;
   font-family: "Times New Roman", Times, serif;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 11px;
+  line-height: 30px;
   letter-spacing: 0.25em;
   position: relative;
   display: inline-flex;
@@ -444,19 +460,20 @@ footer #down-footer .footer-bottom-area .content {
   text-transform: uppercase;
   outline: 0;
   transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
-  padding: 17px 35px 17px 35px;
+  padding: 10px 10px 10px 10px;
   color: #fff;
   margin-top: 3rem;
   background-color: #141A1C;
 }
-#product-detail .price-info .button a span i {
+#product-detail .price-info .items .button a span i {
   margin-right: 5px;
 }
-#product-detail .price-info .button button {
+#product-detail .price-info .items .button button {
+  border-radius: 4px;
   border: 1px solid #bfa37c;
   font-family: "Times New Roman", Times, serif;
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 11px;
+  line-height: 30px;
   letter-spacing: 0.25em;
   position: relative;
   display: inline-flex;
@@ -467,12 +484,12 @@ footer #down-footer .footer-bottom-area .content {
   text-transform: uppercase;
   outline: 0;
   transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
-  padding: 17px 35px 17px 35px;
+  padding: 10px 10px 10px 10px;
   color: #fff;
   margin-top: 3rem;
   background-color: #141A1C;
 }
-#product-detail .price-info .button button span i {
+#product-detail .price-info .items .button button span i {
   margin-right: 5px;
 }
 

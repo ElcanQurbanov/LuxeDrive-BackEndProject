@@ -9,23 +9,31 @@ namespace Final_Project_RentApp.Controllers
     {
         private readonly IContactService _contactService;
         private readonly IPremiumRentalService _premiumRentalService;
+        private readonly IStaticDataService _staticDataService;
+
 
         public ContactController(IContactService contactService,
-                                 IPremiumRentalService premiumRentalService)
+                                 IPremiumRentalService premiumRentalService,
+                                 IStaticDataService staticDataService)
         {
             _contactService = contactService;
             _premiumRentalService = premiumRentalService;
+            _staticDataService = staticDataService;
+
         }
 
         public async Task<IActionResult> Index()
         {
             IEnumerable<Contact> contacts = await _contactService.GetAllAsync();
             PremiumRental premiumRental = await _premiumRentalService.GetPremiumRentalAsync();
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeader();
+
 
             ContactVM model = new()
             {
                 Contacts = contacts,
-                PremiumRental = premiumRental
+                PremiumRental = premiumRental,
+                SectionHeaders = sectionHeaders
             };
 
             return View(model);

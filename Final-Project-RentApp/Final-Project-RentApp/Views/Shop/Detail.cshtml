@@ -178,12 +178,7 @@
                         {
                             <a href="">@tag.Name</a>
                         }
-
-                       @* <a href="">Automatic</a>
-                        <a href="">Black Lether Interior</a>
-                        <a href="">Fast</a>
-                        <a href="">Lux</a>
-                        <a href="">Wi-Fi</a>*@
+                      
                     </div>
 
                     <div class="extra-info">
@@ -234,26 +229,36 @@
                             <form asp-controller="shop" asp-action="detail" method="post">
                             <div class="rezerv">
 
-                                <label for="">FullName:</label>
-                                <input asp-for="OrderVM.Username">
+                                <label for=""></label>
+                                <input placeholder="Full Name:" asp-for="OrderVM.Username">
 
-                                <label for="">Cell Phone:</label>
-                                <input asp-for="@Model.OrderVM.Phone" >
+                                <label for=""></label>
+                                <input placeholder="Cell Phone:" asp-for="@Model.OrderVM.Phone">
 
-                                <label for="">Date:</label>
-                                <input asp-for="@Model.OrderVM.Date">
+                                <label for=""></label>
+                                <input placeholder="Date:" class="white-placeholder" asp-for="@Model.OrderVM.Date">
 
                             </div>
 
-                            <div class="button">
-                                <button type="submit"><span><i class="fa-solid fa-plus"></i>Place order</span></button>
-                            </div>
+                             <div class="items">
+
+                                <div class="button">
+                                    <button type="submit"><span><i class="fa-solid fa-plus"></i>Place order</span></button>
+                                </div>
+
+                                <div class="button">
+                                    <a asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-plus"></i>Add Wihlist</span></a>
+                                </div>
+
+                             </div>
+
+                           
 
                             </form>
 
-                            <div class="button">
+                           @* <div class="button">
                                <a asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-plus"></i>Add Wihlist</span></a>
-                            </div>
+                            </div>*@
 
                     </div>
 

@@ -10,15 +10,18 @@ namespace Final_Project_RentApp.Controllers
         private readonly IExperienceService _experienceService;
         private readonly IFaqService _faqService;
         private readonly IPremiumRentalService _premiumRentalService;
+        private readonly IStaticDataService _staticDataService;
+
 
         public AboutController(IExperienceService experienceService,
                                IFaqService faqService,
-                               IPremiumRentalService premiumRentalService)
+                               IPremiumRentalService premiumRentalService,
+                               IStaticDataService staticDataService)
         {
             _experienceService = experienceService;
             _faqService = faqService;
             _premiumRentalService = premiumRentalService;
-
+            _staticDataService = staticDataService;
         }
 
         public async Task<IActionResult> Index()
@@ -26,12 +29,14 @@ namespace Final_Project_RentApp.Controllers
             IEnumerable<Experience> experiences = await _experienceService.GetAllAsync();
             IEnumerable<Faq> faqs = await _faqService.GetAllAsync();
             PremiumRental premiumRental = await _premiumRentalService.GetPremiumRentalAsync();
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeader();
 
             AboutVM model = new()
             {
                 Experiences = experiences,
                 Faqs = faqs,
-                PremiumRental = premiumRental
+                PremiumRental = premiumRental,
+                SectionHeaders = sectionHeaders
             };
 
             return View(model);

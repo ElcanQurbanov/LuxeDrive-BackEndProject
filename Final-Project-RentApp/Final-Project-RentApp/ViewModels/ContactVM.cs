@@ -6,5 +6,6 @@ namespace Final_Project_RentApp.ViewModels
     {
         public IEnumerable<Contact> Contacts { get; set; }
         public PremiumRental PremiumRental { get; set; }
+        public Dictionary<string, string> SectionHeaders { get; set; }
     }
 }

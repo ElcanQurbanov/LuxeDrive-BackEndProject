@@ -71,14 +71,12 @@
 
             <div class="title">
                 <h2>
-                    Ride To Destinations
-                    <br>
-                    With Maximum Comfort
+                    @Html.Raw(Model.SectionHeaders["ContactComfort"])
                 </h2>
             </div>
 
             <div class="subtitle">
-                <span>finest transport</span>
+                <span>@Model.SectionHeaders["ContactComfortSlogan"]</span>
             </div>
 
             <div class="line">
@@ -169,12 +167,6 @@
                             </div>
                         }
                        
-@*
-                        <div class="col-6">
-                            <div class="img2">
-                                <img src="~/assets/img/home/premium-rental2.jpg" alt="">
-                            </div>
-                        </div>*@
 
                     </div>
 
@@ -187,11 +179,11 @@
                     <div class="widget">
 
                         <div class="title">
-                            <h2>Premium Cars Rental</h2>
+                            <h2>@Model.PremiumRental.Title</h2>
                         </div>
 
                         <div class="subtitle">
-                            <span>Only the best</span>
+                            <span>@Model.PremiumRental.SubTitle</span>
                         </div>
 
                         <p>

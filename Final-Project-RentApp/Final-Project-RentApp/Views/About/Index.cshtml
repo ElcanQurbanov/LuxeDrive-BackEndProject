@@ -67,14 +67,12 @@
 
             <div class="title">
                 <h2>
-                    We Value Our Clients And Want
-                    <br>
-                    Them To Have A Nice Experience
+                    @Html.Raw(Model.SectionHeaders["AboutExperience"])
                 </h2>
             </div>
 
             <div class="subtitle">
-                <span>finest transport</span>
+                <span>@Model.SectionHeaders["AboutExperienceSlogan"]</span>
             </div>
 
             <div class="line">
@@ -124,7 +122,6 @@
     <section id="car">
 
         <div class="car-img">
-            <!-- <img src="~/assets/img/about/rolls-royce.webp" alt=""> -->
             <img src="~/assets/img/about/merc.webp" alt="">
         </div>
 
@@ -136,11 +133,11 @@
         <div class="container">
 
             <div class="title">
-                <h2>Frequently Asked Questions </h2>
+                <h2>@Model.SectionHeaders["AboutFaq"]</h2>
             </div>
 
             <div class="subtitle">
-                <span>List of answers</span>
+                <span>@Model.SectionHeaders["AboutFaqContent"]</span>
             </div>
 
             <div class="line">
@@ -246,11 +243,11 @@
                     <div class="widget">
 
                         <div class="title">
-                            <h2>For Your Every Need</h2>
+                            <h2>@Model.SectionHeaders["AboutNeed"]</h2>
                         </div>
 
                         <div class="subtitle">
-                            <span>Only the best</span>
+                            <span>@Model.SectionHeaders["AboutNeedSlogan"]</span>
                         </div>
 
                         <p>

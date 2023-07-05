@@ -61,17 +61,6 @@
 
             }
 
-           @* <div class="slider-img">
-                <img src="~/assets/img/home/slider2.jpg" alt="">
-            </div>
-
-            <div class="slider-img">
-                <img src="~/assets/img/home/slider3.jpg" alt="">
-            </div>
-
-            <div class="slider-img">
-                <img src="~/assets/img/home/slider1.jpg" alt="">
-            </div>*@
 
         </div>
 
@@ -228,16 +217,6 @@
                         </div>
                     }
 
-                  
-
-                  @*  <div class="widget">
-                        <h5 style="color: #fff;">Premium Support</h5>
-
-                        <p>
-                            Tortor condimentum lacinia quis vel eros donec odio. Feugiat fermentum in posuere urna.
-                            Faucibus turpis in eun mi bibendum.
-                        </p>
-                    </div>*@
 
                 </div>
 
@@ -335,9 +314,9 @@
 
                 <div class="title">
 
-                    <h2 style="color: #fff;">Our Proffesional Chauffeurs</h2>
+                    <h2 style="color: #fff;">@Model.SectionHeaders["HomeTeam"]</h2>
 
-                    <span>Meet or team</span>
+                    <span>@Model.SectionHeaders["HomeTeamContent"]</span>
 
                     <div class="line">
                     </div>
@@ -405,12 +384,6 @@
                             </div>
                         }
                        
-
-                       @* <div class="col-6">
-                            <div class="img2 rental-img">
-                                <img src="~/assets/img/home/h1-img-6.jpg" alt="">
-                            </div>
-                        </div>*@
 
                     </div>
 
@@ -487,11 +460,11 @@
         <div class="container">
 
             <div class="title">
-                <h2>A High Variety Of Options</h2>
+                <h2>@Model.SectionHeaders["HomeBestPossibilities"]</h2>
             </div>
 
             <div class="subtitle">
-                <span>Best possibilities</span>
+                <span>@Model.SectionHeaders["HomeBestPossibilitiesContent"]</span>
             </div>
 
 

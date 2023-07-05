@@ -188,54 +188,6 @@
                             </div>
                         }
 
-                      @*
-                        <div class="information">
-                            <div class="media">
-
-                                <div class="media-img">
-                                    <a asp-action="Detail"><img src="~/assets/img/shop/popular-product-img2.jpg" alt=""></a>
-                                </div>
-
-
-                            </div>
-
-                            <div class="content">
-                                <div class="text">
-                                    <h6><a href="">Rolls Royce</a></h6>
-                                </div>
-
-                                <div class="info">
-                                    <a href="">$180.00</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="information">
-                            <div class="media">
-
-                                <div class="media-img">
-                                    <a asp-action="Detail"><img src="~/assets/img/shop/popular-product-img3.jpg" alt=""></a>
-                                </div>
-
-
-                            </div>
-
-                            <div class="content">
-                                <div class="text">
-                                    <h6><a href="">Lamborghini</a></h6>
-                                </div>
-
-                                <div class="info">
-                                    <a href="">$190.00</a>
-                                </div>
-
-                            </div>
-                        </div>
-*@
-
-
 
                     </div>
 
@@ -249,6 +201,12 @@
                         <div class="categories-list">
 
                             <ul>
+                               @* @foreach (var category in Model.Categories.Select(cc => cc.CarCategories))
+                                {
+                                    <a href="">
+                                    <li>Expensive</li></a>
+                                }*@
+
                                 <a href="">
                                 <li>Expensive</li></a>
                                 <a href="">

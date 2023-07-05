@@ -7,5 +7,6 @@ namespace Final_Project_RentApp.ViewModels
         public IEnumerable<Experience> Experiences { get; set; }
         public IEnumerable<Faq> Faqs { get; set; }
         public PremiumRental PremiumRental { get; set; }
+        public Dictionary<string, string> SectionHeaders { get; set; }
     }
 }
