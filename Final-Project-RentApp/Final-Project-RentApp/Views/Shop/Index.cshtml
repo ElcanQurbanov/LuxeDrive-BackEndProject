@@ -9,7 +9,18 @@
     <link rel="stylesheet" href="~/assets/css/shop/shop.css">
 
 }
+@if (TempData["Order"] != null)
+{
+    if ((bool)TempData["Order"] == true)
+    {
+        <input type="hidden" id="orderSuccess" />
+    }
+    else
+    {
+        <input type="hidden" id="orderError"   />
 
+    }
+}
 @section NavBar{
 
     <ul class="menu">
@@ -275,5 +286,15 @@
 @section Scripts{
 
     <script src="~/assets/js/scroll-to-up.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($("#orderSuccess").length) {
+                toastr["success"]("Successful operation!", "Hello, Succesded Ordered")
+            }
+            else if ($("#orderError").length) {
+                toastr["error"]("An error occurred!", "already in use or due to another reason...")
+                    }
 
+        })
+    </script>
 }

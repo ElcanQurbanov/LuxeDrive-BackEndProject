@@ -447,8 +447,32 @@ footer #down-footer .footer-bottom-area .content {
   padding: 17px 35px 17px 35px;
   color: #fff;
   margin-top: 3rem;
+  background-color: #141A1C;
 }
 #product-detail .price-info .button a span i {
+  margin-right: 5px;
+}
+#product-detail .price-info .button button {
+  border: 1px solid #bfa37c;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.25em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+  padding: 17px 35px 17px 35px;
+  color: #fff;
+  margin-top: 3rem;
+  background-color: #141A1C;
+}
+#product-detail .price-info .button button span i {
   margin-right: 5px;
 }
 

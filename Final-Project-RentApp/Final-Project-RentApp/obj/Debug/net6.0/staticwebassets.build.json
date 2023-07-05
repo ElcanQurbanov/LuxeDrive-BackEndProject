@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N/VE2RzAUxP+LjofUsaS8oHb+/B4kQkvTPJmP+IfCoY=",
+  "Hash": "U9iRIYY48sTsyd/zw7OFOPfxdz7ewtc9fx64jBF/Dg8=",
   "Source": "Final-Project-RentApp",
   "BasePath": "_content/Final-Project-RentApp",
   "Mode": "Default",
@@ -2582,6 +2582,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\home\\logo-gold.png"
+    },
+    {
+      "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\m4-png.webp",
+      "SourceId": "Final-Project-RentApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\",
+      "BasePath": "_content/Final-Project-RentApp",
+      "RelativePath": "assets/img/home/m4-png.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home\\m4-png.webp"
     },
     {
       "Identity": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\person1.jpg",

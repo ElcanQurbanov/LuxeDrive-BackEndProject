@@ -31,8 +31,9 @@ namespace Final_Project_RentApp.Data
         public DbSet<CarCategory> CarCategories { get; set; }
         public DbSet<CarTag> CarTags { get; set; }
         public DbSet<SectionHeader> SectionHeaders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<WishlistItem> WishlistItems { get; set; }
 
-        //public DbSet<Quality> Qualities { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -62,6 +63,8 @@ namespace Final_Project_RentApp.Data
             modelBuilder.Entity<CarCategory>().HasQueryFilter(s => !s.SoftDelete);
             modelBuilder.Entity<CarTag>().HasQueryFilter(s => !s.SoftDelete);
             modelBuilder.Entity<SectionHeader>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<OrderItem>().HasQueryFilter(s => !s.SoftDelete);
+            modelBuilder.Entity<WishlistItem>().HasQueryFilter(s => !s.SoftDelete);
         }
 
     }

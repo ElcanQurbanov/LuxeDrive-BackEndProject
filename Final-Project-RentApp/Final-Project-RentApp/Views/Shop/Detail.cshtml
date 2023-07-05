@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="~/assets/css/product-detail/product-detail.css">
 
 }
+@if (TempData["Order"] != null)
+{
+    if ((bool)TempData["Order"] == false)
+    {
+        <input type="hidden" id="orderError"   />
+    }
+}
+@if (TempData["Wishlist"] != null)
+{
+    if ((bool)TempData["Wishlist"] == true)
+    {
+        <input type="hidden" id="wishSuccess" />
+    }
+    else
+    {
+        <input type="hidden" id="wishError"   />
 
+    }
+}
 @section NavBar{
 
     <ul class="menu">
@@ -176,8 +194,7 @@
 
                         <div class="text">
                             <span>
-                                Leather Seats, LED Lighting, Audio system, rain
-                                sensors, air conditioning, panoramic roof...
+                               @Model.Extra
                             </span>
                         </div>
 
@@ -214,24 +231,29 @@
 
                         </div>
 
-                        <div class="rezerv">
+                            <form asp-controller="shop" asp-action="detail" method="post">
+                            <div class="rezerv">
 
-                            <label for="">FullName:</label>
-                            <input type="text">
+                                <label for="">FullName:</label>
+                                <input asp-for="OrderVM.Username">
 
-                            <label for="">Cell Phone:</label>
-                            <input type="number">
+                                <label for="">Cell Phone:</label>
+                                <input asp-for="@Model.OrderVM.Phone" >
 
-                            <label for="">Date of Birth:</label>
-                            <input placeholder="MM/DD/YYYY" type="datetime">
+                                <label for="">Date:</label>
+                                <input asp-for="@Model.OrderVM.Date">
 
-                        </div>
+                            </div>
 
+                            <div class="button">
+                                <button type="submit"><span><i class="fa-solid fa-plus"></i>Place order</span></button>
+                            </div>
 
-                        <div class="button">
-                            <a href="product-detail.html"><span><i class="fa-solid fa-plus"></i>Place order</span></a>
-                        </div>
+                            </form>
 
+                            <div class="button">
+                               <a asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-plus"></i>Add Wihlist</span></a>
+                            </div>
 
                     </div>
 
@@ -292,6 +314,7 @@
 
                     </form>
 
+            
                 </div>
 
 
@@ -311,3 +334,26 @@
 
 
 </main>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            if ($("#orderError").length) {
+                toastr["error"]("An error occurred!", "already in use or due to another reason...")
+            }
+
+        })
+    </script>
+    <script>
+        $(document).ready(function () {
+            if ($("#wishSuccess").length) {
+                toastr["success"]("Successful operation!", "Hello, Succesded Ordered")
+            }
+            else if ($("#wishError").length) {
+                toastr["error"]("An error occurred!", "already in use or due to another reason...")
+            }
+
+        })
+    </script>
+                    }
