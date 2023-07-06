@@ -265,6 +265,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\blog\\1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\8dd62922-059a-4dc4-9f90-c2e48a61b6ef_best4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\8dd62922-059a-4dc4-9f90-c2e48a61b6ef_best4.png"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg"
     },
@@ -283,6 +287,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-img2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\d1d0d9e4-992c-40f7-b88e-4a69ad42f77a_best3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\d1d0d9e4-992c-40f7-b88e-4a69ad42f77a_best3.png"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg",
@@ -345,8 +353,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\contact\\edit.jpg"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\02c33838-7be9-42d1-80f1-28ac4571e393_car5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\02c33838-7be9-42d1-80f1-28ac4571e393_car5.jpg"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\229f6392-7a21-4e80-876d-5ecee2517e17-car2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\229f6392-7a21-4e80-876d-5ecee2517e17-car2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\244ddda6-2715-441b-bb26-ca0bf270e0b6_car3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\244ddda6-2715-441b-bb26-ca0bf270e0b6_car3.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\41961336-02e9-4071-a01d-894a9b45d084-best2.png",
@@ -371,6 +387,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\ab3e5217-bb25-43e1-acd6-71b84f431e72_car4 - Copy.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\ab3e5217-bb25-43e1-acd6-71b84f431e72_car4 - Copy.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\aston-martin-detail1.jpg",
@@ -489,8 +509,16 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\car6.jpg"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\d50aa99b-8955-4876-8848-95a0a3bd0399_car2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\d50aa99b-8955-4876-8848-95a0a3bd0399_car2.jpg"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\d5215a39-b014-4273-9015-2ed00dd8e0e1-slider4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\d5215a39-b014-4273-9015-2ed00dd8e0e1-slider4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\d9ed01f1-456f-4cc0-ae7a-e2c1753fb1e5_car4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\d9ed01f1-456f-4cc0-ae7a-e2c1753fb1e5_car4.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\earphone.png",
@@ -523,6 +551,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\g-class-png.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\g-class-png.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gt-detail1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\gt-detail1.jpeg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-detail1.jpg",
@@ -967,6 +999,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\templates\\reset.html",
+      "PackagePath": "staticwebassets\\templates\\reset.html"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\templates\\verify.html",

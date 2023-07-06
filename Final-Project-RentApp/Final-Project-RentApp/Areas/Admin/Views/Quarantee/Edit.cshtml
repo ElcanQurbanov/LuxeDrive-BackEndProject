@@ -13,7 +13,8 @@
     <form class="form-sample" asp-action="Edit" asp-route-id="@Model.Id" method="post" enctype="multipart/form-data">
 
         <h4 class="my-3">Image</h4>
-        <div class="slider-content my-5">
+
+        <div class="quarantee-content my-5">
             @foreach (var image in Model.Image)
             {
                 <img style="width:400px; height:200px;" src="~/assets/img/home/@image" />

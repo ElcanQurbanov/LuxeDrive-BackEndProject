@@ -21,7 +21,7 @@ namespace Final_Project_RentApp.Controllers
         {
             AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
 
-            List<OrderItem> orderItem = _context.OrderItems.
+            IEnumerable<OrderItem> orderItem = _context.OrderItems.
                                                  Include(x => x.Car).
                                                  ThenInclude(x=>x.CarImages).
                                                  Include(x => x.Car).

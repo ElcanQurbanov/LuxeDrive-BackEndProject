@@ -147,8 +147,8 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             {
                 Id = team.Id,
                 Name = team.Name,
-                //Position = team.Position,
-                Image = team.Image
+                Image = team.Image,
+                Phone = team.Phone,
             };
 
             return View(model);
@@ -179,8 +179,8 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 {
                     Id = team.Id,
                     Name = team.Name,
-                    //Position = team.Position,
-                    Image = team.Image
+                    Image = team.Image,
+                    Phone = team.Phone,
                 };
 
                 if (team.Photo != null)
@@ -218,7 +218,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 }
 
                 dbTeam.Name = team.Name;
-                //dbTeam.Position = dbTeam.Position;
+                dbTeam.Phone = team.Phone;
 
 
                 await _context.SaveChangesAsync();

@@ -105,6 +105,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             }
 
             experience.Title = model.Title;
+            experience.Description = model.Description;
 
             _context.Experiences.Update(experience);
 

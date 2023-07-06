@@ -54,6 +54,8 @@ builder.Services.AddScoped<IFaqService, FaqService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IStaticDataService, StaticDataService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IWishlistService, WishlistService>();
 
 
 builder.Services.AddScoped<IEmailService, EmailService>();

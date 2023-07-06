@@ -8,9 +8,16 @@
 
     <h1 style="color:darkcyan;">PremiumRental detail</h1>
 
-    <div class="client-content mt-5">
+    <div class="premiumRental-content mt-5">
+
         <h4 style="color:darkcyan" class="my-3">Image</h4>
-        <img style="width:400px; height:200px;" src="~/assets/img/home/@Model.PremiumRentalImages.FirstOrDefault().Image" />
+
+        @foreach (var image in Model.PremiumRentalImages)
+        {
+            <img style="width:400px; height:200px;" src="~/assets/img/home/@image.Image" />
+
+        }
+
     </div>
 
     <h4 style="color:darkcyan;" class="my-3">Title</h4>

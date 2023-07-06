@@ -37,7 +37,8 @@ namespace Final_Project_RentApp.Controllers
 
                 Car car = await _carService.GetByIdAsync((int)id);
 
-                bool dublicate = _context.WishlistItems.Where(m => m.CarId == car.Id && m.AppUserId == user.Id).Include(x => x.Car).Any(x => x.CarId == car.Id);
+                bool dublicate = _context.WishlistItems.Any(m =>m.AppUserId==user.Id
+                                                    && m.CarId == car.Id);
 
                 if (dublicate == true) return Redirect(Request.Headers["Referer"].ToString());
 

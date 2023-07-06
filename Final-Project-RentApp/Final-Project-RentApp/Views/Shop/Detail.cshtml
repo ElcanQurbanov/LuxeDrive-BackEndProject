@@ -46,7 +46,7 @@
 
         <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
 
-        <li><a asp-controller="Shop"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
+        <li><a asp-controller="Shop" asp-action="index"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
 
     </ul>
 
@@ -245,20 +245,19 @@
                                 <div class="button">
                                     <button type="submit"><span><i class="fa-solid fa-plus"></i>Place order</span></button>
                                 </div>
-
+                             
                                 <div class="button">
-                                    <a asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-plus"></i>Add Wihlist</span></a>
+                                    <a class="@(Model.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? "d-none" : " ") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-heart"></i>Add Wihlist</span></a>
                                 </div>
-
+                                <div class="button">
+                                    <a class="@(Model.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? " " : "d-none") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-heart"></i>Remove Wihlist</span></a>
+                                </div>
                              </div>
 
                            
 
                             </form>
 
-                           @* <div class="button">
-                               <a asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-plus"></i>Add Wihlist</span></a>
-                            </div>*@
 
                     </div>
 
@@ -345,7 +344,7 @@
     <script>
         $(document).ready(function () {
             if ($("#orderError").length) {
-                toastr["error"]("An error occurred!", "already in use or due to another reason...")
+                toastr["error"]("An error occurred!", "The date you selected was rented or the date you selected is invalid")
             }
 
         })
@@ -353,10 +352,10 @@
     <script>
         $(document).ready(function () {
             if ($("#wishSuccess").length) {
-                toastr["success"]("Successful operation!", "Hello, Succesded Ordered")
+                toastr["success"]("Successful operation!", "Hello, Successfully added to wishlist")
             }
             else if ($("#wishError").length) {
-                toastr["error"]("An error occurred!", "already in use or due to another reason...")
+                toastr["error"]("An error occurred!", "Already in Wishlist")
             }
 
         })

@@ -226,19 +226,16 @@
         .items {
 
             display: flex;
-            gap: 22px;
+            gap: 18px;
 
             .button {
-
-
-
 
                 a {
                     border-radius: 4px;
                     cursor: pointer;
                     border: 1px solid #bfa37c;
                     font-family: 'Times New Roman', Times, serif;
-                    font-size: 11px;
+                    font-size: 10px;
                     line-height: 30px;
                     letter-spacing: .25em;
                     position: relative;
@@ -270,7 +267,7 @@
                     // border-radius: 5px;
                     border: 1px solid #bfa37c;
                     font-family: 'Times New Roman', Times, serif;
-                    font-size: 11px;
+                    font-size: 10px;
                     // line-height: 25px;
                     line-height: 30px;
                     letter-spacing: .25em;

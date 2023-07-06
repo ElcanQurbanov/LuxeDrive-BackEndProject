@@ -9,9 +9,16 @@
 
     <div class="my-3">
 
-        <h4 class="my-3">Image</h4>
-        <div class="blog-content">
-            <img style="width:400px; height:200px;" src="~/assets/img/blog/@Model.BlogImages.FirstOrDefault().Image" />
+        <div class="blog-content mt-5">
+
+            <h4 class="my-3">Image</h4>
+
+            @foreach (var image in Model.BlogImages)
+            {
+                <img style="width:400px; height:200px;" src="~/assets/img/blog/@image.Image" />
+
+            }
+
         </div>
 
         <h4 class="my-3">Title</h4>

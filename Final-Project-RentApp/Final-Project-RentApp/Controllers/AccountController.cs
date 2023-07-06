@@ -180,13 +180,13 @@ namespace Final_Project_RentApp.Controllers
 
             string token = await _userManager.GeneratePasswordResetTokenAsync(existUser);
 
-            string link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
+            string link = Url.Action(nameof(ResetPassword), "Account", new { userId = existUser.Id, token }, Request.Scheme, Request.Host.ToString());
 
             string subject = "Verify password reset email";
 
             string html = string.Empty;
 
-            using (StreamReader reader = new StreamReader("wwwroot/templates/verify.html"))
+            using (StreamReader reader = new StreamReader("wwwroot/templates/reset.html"))
             {
                 html = reader.ReadToEnd();
             }
@@ -206,11 +206,14 @@ namespace Final_Project_RentApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword )
         {
             if (!ModelState.IsValid)
             {
-                return  View(resetPassword);
+                foreach (string message in ModelState.Values.SelectMany(e=>e.Errors).Select(e=>e.ErrorMessage))
+                {
+                    ModelState.AddModelError("", message);
+                }
             }
 
             AppUser existUser = await _userManager.FindByIdAsync(resetPassword.UserId);

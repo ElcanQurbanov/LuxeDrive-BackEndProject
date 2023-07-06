@@ -13,6 +13,8 @@ namespace Final_Project_RentApp.Models
         public int CarClassId { get; set; }
         public CarClass CarClass { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }
+        public ICollection<WishlistItem> WishlistItems { get; set; }
+
 
         public ICollection<CarImage> CarImages { get; set; }
         public ICollection<CarTag> CarTags { get; set; }

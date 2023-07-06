@@ -8,13 +8,16 @@
 
     <h1 style="color:darkcyan;">Guarantee detail</h1>
 
-    <div class="client-content mt-5">
+    <div class="quarantee-content mt-5">
+
         <h4 style="color:darkcyan" class="my-3">Image</h4>
+
         @foreach (var image in Model.QuaranteeImages)
         {
             <img style="width:400px; height:200px;" src="~/assets/img/home/@image.Image" />
 
         }
+
     </div>
 
 

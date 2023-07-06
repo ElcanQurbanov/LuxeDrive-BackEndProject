@@ -105,6 +105,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             }
 
             advantage.Title = model.Title;
+            advantage.Description = model.Description;
 
             _context.Advantages.Update(advantage);
 
