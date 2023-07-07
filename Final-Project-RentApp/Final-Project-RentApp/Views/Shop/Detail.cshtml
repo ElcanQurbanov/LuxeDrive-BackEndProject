@@ -230,13 +230,13 @@
                             <div class="rezerv">
 
                                 <label for=""></label>
-                                <input placeholder="Full Name:" asp-for="OrderVM.Username">
+                                <input placeholder="Full Name:" asp-for="OrderVM.Username" required>
 
                                 <label for=""></label>
-                                <input placeholder="Cell Phone:" asp-for="@Model.OrderVM.Phone">
+                                <input placeholder="Cell Phone:" asp-for="@Model.OrderVM.Phone" required>
 
                                 <label for=""></label>
-                                <input placeholder="Date:" class="white-placeholder" asp-for="@Model.OrderVM.Date">
+                                <input  class="white-placeholder" asp-for="@Model.OrderVM.Date" required>
 
                             </div>
 
@@ -249,9 +249,15 @@
                                 <div class="button">
                                     <a class="@(Model.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? "d-none" : " ") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-heart"></i>Add Wihlist</span></a>
                                 </div>
+
+                                @{
+                                    var wishlistItem = Model.WishlistItems.FirstOrDefault(w => w.AppUser.UserName == User.Identity.Name);
+                                    int wishlistItemId = wishlistItem != null ? wishlistItem.Id : 0;
+                                }
                                 <div class="button">
-                                    <a class="@(Model.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? " " : "d-none") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-heart"></i>Remove Wihlist</span></a>
+                                    <a class="@(wishlistItem != null ? " " : "d-none")" asp-controller="WishList" asp-action="RemoveFromWishList" asp-route-wishListItemId="@wishlistItemId"><span><i class="fa-solid fa-heart"></i>Remove Wishlist</span></a>
                                 </div>
+
                              </div>
 
                            

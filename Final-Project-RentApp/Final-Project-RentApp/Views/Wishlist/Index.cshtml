@@ -55,45 +55,22 @@
                         <th scope="col">Car</th>
                         <th scope="col">Brand</th>
                         <th scope="col">Price</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">IsAccepted</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (WishlistItem wishlist in Model)
                     {
                         <tr>
-                            <td><img style="width: 100px;" src="~/assets/img/home/@wishlist.Car.CarImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt=""></td>
-                            <td>@wishlist.Car.Name</td>
+                            <td><a class="text-decoration-none text-dark" asp-controller="shop" asp-action="Detail" asp-route-id="@wishlist.Car.Id"><img style="width: 100px;" src="~/assets/img/home/@wishlist.Car.CarImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt=""></a></td>
+                            <td><a class="text-decoration-none text-dark" asp-controller="shop" asp-action="Detail" asp-route-id="@wishlist.Car.Id">@wishlist.Car.Name</a></td>
                             <td>@wishlist.Car.CarClass.Name</td>
                             <td>$@wishlist.Car.Price</td>
-                          @*  <td>@wishlist.Date.ToString("dd/MM/yyyy")</td>
-                            <td>@wishlist.Status</td>*@
+                            <td><a asp-controller="wishlist" asp-action="RemoveFromWishList" asp-route-wishListItemId="@wishlist.Id" class="btn btn-danger">Remove From Wishlist</a></td>
+
                         </tr>
                     }
                 </tbody>
             </table>
-            <div class="table-content">
-
-                <div class="col-5">
-                    <div class="cart-page-total">
-
-                        <h2>Cart totals</h2>
-
-                        <ul>
-                            <li>Total <span>$@Model.Sum(x=>x.Car.Price)</span></li>
-                        </ul>
-
-                        <div class="button">
-                            <button type="submit"><span><i class="fa-solid fa-plus"></i>Proceed to checkout</span></button>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
 
         </div>
 

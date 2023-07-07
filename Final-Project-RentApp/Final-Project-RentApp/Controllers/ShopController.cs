@@ -37,7 +37,7 @@ namespace Final_Project_RentApp.Controllers
             {
                 Cars = cars
             };
-
+            ViewBag.Categories = _context.Categories.ToList(); ;
             return View(model);
         }
 
@@ -75,7 +75,7 @@ namespace Final_Project_RentApp.Controllers
                     bool dublicate = _context.OrderItems.Any(m => m.Date.Date.Day == cars.OrderVM.Date.Date.Day
                                                                  && m.Date.Date.Month == cars.OrderVM.Date.Date.Month
                                                                  && m.Date.Date.Year == cars.OrderVM.Date.Date.Year
-                                                                 && m.CarId == car.Id);
+                                                                 && m.CarId == car.Id && m.Status==OrderStatus.Accepted);
                     if (dublicate == true) return View(car);
 
                     OrderItem orderItem = new()

@@ -1,4 +1,5 @@
-﻿using Final_Project_RentApp.Models;
+﻿using Final_Project_RentApp.Helpers;
+using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services.Interfaces;
 using Final_Project_RentApp.ViewModels.Account;
 using Microsoft.AspNetCore.Identity;
@@ -10,14 +11,17 @@ namespace Final_Project_RentApp.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailService _emailService;
 
         public AccountController(UserManager<AppUser> userManager,
                                  SignInManager<AppUser> signInManager,
+                                 RoleManager<IdentityRole> roleManager,
                                  IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
             _emailService = emailService;
         }
 
@@ -58,6 +62,8 @@ namespace Final_Project_RentApp.Controllers
                 return View(model);
 
             }
+
+            //await _userManager.AddToRoleAsync(newUser, Roles.Admin.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
 
@@ -231,6 +237,22 @@ namespace Final_Project_RentApp.Controllers
             
             return RedirectToAction(nameof(Login));
         }
+
+
+
+        public async Task CreateRole()
+        {
+            foreach (var role in Enum.GetValues(typeof(Roles)))
+            {
+                if(!await _roleManager.RoleExistsAsync(role.ToString()))
+                {
+                    await _roleManager.CreateAsync(new IdentityRole { Name = role.ToString() });
+                }
+            }
+        }
+
+
+
         
 
 

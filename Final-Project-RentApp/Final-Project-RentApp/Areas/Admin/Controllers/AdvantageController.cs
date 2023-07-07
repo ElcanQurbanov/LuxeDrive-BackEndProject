@@ -4,10 +4,12 @@ using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services;
 using Final_Project_RentApp.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project_RentApp.Areas.Admin.Controllers
 {
+    //[Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class AdvantageController : Controller
     {

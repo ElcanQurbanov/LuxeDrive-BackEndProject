@@ -169,6 +169,13 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
                 if (blog is null) return NotFound();
 
+                foreach (var image in blog.BlogImages)
+                {
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/blog", image.Image);
+
+                    FileHelper.DeleteFile(path);
+                }
+
                 _context.Blogs.Remove(blog);
 
                 await _context.SaveChangesAsync();

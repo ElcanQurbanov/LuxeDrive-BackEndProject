@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Shop - LuxeDrive";
+    List<Category> categories = ViewBag.Categories;
 }
 
 @section Style{
@@ -196,16 +197,12 @@
                         <div class="categories-list">
 
                             <ul>
-                               @* @foreach (var category in Model.Categories.Select(cc => cc.CarCategories))
+                                @foreach (var category in categories)
                                 {
                                     <a href="">
-                                    <li>Expensive</li></a>
-                                }*@
+                                    <li>@category.Name</li></a>
+                                }
 
-                                <a href="">
-                                <li>Expensive</li></a>
-                                <a href="">
-                                <li>Limo Service</li></a>
                             </ul>
 
                         </div>

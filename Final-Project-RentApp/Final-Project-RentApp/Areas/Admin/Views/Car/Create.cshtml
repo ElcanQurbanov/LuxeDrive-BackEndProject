@@ -1,12 +1,12 @@
 ﻿@model CarCreateVM 
 
-
 @{
     ViewData["Title"] = "Create";
 }
 
 <div class="container my-5">
-    <h1 style="color:darkcyan; text-align:center">Blog create</h1>
+
+    <h1 style="color:darkcyan; text-align:center">Car create</h1>
 
     <form class="forms-sample" asp-action="Create" method="post" enctype="multipart/form-data">
 
@@ -18,7 +18,7 @@
 
         <div class="form-group">
             <h4 class="my-3" style="color:darkcyan">Name</h4>
-            <input type="text" placeholder="Title" class="form-control" id="customFile" asp-for="Name" />
+            <input placeholder="Title" class="form-control" id="customFile" asp-for="Name" />
             <span class="text-danger" asp-validation-for="Name"></span>
         </div>
 
@@ -53,18 +53,15 @@
 
         <div class="form-group">
             <h4 class="my-3" style="color:darkcyan">Extra</h4>
-            <input type="text" placeholder="Title" class="form-control" id="customFile" asp-for="Extra" />
+            <input placeholder="Title" class="form-control" id="customFile" asp-for="Extra" />
             <span class="text-danger" asp-validation-for="Extra"></span>
         </div>
 
-
-
         <div class="form-group">
             <h4 class="my-3" style="color:darkcyan">Price</h4>
-            <input type="text" placeholder="Title" class="form-control" id="customFile" asp-for="Price" />
+            <input placeholder="Title" class="form-control" id="customFile" asp-for="Price" />
             <span class="text-danger" asp-validation-for="Price"></span>
         </div>
-
 
 
 

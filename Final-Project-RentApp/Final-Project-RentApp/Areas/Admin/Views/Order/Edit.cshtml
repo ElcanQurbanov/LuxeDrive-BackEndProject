@@ -1,0 +1,51 @@
+﻿@model OrderItem
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div style="
+    display: flex;
+    justify-content: center;
+    margin:10px;
+">
+    <div class="card" style="display: flex;width: 18rem;justify-content: center;padding:20px;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Username</h5>
+            <p class="card-text">Email:@Model.AppUser.Email</p>
+            <p class="card-text">Email:@Model.Phone</p>
+            <p class="card-text">Date:@Model.Date.ToString("dd.MMMM.yyyy HH:mm")</p>
+            <ul style="list-style-type:none">
+                    <li>
+                        <div class="image" style="width:100px;height:100px;">
+                        <img style="width:100%;object-fit:contain" src="~/assets/img/home/@Model.Car.CarImages.FirstOrDefault(x=>x.IsMain==true)?.Image" />
+                        </div>
+                    </li>
+                    <li>
+                        @Model.Car.Name
+                    </li>
+                    <li>
+                        @Model.Car.Price<span>$</span>
+                    </li>
+        
+              
+
+                    <button class="btn btn-danger">
+                       @Model.Status
+                    </button>
+
+                
+            </ul>
+
+
+            <p class="card-text">TotalPrice: @Model.Car.Price <span>$</span></p>
+        </div>
+    </div>
+</div>
+<div style="display: flex;justify-content: center;">
+    <div>
+        <a style="display:flex;justify-content:center;align-items:center;width:289px" class="btn btn-success" asp-controller="Order" asp-action="Accept" asp-route-id="@Model.Id">Accept</a>
+        <a style="display:flex;justify-content:center;align-items:center;width:289px" class="btn btn-danger" asp-controller="Order" asp-action="Reject" asp-route-id="@Model.Id">Reject</a>
+    </div>
+</div>
+

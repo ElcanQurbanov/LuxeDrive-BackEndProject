@@ -38,6 +38,7 @@ builder.Services.Configure<IdentityOptions>(opt =>
 
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 
+builder.Services.AddScoped<LayoutService>();
 
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<IComfortService, ComfortService>();
@@ -56,6 +57,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IStaticDataService, StaticDataService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IWishlistService, WishlistService>();
+
 
 
 builder.Services.AddScoped<IEmailService, EmailService>();

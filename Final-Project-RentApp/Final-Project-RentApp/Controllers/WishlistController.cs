@@ -20,9 +20,30 @@ namespace Final_Project_RentApp.Controllers
             _userManager = userManager;
             _carService = carService;
         }
+
         public IActionResult Index()
         {
-            return View();
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View(new List<WishlistItem>());
+            }
+
+            var userId = _userManager.GetUserId(User);
+
+            var wishListItems = _context.WishlistItems
+                                        .Include(wli => wli.Car)
+                                        .ThenInclude(p => p.CarImages)
+                                        .Include(wli => wli.Car)
+                                        .ThenInclude(p => p.CarClass)
+                                        .Where(wli => wli.AppUserId == userId)
+                                        .ToList();
+
+            if (wishListItems.Count == 0)
+            {
+                return View(new List<WishlistItem>());
+            }
+
+            return View(wishListItems);
         }
 
         public async Task<IActionResult> AddWishList(int? id)
@@ -37,8 +58,7 @@ namespace Final_Project_RentApp.Controllers
 
                 Car car = await _carService.GetByIdAsync((int)id);
 
-                bool dublicate = _context.WishlistItems.Any(m =>m.AppUserId==user.Id
-                                                    && m.CarId == car.Id);
+                bool dublicate = _context.WishlistItems.Any(m =>m.AppUserId==user.Id && m.CarId == car.Id);
 
                 if (dublicate == true) return Redirect(Request.Headers["Referer"].ToString());
 
@@ -58,6 +78,24 @@ namespace Final_Project_RentApp.Controllers
             }
 
             TempData["Wishlist"] = true;
+
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
+
+        public async Task<IActionResult> RemoveFromWishList(int wishListItemId)
+        {
+            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            WishlistItem wishListItem = await _context.WishlistItems.FirstOrDefaultAsync(x => x.AppUserId == user.Id && x.Id == wishListItemId);
+
+            if (wishListItem is null)
+            {
+                return NotFound();
+            }
+
+            _context.WishlistItems.Remove(wishListItem);
+
+            await _context.SaveChangesAsync();
 
             return Redirect(Request.Headers["Referer"].ToString());
         }

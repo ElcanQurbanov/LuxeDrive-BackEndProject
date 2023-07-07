@@ -38,8 +38,75 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
         {
             IEnumerable<Car> cars = await _carService.GetAllAsync();
 
-            return View(cars);
+            List<CarIndexVM> model = new List<CarIndexVM>();
+
+            foreach (var car in cars)
+            {
+                CarIndexVM mappedData = new CarIndexVM()
+                {
+                    Id = car.Id,
+                    Name = car.Name,
+                    Image = car.CarImages.FirstOrDefault(ci => ci.IsMain).Image,
+                    Price = car.Price
+                };
+
+                model.Add(mappedData);
+            }
+
+            return View(model);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            Car car = await _carService.GetByIdAsync((int)id);
+
+            if (car is null) return NotFound();
+
+            List<string> images = new List<string>();
+
+            foreach (var image in car.CarImages)
+            {
+                images.Add(image.Image);
+            }
+
+            List<string> tags = new List<string>();
+
+            foreach (var tag in car.CarTags.Select(pt => pt.Tag))
+            {
+                tags.Add(tag.Name);
+            }
+
+
+            List<string> categories = new List<string>();
+
+            foreach (var category in car.CarCategories.Select(ct => ct.Category))
+            {
+                categories.Add(category.Name);
+            }
+
+            CarDetaiLVM model = new CarDetaiLVM()
+            {
+                Name = car.Name,
+                Price = car.Price,
+                Description = car.Description,
+                ShortDescription = car.ShortDescription,
+                Extra = car.Extra,
+                Images = images,
+                Categories = categories,
+                Tags = tags,
+                CarClass = car.CarClass,
+
+                //CreatedAt = product.CreatedAt,
+                //ColorName = product.Color.Name,
+                //UpdatedAt = product.UpdatedAt
+            };
+
+            return View(model);
+        }
+
 
         [HttpGet]
         public async Task<IActionResult> Create()
@@ -171,6 +238,29 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             }
         }
 
+        //[HttpPost]
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id is null) return BadRequest();
+
+        //    Car car = await _carService.GetByIdAsync((int)id);
+
+        //    if (car is null) return NotFound();
+
+        //    foreach (var image in car.CarImages)
+        //    {
+        //        string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", image.Image);
+
+        //        FileHelper.DeleteFile(path);
+        //    }
+
+        //    _context.Cars.Remove(car);
+
+        //    _context.SaveChangesAsync();
+
+        //    return Ok();
+        //}
+
         public async Task<IActionResult> Delete(int? id)
         {
             try
@@ -180,6 +270,13 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 Car car = await _carService.GetByIdAsync((int)id);
 
                 if (car is null) return NotFound();
+
+                foreach (var image in car.CarImages)
+                {
+                    string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", image.Image);
+
+                    FileHelper.DeleteFile(path);
+                }
 
                 _context.Cars.Remove(car);
 
@@ -194,6 +291,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             }
 
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
@@ -228,7 +326,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
             });
 
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -342,7 +439,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
+      
 
 
         private async Task<SelectList> GetCategoriesAsync()

@@ -1,7 +1,7 @@
-﻿@model IEnumerable<Car>
+﻿@model List<CarIndexVM>
 
 @{
-    ViewData["Title"] = "Blog";
+    ViewData["Title"] = "Car";
 }
 
 
@@ -19,13 +19,14 @@
                 </tr>
             </thead>
             <tbody>
+
                 @foreach (var car in Model)
                 {
 
                     <tr>
 
                         <td class="py-1">
-                            <img src="~/assets/img/blog/@car.CarImages.FirstOrDefault().Image" style="width:70px; height:70px; border-radius:50%" alt="image">
+                            <img src="~/assets/img/home/@car.Image" style="width:70px; height:70px; border-radius:50%" alt="image">
                         </td>
 
                         <td>
@@ -33,8 +34,9 @@
                         </td>
 
                             <td>
-                    @car.CarClass.Name
-                    </td>
+                          @car.Name
+
+                      </td>
 
 
                        @* <td>
@@ -50,7 +52,7 @@
                                 Edit
                             </a>
 
-                            <form asp-controller="Blog" asp-action="Delete" asp-route-id="@car.Id" style="display:inline-block;" method="post">
+                            <form asp-area="Admin" asp-controller="Car" asp-action="Delete" asp-route-id="@car.Id" style="display:inline-block;" method="post">
                                 <button type="submit" class="btn btn-outline-danger">
                                     Delete
                                 </button>
