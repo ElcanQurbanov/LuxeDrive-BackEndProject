@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Final_Project_RentApp.Areas.Admin.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class AdvantageController : Controller
     {

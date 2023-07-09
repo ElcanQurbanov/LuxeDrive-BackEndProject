@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Car>
+
+@{
+    ViewData["Title"] = "SearchByCars";
+}
+
+@foreach (var item in Model)
+{
+    <h1>@item.Name</h1>
+}

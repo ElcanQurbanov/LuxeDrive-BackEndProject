@@ -13,23 +13,12 @@ namespace Final_Project_RentApp.Controllers
             _carService = carService;
         }
 
-        //public async Task<IActionResult> Index(string searchString)
-        //{
-        //    if (_context.Movie == null)
-        //    {
-        //        return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
-        //    }
+        public async Task<IActionResult> SearchByCars(string searchText)
+        {
+            if (searchText == null) return BadRequest();
 
-        //    var movies = from m in _context.Movie
-        //                 select m;
-
-        //    if (!String.IsNullOrEmpty(searchString))
-        //    {
-        //        movies = movies.Where(s => s.Title!.Contains(searchString));
-        //    }
-
-        //    return View(await movies.ToListAsync());
-        //}
+            return View(await _carService.SearchAsync(searchText));
+        }
 
     }
 }

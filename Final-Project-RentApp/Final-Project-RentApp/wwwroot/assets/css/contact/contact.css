@@ -331,7 +331,7 @@ footer #down-footer .footer-bottom-area .content {
 
 #comfort {
   background-color: #0B1112;
-  height: 1200px;
+  /*height: 1200px;*/
   display: flex;
   justify-content: flex-end;
 }

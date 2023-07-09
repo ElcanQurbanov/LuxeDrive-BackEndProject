@@ -113,7 +113,8 @@ body{
 #product {
 
     background-color: #141A1C;
-    height: 1800px;
+    // height: 1800px;
+    margin-bottom: 5rem;
 
     .product-title {
 
@@ -539,7 +540,8 @@ body{
     background-color: #0B1112;
     // padding-top: 5rem;
     padding-top: 5%;
-    height: 820px;
+    // height: 820px;
+
 
     .title {
         h2 {
@@ -594,6 +596,9 @@ body{
             }
 
             .icon {
+
+                margin-bottom: 5rem;
+
                 span {
                     font-family: 'Times New Roman', Times, serif;
                     font-size: 14px;
@@ -730,7 +735,7 @@ body{
     background-color: #0B1112;
     // padding-top: 5rem;
     padding-top: 5%;
-    height: 1100px;
+    /*height: 1100px;*/
 
     .title {
 

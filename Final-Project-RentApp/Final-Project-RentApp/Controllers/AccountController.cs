@@ -63,7 +63,7 @@ namespace Final_Project_RentApp.Controllers
 
             }
 
-            //await _userManager.AddToRoleAsync(newUser, Roles.Admin.ToString());
+            await _userManager.AddToRoleAsync(newUser, Roles.Member.ToString());
 
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
 

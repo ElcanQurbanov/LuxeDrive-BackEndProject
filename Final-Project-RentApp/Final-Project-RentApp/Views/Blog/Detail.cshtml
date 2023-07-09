@@ -70,29 +70,15 @@
                         <div class="content">
 
                             <div class="img">
-                                <a asp-action="Detail"> <img src="~/assets/img/blog/blog-img1.jpg" alt=""></a>
+                                <a asp-action="Detail"> <img src="~/assets/img/blog/@Model.BlogImages.FirstOrDefault(i => i.IsMain).Image" alt=""></a>
                             </div>
 
                             <div class="widget">
-                                <p>
-                                    Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Enim ut tellus
-                                    elementum sagittis vitae et le duiso ut. Habitasse platea dictumst quisque
-                                    sagitti puruse sit. Lorem ipsum dolor sit amet consectetur adip icing elit ut.
-                                    Amet justo donec enim diam vulputate. Donec adipiscing tristique risus nec.
-                                    Egestas purus viver a accu san in. Feugiat vivamus at augue eget arcu dictum
-                                    varius duis at. Purs usit amet luctus venenatis. Lectu smagn do diam maecenas se
-                                    denim ut sem. Vive ra mauris in aliquam sem feugiat in ani.
-                                </p>
 
                                 <p>
-                                    Semper auctor neque vitae tempus quam pellentesque. Vel facilisis volut at est
-                                    velit. Porta lorem mollis aliquail uto porttitor. Feugiat pretium nibh ipsum
-                                    conseq ut nisl vel pretium lectus. Est pa leract in egestas erat imperd sed.
-                                    Adipiscing elit duis tristique sollici udinn nibh. Ultrices eros in cursus
-                                    turpis tincidunt massa. Dui ut dign ssimo suspendisse in est ante. Auctor urna
-                                    nunc id cursus metus aliquam. Dui nunc mattiso nim ut tellus eleme sagitt is
-                                    vitae. Lectus ves tiblum ullamcorper mattis velit. Viverra aliquet eget.
+                                    @Html.Raw(Model.Description)
                                 </p>
+                                    
 
                                 <div class="text-box">
                                     <p>
@@ -117,6 +103,7 @@
 
 
                             <div class="img">
+
                                 <img src="~/assets/img/blog/blog-detail-img2.jpg" alt="">
 
 

@@ -2,12 +2,14 @@
 using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_RentApp.Controllers
 {
+    [Authorize]
     public class WishlistController : Controller
     {
         private readonly AppDbContext _context;

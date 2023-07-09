@@ -1,11 +1,13 @@
 ﻿using Final_Project_RentApp.Data;
 using Final_Project_RentApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Final_Project_RentApp.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly AppDbContext _context;

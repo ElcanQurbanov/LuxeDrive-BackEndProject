@@ -19,6 +19,7 @@ namespace Final_Project_RentApp.Models
         public ICollection<CarImage> CarImages { get; set; }
         public ICollection<CarTag> CarTags { get; set; }
         public ICollection<CarCategory> CarCategories { get; set; }
+        public ICollection<CarComment> CarComments { get; set; }
 
         [NotMapped]
         public OrderVM OrderVM { get; set; }

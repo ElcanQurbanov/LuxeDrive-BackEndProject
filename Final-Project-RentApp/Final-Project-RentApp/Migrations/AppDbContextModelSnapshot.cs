@@ -296,6 +296,38 @@ namespace Final_Project_RentApp.Migrations
                     b.ToTable("CarClassInfos");
                 });
 
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SoftDelete")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("CarId");
+
+                    b.ToTable("CarComments");
+                });
+
             modelBuilder.Entity("Final_Project_RentApp.Models.CarImage", b =>
                 {
                     b.Property<int>("Id")
@@ -416,22 +448,25 @@ namespace Final_Project_RentApp.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Phone")
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("SoftDelete")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Street")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("WorkTime")
+                    b.Property<string>("Subject")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -988,6 +1023,23 @@ namespace Final_Project_RentApp.Migrations
                     b.Navigation("CarClass");
                 });
 
+            modelBuilder.Entity("Final_Project_RentApp.Models.CarComment", b =>
+                {
+                    b.HasOne("Final_Project_RentApp.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("Final_Project_RentApp.Models.Car", "Car")
+                        .WithMany("CarComments")
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Car");
+                });
+
             modelBuilder.Entity("Final_Project_RentApp.Models.CarImage", b =>
                 {
                     b.HasOne("Final_Project_RentApp.Models.Car", "Car")
@@ -1064,7 +1116,7 @@ namespace Final_Project_RentApp.Migrations
                         .HasForeignKey("AppUserId");
 
                     b.HasOne("Final_Project_RentApp.Models.Car", "Car")
-                        .WithMany()
+                        .WithMany("WishlistItems")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1139,11 +1191,15 @@ namespace Final_Project_RentApp.Migrations
                 {
                     b.Navigation("CarCategories");
 
+                    b.Navigation("CarComments");
+
                     b.Navigation("CarImages");
 
                     b.Navigation("CarTags");
 
                     b.Navigation("OrderItems");
+
+                    b.Navigation("WishlistItems");
                 });
 
             modelBuilder.Entity("Final_Project_RentApp.Models.CarClass", b =>

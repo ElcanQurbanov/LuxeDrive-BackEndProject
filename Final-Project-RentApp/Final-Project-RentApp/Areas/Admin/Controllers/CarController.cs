@@ -4,11 +4,14 @@ using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services;
 using Final_Project_RentApp.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Data;
 
 namespace Final_Project_RentApp.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class CarController : Controller
     {
@@ -87,7 +90,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 categories.Add(category.Name);
             }
 
-            CarDetaiLVM model = new CarDetaiLVM()
+            CarAdminDetailVM model = new CarAdminDetailVM()
             {
                 Name = car.Name,
                 Price = car.Price,
@@ -100,7 +103,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 CarClass = car.CarClass,
 
                 //CreatedAt = product.CreatedAt,
-                //ColorName = product.Color.Name,
                 //UpdatedAt = product.UpdatedAt
             };
 
@@ -146,6 +148,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     {
                         ModelState.AddModelError("Photos", "File type must be image");
                         return View();
+
                     }
 
                     if (!photo.CheckFileSize(200))
@@ -206,6 +209,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 }
 
                 carImages.FirstOrDefault().IsMain = true;
+                carImages.Skip(1).FirstOrDefault().IsPreview = true;
 
                 decimal convertedPrice = decimal.Parse(model.Price);
 

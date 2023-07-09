@@ -3,6 +3,7 @@ using Final_Project_RentApp.Helpers;
 using Final_Project_RentApp.Models;
 using Final_Project_RentApp.Services.Interfaces;
 using Final_Project_RentApp.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,29 +17,37 @@ namespace Final_Project_RentApp.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly AppDbContext _context;
         private readonly IOrderService _orderService;
+        private readonly IStaticDataService _staticDataService;
 
 
         public ShopController(ICarService carService,
                               UserManager<AppUser> userManager,
                               AppDbContext context,
-                              IOrderService orderService)
+                              IOrderService orderService,
+                              IStaticDataService staticDataService)
         {
             _carService = carService;
             _userManager = userManager;
             _context = context;
             _orderService = orderService;
+            _staticDataService = staticDataService;
         }
 
         public async Task<IActionResult> Index()
         {
             IEnumerable<Car> cars = await _carService.GetAllAsync();
+            Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeader();
 
             ShopVM model = new()
             {
-                Cars = cars
+                Cars = cars,
+                SectionHeaders = sectionHeaders
             };
-            ViewBag.Categories = _context.Categories.ToList(); ;
+            
+            ViewBag.Categories = _context.Categories.ToList();
+
             return View(model);
+
         }
 
         public async Task<IActionResult> Detail(int? id)
@@ -48,6 +57,13 @@ namespace Final_Project_RentApp.Controllers
             Car car = await _carService.GetByIdAsync((int)id);
 
             if (car == null) return NotFound();
+
+
+            CarDetailVM model = new CarDetailVM()
+            {
+                Car = car,
+                CarComments = car.CarComments
+            };
 
             return View(car);
         }
@@ -103,6 +119,32 @@ namespace Final_Project_RentApp.Controllers
             TempData["Order"] = true;
 
             return RedirectToAction(nameof(Index));
+        }
+
+
+
+        [HttpPost, Authorize]
+        public async Task<IActionResult> PostComment(CarDetailVM model, string userId, int carId)
+        {
+            if (model.CommentVM.Message == null)
+            {
+                return RedirectToAction(nameof(Detail), new { id = carId });
+            }
+
+            CarComment carComment = new()
+            {
+                Message = model.CommentVM.Message,
+                AppUserId = userId,
+                CarId = carId
+            };
+
+            await _context.CarComments.AddAsync(carComment);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Detail), new { id = carId });
+
+
         }
 
 

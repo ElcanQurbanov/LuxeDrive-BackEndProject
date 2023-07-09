@@ -1,14 +1,18 @@
-﻿@model Car
+﻿@model CarDetailVM
 
 @{
     ViewData["Title"] = "Car Detail - LuxeDrive";
 }
+
+@*@inject UserManager<AppUser> userManager;*@
+
 
 @section Style{
 
     <link rel="stylesheet" href="~/assets/css/product-detail/product-detail.css">
 
 }
+
 @if (TempData["Order"] != null)
 {
     if ((bool)TempData["Order"] == false)
@@ -16,6 +20,7 @@
         <input type="hidden" id="orderError"   />
     }
 }
+
 @if (TempData["Wishlist"] != null)
 {
     if ((bool)TempData["Wishlist"] == true)
@@ -28,6 +33,7 @@
 
     }
 }
+
 @section NavBar{
 
     <ul class="menu">
@@ -46,7 +52,7 @@
 
         <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
 
-        <li><a asp-controller="Shop" asp-action="index"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
+        <li><a asp-controller="Shop" asp-action="Index"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
 
     </ul>
 
@@ -81,24 +87,16 @@
 
 
 
-                        <img src="~/assets/img/home/@Model.CarImages.FirstOrDefault(m => !m.IsMain && !m.IsPreview).Image" alt="">
+                        <img src="~/assets/img/home/@Model.Car.CarImages.FirstOrDefault(m => !m.IsMain && !m.IsPreview).Image" alt="">
 
                         <div class="row">
 
-                            @foreach (var car in Model.CarImages.Where(m => !m.IsMain && !m.IsPreview).Skip(1))
+                            @foreach (var car in Model.Car.CarImages.Where(m => !m.IsMain && !m.IsPreview).Skip(1))
                             {
                                 <div class="col-4">
                                     <img src="~/assets/img/home/@car.Image" alt="">
                                 </div>
                             }
-
-                           @* <div class="col-4">
-                                <img src="~/assets/img/home/product-detail-img3.jpg" alt="">
-                            </div>
-
-                            <div class="col-4">
-                                <img src="~/assets/img/home/product-detail-img4.jpg" alt="">
-                            </div>*@
 
 
                         </div>
@@ -106,7 +104,7 @@
                         <div class="content">
 
                             <div class="title">
-                                <h2>@Model.Name</h2>
+                                <h2>@Model.Car.Name</h2>
                             </div>
 
                             <div class="info">
@@ -117,9 +115,6 @@
                                     voluptate
                                     velit esse cillum dolore eu fugiat nulla est pariatur. Excepteur sint occaecat
                                     cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.
-                                </p>
-
-                                <p>
                                     Sagittis molestie magnis etiam nullam tincidunt hendrerit enim ultricies
                                     phasellus, laoreet nascetur ornare torquent ultrices sapien sodales volutpat
                                     duis, accumsan ridiculus magna dictum cras gravida leo mus ex. Aenean dictum
@@ -130,7 +125,6 @@
                                 </p>
 
                             </div>
-
 
                             <div class="title">
                                 <h2>Service Offered In This Vehicle </h2>
@@ -154,27 +148,22 @@
                     </div>
 
 
-
                 </div>
 
 
                 <div class="col-4">
 
-                    <!-- <div style="width: 331px;" class="img">
-                        <img style="width: 100%;" src="~/assets/img/home/Rolls-Royce-PNG-Pic.png" alt="">
-                    </div> -->
-
                     <div class="img">
-                        <img style="object-fit:cover" src="~/assets/img/home/@Model.CarImages.FirstOrDefault(i => i.IsPreview).Image" alt="">
+                        <img style="object-fit:cover" src="~/assets/img/home/@Model.Car.CarImages.FirstOrDefault(i => i.IsPreview).Image" alt="">
                     </div>
 
                     <div class="product-name">
-                        <h4>@Model.Name</h4>
+                        <h4>@Model.Car.Name</h4>
                     </div>
 
                     <div class="tags">
 
-                        @foreach (var tag in Model.CarTags.Select(ct => ct.Tag))
+                        @foreach (var tag in Model.Car.CarTags.Select(ct => ct.Tag))
                         {
                             <a href="">@tag.Name</a>
                         }
@@ -189,7 +178,7 @@
 
                         <div class="text">
                             <span>
-                               @Model.Extra
+                               @Model.Car.Extra
                             </span>
                         </div>
 
@@ -201,23 +190,10 @@
                             <h5>Prices</h5>
                         </div>
 
-                        <!--
                         <div class="price">
 
                             <span class="currency">$</span>
-                            <span>180</span>
-
-                            <div class="price-label">
-                                <span>/</span>
-                                <span>hour</span>
-                            </div>
-
-                        </div> -->
-
-                        <div class="price">
-
-                            <span class="currency">$</span>
-                            <span>@Model.Price.ToString("0.####")</span>
+                            <span>@Model.Car.Price.ToString("0.####")</span>
 
                             <div class="price-label">
                                 <span>/</span>
@@ -230,13 +206,13 @@
                             <div class="rezerv">
 
                                 <label for=""></label>
-                                <input placeholder="Full Name:" asp-for="OrderVM.Username" required>
+                                <input placeholder="Full Name:" asp-for="@Model.Car.OrderVM.Username" required>
 
                                 <label for=""></label>
-                                <input placeholder="Cell Phone:" asp-for="@Model.OrderVM.Phone" required>
+                                <input placeholder="Cell Phone:" asp-for="@Model.Car.OrderVM.Phone" required>
 
                                 <label for=""></label>
-                                <input  class="white-placeholder" asp-for="@Model.OrderVM.Date" required>
+                                <input  class="white-placeholder" asp-for="@Model.Car.OrderVM.Date" required>
 
                             </div>
 
@@ -247,11 +223,11 @@
                                 </div>
                              
                                 <div class="button">
-                                    <a class="@(Model.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? "d-none" : " ") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Id"><span><i class="fa-solid fa-heart"></i>Add Wihlist</span></a>
+                                    <a class="@(Model.Car.WishlistItems.Any(x=>x.AppUser.UserName==User.Identity.Name) ? "d-none" : " ") " asp-controller="WishList" asp-action="AddWishlist" asp-route-id="@Model.Car.Id"><span><i class="fa-solid fa-heart"></i>Add Wihlist</span></a>
                                 </div>
 
                                 @{
-                                    var wishlistItem = Model.WishlistItems.FirstOrDefault(w => w.AppUser.UserName == User.Identity.Name);
+                                    var wishlistItem = Model.Car.WishlistItems.FirstOrDefault(w => w.AppUser.UserName == User.Identity.Name);
                                     int wishlistItemId = wishlistItem != null ? wishlistItem.Id : 0;
                                 }
                                 <div class="button">
@@ -259,14 +235,12 @@
                                 </div>
 
                              </div>
-
                            
 
                             </form>
 
 
                     </div>
-
 
 
 
@@ -287,25 +261,29 @@
 
                 <div class="product-comment">
 
-                    <h4 class="heading">Comments (1)</h4>
+                    <h4 class="heading">Comments (@Model.CarComments.Count())</h4>
 
-                    <div class="product-comment-item">
+                    @foreach (var item in Model.CarComments)
+                    {
+                        <div class="product-comment-item">
 
-                        <div class="comment">
+                            <div class="comment">
 
-                            <div class="user-meta">
-                                <h2 class="user-name">Elcan Qurbanov</h2>
-                                <span class="date">16 iyun 2023</span>
+                                <div class="user-meta">
+                                    <h2 class="user-name">@item.AppUser.FullName</h2>
+                                    <span class="date">@item.CreateDate.ToString("dd MMMM yyyy")</span>
+                                </div>
+
+                                <p class="user-comment">
+                                    @item.Message
+                                </p>
+
+
                             </div>
 
-                            <p class="user-comment">
-                                Salam
-                            </p>
-
-
                         </div>
-
-                    </div>
+                    }
+                    
 
                 </div>
 
@@ -313,25 +291,23 @@
                 <div class="post-comment">
 
                     <h2 class="heading">Leave a comment</h2>
+                    
+                    
+                        <form method="post" asp-action="PostComment" asp-route-id="">
 
-                    <form method="post" action="">
+                            <textarea asp-for="CommentVM.Message" placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
 
-                        <textarea placeholder="Message" name="" id="" cols="30" rows="5"></textarea>
+                            <div class="button">
+                                <button type="submit"><span><i class="fa-solid fa-plus"></i>Post Comment</span></button>
+                            </div>
 
-                        <div class="button">
-                            <button type="submit"><span><i class="fa-solid fa-plus"></i>Post Comment</span></button>
-                        </div>
-
-                    </form>
+                        </form>
 
             
                 </div>
 
 
             </div>
-
-
-
 
 
 
@@ -347,15 +323,20 @@
 
 
 @section Scripts{
+
     <script>
+
         $(document).ready(function () {
             if ($("#orderError").length) {
                 toastr["error"]("An error occurred!", "The date you selected was rented or the date you selected is invalid")
             }
 
         })
+
     </script>
+
     <script>
+
         $(document).ready(function () {
             if ($("#wishSuccess").length) {
                 toastr["success"]("Successful operation!", "Hello, Successfully added to wishlist")
@@ -365,5 +346,6 @@
             }
 
         })
+
     </script>
-                    }
+}

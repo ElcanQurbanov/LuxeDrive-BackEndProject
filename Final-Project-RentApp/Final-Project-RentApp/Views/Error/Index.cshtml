@@ -1,0 +1,65 @@
+﻿@model int
+
+@{
+    ViewData["Title"] = "Error404 - LuxeDrive";
+    Layout = "_UserLayout";
+    //Layout = null;
+}
+
+
+@section Style{
+
+    <link rel="stylesheet" href="~/assets/css/error/error.css" />
+
+}
+
+@section NavBar{
+
+    <ul class="menu">
+
+        <li>
+            <a asp-controller="Home" asp-action="Index">
+                <i class="fa-solid fa-circle"></i><span>HOME</span>
+            </a>
+        </li>
+
+        <li><a asp-controller="About" asp-action="Index"><i class="fa-solid fa-circle"></i><span>ABOUT</span></a></li>
+
+        <li>
+            <a asp-controller="Contact" asp-action="Index"><i class="fa-solid fa-circle"></i><span>CONTACT</span></a>
+        </li>
+
+        <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
+
+        <li><a asp-controller="Shop"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
+
+    </ul>
+
+}
+
+<section id="error">
+    <div class="container">
+
+        <div class="row error">
+
+            <div class="col-6">
+
+                <h1>Something's missing.</h1>
+
+                <p>Looks like this page is missing. Don't worry though, our best team is on the case.</p>
+
+                <a class="btn-main" asp-controller="Home" asp-action="Index">Go Back</a>
+
+            </div>
+
+            <div class="col-lg-6 text-center" style="background-size: 100%; background-repeat: no-repeat;">
+                <h1 class="s2">
+                    <span class="c1">404</span>
+                    <span class="spacer-single"></span>
+                    <span class="c3">Not Found</span>
+                </h1>
+            </div>
+
+        </div>
+    </div>
+</section>

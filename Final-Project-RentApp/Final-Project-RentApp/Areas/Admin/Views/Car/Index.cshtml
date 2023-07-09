@@ -12,8 +12,8 @@
             <thead>
                 <tr>
                     <th scope="col">Image</th>
+                    <th scope="col">Brand</th>
                     <th scope="col">Price</th>
-                    <th scope="col">CarClass</th>
                     @*<th scope="col">Extra</th>*@
                     <th scope="col">Operations</th>
                 </tr>
@@ -26,18 +26,16 @@
                     <tr>
 
                         <td class="py-1">
-                            <img src="~/assets/img/home/@car.Image" style="width:70px; height:70px; border-radius:50%" alt="image">
+                            <img src="~/assets/img/home/@car.Image" style="width:115px; height:112px; border-radius:50%; object-fit:cover;" alt="image">
+                        </td>
+
+                        <td>
+                            @car.Name
                         </td>
 
                         <td>
                             @car.Price
                         </td>
-
-                            <td>
-                          @car.Name
-
-                      </td>
-
 
                        @* <td>
                             @car.Extra

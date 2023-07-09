@@ -6,5 +6,6 @@ namespace Final_Project_RentApp.Services.Interfaces
     {
         Task<IEnumerable<Car>> GetAllAsync();
         Task<Car> GetByIdAsync(int id);
+        Task<IEnumerable<Car>> SearchAsync(string searchText);
     }
 }

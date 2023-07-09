@@ -27,6 +27,9 @@ header #navbar .nav-menu .menu {
   list-style: none;
   gap: 35px;
 }
+header #navbar .nav-menu .menu .bars i {
+  display: none;
+}
 header #navbar .nav-menu .menu li a {
   color: white;
   text-decoration: none;
@@ -371,7 +374,7 @@ body {
 
 #product {
   background-color: #141A1C;
-  height: 1800px;
+  margin-bottom: 5rem;
 }
 #product .product-title .title h2 {
   color: #fff;
@@ -660,7 +663,6 @@ body {
 #team {
   background-color: #0B1112;
   padding-top: 5%;
-  height: 820px;
 }
 #team .title h2 {
   font-size: 42px;
@@ -695,6 +697,9 @@ body {
 }
 #team .persons .content h5 {
   font-size: 22px;
+}
+#team .persons .content .icon {
+  margin-bottom: 5rem;
 }
 #team .persons .content .icon span {
   font-family: "Times New Roman", Times, serif;
@@ -787,7 +792,7 @@ body {
 #best-possibilities {
   background-color: #0B1112;
   padding-top: 5%;
-  height: 1100px;
+  /*height: 1100px;*/
 }
 #best-possibilities .title h2 {
   color: #fff;

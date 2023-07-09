@@ -1,34 +1,33 @@
 ﻿@model IEnumerable<Contact>
 
 @{
-    ViewData["Title"] = "Team";
+    ViewData["Title"] = "Contact";
 }
 
 
 <div class="container my-5">
-    <a class="btn btn-success text-white" asp-action="Create" style="float:right;">Create</a>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Title</th>
-                    @*<th scope="col">Name</th>*@
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Operations</th>
                 </tr>
             </thead>
             <tbody>
+
                 @foreach (var contact in Model)
                 {
-
                     <tr>
 
                         <td class="py-1">
-                            @contact.City
+                            @contact.FullName
                         </td>
 
-                        @*    <td class="py-1">
-                    @advantage.Name
-                    </td>*@
+                        <td class="py-1">
+                            @contact.Email
+                        </td>
 
                         <td>
                             <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@contact.Id">

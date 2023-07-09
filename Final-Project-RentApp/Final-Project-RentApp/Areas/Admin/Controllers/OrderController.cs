@@ -10,6 +10,7 @@ using System.Data;
 
 namespace Final_Project_RentApp.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Admin")]
     public class OrderController : Controller
     {

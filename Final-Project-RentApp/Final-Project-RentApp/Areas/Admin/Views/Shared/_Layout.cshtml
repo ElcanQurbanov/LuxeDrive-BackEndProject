@@ -19,6 +19,7 @@
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/" />
     <link https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
     <title>AdminKit</title>
 
@@ -39,9 +40,18 @@
                         Pages
                     </li>
 
+                   
                     <li class="sidebar-item active">
                         <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="sidebar-link">
-                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+                            <i style="font-size:22px; position:relative; top:4px;" class="las la-tachometer-alt"></i> <span class="align-middle">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                           asp-area="Admin" asp-controller="Order" asp-action="Index"
+                           aria-expanded="false">
+                            <i style="margin:0; position:relative; right:2px;" class="align-middle" data-feather="bar-chart-2"></i> <span class="hide-menu">Order</span>
                         </a>
                     </li>
 
@@ -57,7 +67,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Car" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Car</span>
+                            <i style="font-size:22px; position:relative; top:3px; margin:0; right:3px;" class="las la-car"></i> <span class="hide-menu">Car</span>
                         </a>
                     </li>
 
@@ -65,7 +75,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Comfort" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Comfort</span>
+                            <i class="fa-solid fa-c"></i> <span class="hide-menu">Comfort</span>
                         </a>
                     </li>
 
@@ -73,7 +83,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Advantage" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Advantage</span>
+                            <i class="fa-brands fa-adversal"></i> <span class="hide-menu">Advantage</span>
                         </a>
                     </li>
 
@@ -81,7 +91,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Quarantee" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Guarantee</span>
+                            <i class="fa-solid fa-guarani-sign"></i> <span class="hide-menu">Guarantee</span>
                         </a>
                     </li>
 
@@ -89,7 +99,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Team" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Team</span>
+                            <i class="lab la-teamspeak" style="font-size:22px; position:relative; top:2px; right:3px; margin:0"></i> <span class="hide-menu">Team</span>
                         </a>
                     </li>
 
@@ -97,7 +107,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="PremiumRental" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">PremiumRental</span>
+                            <i class="fa-solid fa-p"></i> <span class="hide-menu">PremiumRental</span>
                         </a>
                     </li>
 
@@ -105,7 +115,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="CarClass" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">CarClass</span>
+                            <i class="fa-solid fa-cruzeiro-sign"></i> <span class="hide-menu">Class</span>
                         </a>
                     </li>
 
@@ -113,7 +123,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Experience" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Experience</span>
+                            <i class="fa-brands fa-buromobelexperte"></i> <span class="hide-menu">Experience</span>
                         </a>
                     </li>
 
@@ -121,7 +131,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Contact" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Contact</span>
+                            <i class="fa-regular fa-address-book"></i> <span class="hide-menu">Contact</span>
                         </a>
                     </li>
 
@@ -129,7 +139,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Blog" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Blog</span>
+                            <i class="fa-solid fa-blog"></i> <span class="hide-menu">Blog</span>
                         </a>
                     </li>
 
@@ -137,7 +147,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Tag" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Tag</span>
+                            <i class="fa-solid fa-tags"></i> <span class="hide-menu">Tag</span>
                         </a>
                     </li>
 
@@ -145,7 +155,7 @@
                         <a class="sidebar-link waves-effect waves-dark sidebar-link"
                            asp-area="Admin" asp-controller="Category" asp-action="Index"
                            aria-expanded="false">
-                            <i class="fa-solid fa-chart-area"></i><span class="hide-menu">Category</span>
+                            <i class="las la-closed-captioning"></i> <span class="hide-menu">Category</span>
                         </a>
                     </li>
 
@@ -630,6 +640,7 @@
             });
         });
     </script>
+    <script src="https://kit.fontawesome.com/09a7df35a3.js" crossorigin="anonymous"></script>
 
 </body>
 

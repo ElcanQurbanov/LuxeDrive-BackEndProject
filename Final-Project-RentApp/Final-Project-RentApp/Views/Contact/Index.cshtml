@@ -7,8 +7,15 @@
 @section Style{
 
     <link rel="stylesheet" href="~/assets/css/contact/contact.css">
+    <link rel="stylesheet" href="~/assets/css/contact/Contact-info.css">
+
+            @*<link rel="stylesheet" href="css/style.css">*@
+
+
 
 }
+
+
 
 
 @section NavBar{
@@ -52,14 +59,13 @@
 
     <section id="contact-us">
 
-        <div class="contact-us-img">
+        <div @*style="background: url('assets/img/contact/contact-us5.jpg');*@" class="contact-us-img">
 
             <div class="title">
                 <h1>Contact Us</h1>
             </div>
 
         </div>
-
 
 
     </section>
@@ -82,63 +88,83 @@
             <div class="line">
             </div>
 
-            <div class="row">
+            @*<div class="row">*@
 
-                <div class="col-6">
-
-                    @foreach (var contact in Model.Contacts.Take(2))
-                    {
-                      <div class="widget">
-
-                        <h5 style="color: #fff;">@contact.City</h5>
-
-
-                        <p>@contact.Street</p>
-                        <p>Office: @contact.Phone</p>
-                        <p>@contact.WorkTime</p>
-
-
-                      </div>
-                        
-                    }
-
-
-
-                </div>
-
-                <div class="col-6">
-
-                    @foreach (var contact in Model.Contacts.Skip(2).Take(2))
-                    {
-                        <div class="widget">
-
-                            <h5 style="color: #fff;">@contact.City</h5>
-
-
-                            <p>@contact.Street</p>
-                            <p>Office: @contact.Phone</p>
-                            <p>@contact.WorkTime</p>
-
-
-                        </div>
-
-                    }
-
-                
-
-
-
-                </div>
-
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428674496239!2d49.85175681510556!3d40.37719087936975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1678098236806!5m2!1sen!2saz"
-                            width="100%;" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-
-
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428674496239!2d49.85175681510556!3d40.37719087936975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1678098236806!5m2!1sen!2saz"
+                        width="100%;" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
+
+            <section class="ftco-section">
+                <div class="container">
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="wrapper">
+                                <div class="row no-gutters">
+                                    <div class="col-md-7">
+                                        <div class="contact-wrap w-100 p-md-5 p-4">
+                                            <div id="form-message-warning" class="mb-4"></div>
+                                            <div id="form-message-success" class="mb-4">
+                                                Your message was sent, thank you!
+                                            </div>
+
+                                            <form asp-controller="Contact" asp-action="Index" method="POST" id="contactForm" name="contactForm" class="contactForm">
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="label">Full Name</label>
+                                                            <input asp-for="Contact.FullName" class="form-control" id="name" placeholder="Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label class="label">Email Address</label>
+                                                            <input type="email" asp-for="Contact.Email" class="form-control" id="email" placeholder="Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="label">Subject</label>
+                                                            <input asp-for="Contact.Subject" class="form-control" id="subject" placeholder="Subject">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="label">Message</label>
+                                                            <textarea asp-for="Contact.Message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="submit" value="Send Message" class="btn btn-primary">
+                                                            <div class="submitting"></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 d-flex align-items-stretch">
+                                        <div class="info-wrap w-100 p-5 img" style="background-image: url(https://www.automobilesreview.com/img/2022-brabus-900-mercedes-amg-e-63-s-4matic/2022-brabus-900-mercedes-amg-e-63-s-4matic-36.jpg); background-position:center">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            @*</div>*@
 
         </div>
     </section>
@@ -166,7 +192,7 @@
 
                             </div>
                         }
-                       
+
 
                     </div>
 
