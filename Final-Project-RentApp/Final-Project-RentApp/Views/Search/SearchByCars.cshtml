@@ -1,10 +1,107 @@
 ﻿@model IEnumerable<Car>
 
 @{
-    ViewData["Title"] = "SearchByCars";
+
+    ViewData["Title"] = $"Search Result for \"{ViewData["SearchText"]}\"";
+
+}
+
+@section Style{
+
+    <link rel="stylesheet" href="~/assets/css/search/search.css" />
+
 }
 
 @foreach (var item in Model)
 {
     <h1>@item.Name</h1>
 }
+
+
+@section NavBar{
+
+    <ul class="menu">
+
+        <li>
+            <a asp-controller="Home" asp-action="Index">
+                <i class="fa-solid fa-circle"></i><span>HOME</span>
+            </a>
+        </li>
+
+        <li><a asp-controller="About" asp-action="Index"><i class="fa-solid fa-circle"></i><span>ABOUT</span></a></li>
+
+        <li>
+            <a asp-controller="Contact" asp-action="Index"><i class="fa-solid fa-circle"></i><span>CONTACT</span></a>
+        </li>
+
+        <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
+
+        <li><a asp-controller="Shop"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
+
+    </ul>
+
+}
+
+
+@section Menu{
+
+    <ul>
+        <li><a asp-controller="Home" asp-action="Index"><i class="fa-solid fa-circle"></i><span>HOME</span></a></li>
+        <li><a asp-controller="About" asp-action="Index"><i class="fa-solid fa-circle"></i><span>ABOUT</span></a></li>
+        <li><a asp-controller="Contact" asp-action="Index"><i class="fa-solid fa-circle"></i><span>CONTACT</span></a></li>
+        <li><a asp-controller="Blog" asp-action="Index"><i class="fa-solid fa-circle"></i><span>BLOG</span></a></li>
+        <li><a asp-controller="Shop"><i class="fa-solid fa-circle"></i><span>SHOP</span></a></li>
+    </ul>
+
+}
+
+
+<div class="product-list">
+    <div class="row">
+
+        @foreach (var car in Model)
+        {
+            <div class="col-4">
+
+                <div class="product-info">
+
+                    <div class="product-img">
+                        <a asp-action="Detail" asp-route-id="@car.Id"><img src="~/assets/img/home/@car.CarImages.FirstOrDefault(ci => ci.IsMain).Image" alt=""></a>
+                    </div>
+
+                    <div class="content">
+
+                        <div class="top-holder">
+
+                            <a asp-action="Detail" asp-route-id="@car.Id"><h5>@car.Name</h5></a>
+
+                            <div class="price">
+                                <del>$180.00</del>
+                                <span>$@car.Price</span>
+                            </div>
+
+                        </div>
+
+                        <div class="info">
+                            <a href="">Expensive</a>
+                        </div>
+
+                    </div>
+
+                    <div class="image-inner">
+
+                        <div class="button">
+                            <a asp-action="Detail" asp-route-id="@car.Id"><span><i class="fa-solid fa-plus"></i>Place order</span></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        }
+
+
+    </div>
+</div>

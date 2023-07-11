@@ -27,6 +27,9 @@ header #navbar .nav-menu .menu {
   list-style: none;
   gap: 35px;
 }
+header #navbar .nav-menu .menu .bars i {
+  display: none;
+}
 header #navbar .nav-menu .menu li a {
   color: white;
   text-decoration: none;
@@ -320,7 +323,7 @@ footer #down-footer .footer-bottom-area .content {
   background-size: cover;
 }
 #contact-us .contact-us-img .title h1 {
-  height: 582px;
+  height: 579px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,8 +333,9 @@ footer #down-footer .footer-bottom-area .content {
 }
 
 #comfort {
+  padding-top: 5rem;
   background-color: #0B1112;
-  /*height: 1200px;*/
+  height: 1200px;
   display: flex;
   justify-content: flex-end;
 }

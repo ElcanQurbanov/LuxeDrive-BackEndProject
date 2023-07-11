@@ -18,5 +18,9 @@ namespace Final_Project_RentApp.Services
 
         public async Task<Blog> GetByIdAsync(int id) => await _context.Blogs.Include(b=>b.BlogImages).FirstOrDefaultAsync(b => b.Id == id);
 
+        //public async Task<IEnumerable<Blog>> GetPaginatedDatas()
+        //{
+        //    return await _context.Blogs.Include(i => i.BlogImages).ToListAsync();
+        //}
     }
 }

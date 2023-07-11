@@ -11,6 +11,6 @@ namespace Final_Project_RentApp.Areas.Admin.ViewModels
         public string StartPrice { get; set; }
 
         public string Image { get; set; }
-        public IFormFile Photo { get; set; }
+        public IFormFile? Photo { get; set; }
     }
 }

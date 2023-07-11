@@ -173,6 +173,10 @@
       "PackagePath": "staticwebassets\\assets\\css\\layout\\_header.scss"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\layout\\_search.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\layout\\_search.scss"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\layout\\_up.scss",
       "PackagePath": "staticwebassets\\assets\\css\\layout\\_up.scss"
     },
@@ -225,6 +229,18 @@
       "PackagePath": "staticwebassets\\assets\\css\\register\\verify-email.scss"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\search\\search.css",
+      "PackagePath": "staticwebassets\\assets\\css\\search\\search.css"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\search\\search.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\search\\search.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\search\\search.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\search\\search.scss"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\css\\shop\\shop.css",
       "PackagePath": "staticwebassets\\assets\\css\\shop\\shop.css"
     },
@@ -273,18 +289,6 @@
       "PackagePath": "staticwebassets\\assets\\img\\about\\rolls-royce2.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\1d38d057-235d-4ee3-a613-28560cea7fa0-car2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\8dd62922-059a-4dc4-9f90-c2e48a61b6ef_best4.png",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\8dd62922-059a-4dc4-9f90-c2e48a61b6ef_best4.png"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\a9197ff3-c9ec-4569-aee0-f2d98dd28718-car2.jpg"
-    },
-    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-detail-img1.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-detail-img1.jpg"
     },
@@ -299,14 +303,6 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\blog-img2.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\blog\\blog-img2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\d1d0d9e4-992c-40f7-b88e-4a69ad42f77a_best3.png",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\d1d0d9e4-992c-40f7-b88e-4a69ad42f77a_best3.png"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\blog\\ff2a7eb9-1faf-46e5-b484-3d0fec01d365_car2.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\blog\\recent-post-img1.jpg",
@@ -369,76 +365,24 @@
       "PackagePath": "staticwebassets\\assets\\img\\error\\error404.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\0a401c76-b13a-479e-865c-e561079fb258_car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\0a401c76-b13a-479e-865c-e561079fb258_car2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\229f6392-7a21-4e80-876d-5ecee2517e17-car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\229f6392-7a21-4e80-876d-5ecee2517e17-car2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\2fab6dde-1919-478a-bc04-58124f4bc222_bmw-detail-3.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\2fab6dde-1919-478a-bc04-58124f4bc222_bmw-detail-3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\3c2c6654-a5a7-4e0e-bfb8-d4703f2f2a77_0a401c76-b13a-479e-865c-e561079fb258_car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\3c2c6654-a5a7-4e0e-bfb8-d4703f2f2a77_0a401c76-b13a-479e-865c-e561079fb258_car2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\41961336-02e9-4071-a01d-894a9b45d084-best2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\41961336-02e9-4071-a01d-894a9b45d084-best2.png"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\486529f6-c301-4edf-b29e-35e7f80361a0_best1.png",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\486529f6-c301-4edf-b29e-35e7f80361a0_best1.png"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\4faede63-96bf-443d-a433-2b27fa6ac60c_5bc4d3f1-63e5-45be-9809-b80cd82065b8-slider2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\4faede63-96bf-443d-a433-2b27fa6ac60c_5bc4d3f1-63e5-45be-9809-b80cd82065b8-slider2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\56c5880b-f191-4bcc-b27c-fc2264a4c6a9_best2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\56c5880b-f191-4bcc-b27c-fc2264a4c6a9_best2.png"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\5bc4d3f1-63e5-45be-9809-b80cd82065b8-slider2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\5bc4d3f1-63e5-45be-9809-b80cd82065b8-slider2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\60fe46a6-930c-4b70-8c1e-a99461197764_0a401c76-b13a-479e-865c-e561079fb258_car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\60fe46a6-930c-4b70-8c1e-a99461197764_0a401c76-b13a-479e-865c-e561079fb258_car2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\6778622f-e350-4972-8594-f86317bd1723-slider1.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\6778622f-e350-4972-8594-f86317bd1723-slider1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\70fa8e5e-877e-45a8-a90c-b71efd4bcc95_car2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\70fa8e5e-877e-45a8-a90c-b71efd4bcc95_car2.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\622ab465-7ec4-4460-b985-80166f1dae76_brabus-png.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\622ab465-7ec4-4460-b985-80166f1dae76_brabus-png.webp"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\7196db7a-bbf8-4065-acda-578a7df3bc34-personNew.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\7196db7a-bbf8-4065-acda-578a7df3bc34-personNew.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\828d6c9a-f36b-48a9-8e3d-97aa7fd65026-slider1.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\828d6c9a-f36b-48a9-8e3d-97aa7fd65026-slider1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\8ce13c82-4880-4d32-b4c6-eaf947f09625_bmw-png.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\8ce13c82-4880-4d32-b4c6-eaf947f09625_bmw-png.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\9086589e-d868-4595-8cf1-3fb0078434c6-best2.png",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\9086589e-d868-4595-8cf1-3fb0078434c6-best2.png"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\79e02d93-15aa-4aa6-ad8f-ec7c0046e69f_aston-martin-detail1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\79e02d93-15aa-4aa6-ad8f-ec7c0046e69f_aston-martin-detail1.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\Rolls-Royce-PNG-Pic.png"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\ae155c2d-f4ae-4844-bdfe-302bc38662bd_car2 - Copy.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\ae155c2d-f4ae-4844-bdfe-302bc38662bd_car2 - Copy.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\ade17518-472a-4467-9666-1c1dc6c285b4_79e02d93-15aa-4aa6-ad8f-ec7c0046e69f_aston-martin-detail1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\ade17518-472a-4467-9666-1c1dc6c285b4_79e02d93-15aa-4aa6-ad8f-ec7c0046e69f_aston-martin-detail1.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\aston-martin-detail1.jpg",
@@ -459,6 +403,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\aston-martin-png.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\aston-martin-png.png"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\b665d320-180f-4c1c-b433-6dd7c88e3e19_622ab465-7ec4-4460-b985-80166f1dae76_brabus-png.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\b665d320-180f-4c1c-b433-6dd7c88e3e19_622ab465-7ec4-4460-b985-80166f1dae76_brabus-png.webp"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\best1.png",
@@ -505,6 +453,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\bmw-detail4.jpg"
     },
     {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\bmw-m4-g82.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\bmw-m4-g82.jpg"
+    },
+    {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\bmw-png.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\bmw-png.jpg"
     },
@@ -523,6 +475,10 @@
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\brabus-detail4.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\home\\brabus-detail4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\brabus-png.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\brabus-png.webp"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\brabuss-png.webp",
@@ -561,20 +517,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\car6.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\d5215a39-b014-4273-9015-2ed00dd8e0e1-slider4.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\d5215a39-b014-4273-9015-2ed00dd8e0e1-slider4.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\d8fec9fe-d125-45db-a054-5787966c448f-best1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\d8fec9fe-d125-45db-a054-5787966c448f-best1.png"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\earphone.png",
       "PackagePath": "staticwebassets\\assets\\img\\home\\earphone.png"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\g-class-brabus-detail1.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\g-class-brabus-detail1.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\ff51c642-ea41-40f1-a83a-3930a9f1b947_aston-martin-png.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\ff51c642-ea41-40f1-a83a-3930a9f1b947_aston-martin-png.png"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\g-class-brabus-detail2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\g-class-brabus-detail2.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\g-class-brabus-detail1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\g-class-brabus-detail1.jpg"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\g-class-brabus-detail3.jpg",
@@ -597,12 +553,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\gt-detail1.jpeg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-detail1.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-detail1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-detail2.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-detail2.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-detail2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-detail2.png"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-detail3.jpg",
@@ -613,8 +565,8 @@
       "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-detail4.jpg"
     },
     {
-      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-png.jpg",
-      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-png.jpg"
+      "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr-png.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home\\gtr-png.png"
     },
     {
       "Id": "C:\\Users\\cavid\\Desktop\\LuxeDrive-RentApp\\Final-Project-RentApp\\Final-Project-RentApp\\wwwroot\\assets\\img\\home\\gtr.jpg",

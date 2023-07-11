@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="~/assets/css/contact/contact.css">
     <link rel="stylesheet" href="~/assets/css/contact/Contact-info.css">
 
-            @*<link rel="stylesheet" href="css/style.css">*@
-
-
 
 }
 
@@ -73,22 +70,9 @@
 
 
     <section id="comfort">
+
         <div class="container">
 
-            <div class="title">
-                <h2>
-                    @Html.Raw(Model.SectionHeaders["ContactComfort"])
-                </h2>
-            </div>
-
-            <div class="subtitle">
-                <span>@Model.SectionHeaders["ContactComfortSlogan"]</span>
-            </div>
-
-            <div class="line">
-            </div>
-
-            @*<div class="row">*@
 
             <div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428674496239!2d49.85175681510556!3d40.37719087936975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2saz!4v1678098236806!5m2!1sen!2saz"
@@ -105,33 +89,44 @@
                             <div class="wrapper">
                                 <div class="row no-gutters">
                                     <div class="col-md-7">
+
                                         <div class="contact-wrap w-100 p-md-5 p-4">
+
                                             <div id="form-message-warning" class="mb-4"></div>
+
                                             <div id="form-message-success" class="mb-4">
                                                 Your message was sent, thank you!
                                             </div>
 
-                                            <form asp-controller="Contact" asp-action="Index" method="POST" id="contactForm" name="contactForm" class="contactForm">
+
+                                            <form asp-controller="Contact" asp-action="Index" method="POST" id="contactForm" class="contactForm">
 
                                                 <div class="row">
+
                                                     <div class="col-md-6">
+
                                                         <div class="form-group">
                                                             <label class="label">Full Name</label>
                                                             <input asp-for="Contact.FullName" class="form-control" id="name" placeholder="Name">
+                                                            <span class="text-danger" asp-validation-for="Name"></span>
                                                         </div>
+
                                                     </div>
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="label">Email Address</label>
                                                             <input type="email" asp-for="Contact.Email" class="form-control" id="email" placeholder="Email">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label class="label">Subject</label>
                                                             <input asp-for="Contact.Subject" class="form-control" id="subject" placeholder="Subject">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12">
                                                         <div class="form-group">
                                                             <label class="label">Message</label>
@@ -162,11 +157,9 @@
                 </div>
             </section>
 
+       </div>
 
-
-            @*</div>*@
-
-        </div>
+       
     </section>
 
 

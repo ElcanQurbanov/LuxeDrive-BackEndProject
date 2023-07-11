@@ -9,6 +9,6 @@ namespace Final_Project_RentApp.Areas.Admin.ViewModels
         [Required]
         public string Phone { get; set; }
         [Required]
-        public List<IFormFile> Photos { get; set; }
+        public IFormFile Photo { get; set; }
     }
 }

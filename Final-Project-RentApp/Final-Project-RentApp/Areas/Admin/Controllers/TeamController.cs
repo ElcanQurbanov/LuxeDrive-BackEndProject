@@ -62,28 +62,28 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     return View();
                 }
 
-                foreach (var photo in team.Photos)
-                {
-                    if (!photo.CheckFileType("image/"))
+                
+                
+                    if (!team.Photo.CheckFileType("image/"))
                     {
                         ModelState.AddModelError("Photo", "File type must be image");
                         return View();
                     }
 
-                    if (!photo.CheckFileSize(200))
+                    if (!team.Photo.CheckFileSize(200))
                     {
                         ModelState.AddModelError("Photo", "Image size must be max 200kb");
                         return View();
                     }
-                }
+                
 
-                foreach (var photo in team.Photos)
-                {
-                    string fileName = Guid.NewGuid().ToString() + "-" + photo.FileName;
+                
+                
+                    string fileName = Guid.NewGuid().ToString() + "-" + team.Photo.FileName;
 
                     string path = FileHelper.GetFilePath(_env.WebRootPath, "assets/img/home", fileName);
 
-                    await FileHelper.SaveFileAsync(path, photo);
+                    await FileHelper.SaveFileAsync(path, team.Photo);
 
                     Team newTeam = new()
                     {
@@ -93,7 +93,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                     };
 
                     await _context.Teams.AddAsync(newTeam);
-                }
+                
 
                 await _context.SaveChangesAsync();
 

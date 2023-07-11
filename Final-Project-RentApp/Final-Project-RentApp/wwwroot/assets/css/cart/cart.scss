@@ -2,9 +2,7 @@
 @use "../layout/footer";
 
 #cart-table {
-
     // .table{
-
     // }
 
     .table-content {
@@ -30,9 +28,9 @@
                     font-size: 15px;
                     padding: 10px 30px;
                     border-bottom: 1px solid #dee2e6;
-                    font-weight: 700;  
-                    
-                    span{
+                    font-weight: 700;
+
+                    span {
                         float: right;
                     }
                 }
@@ -40,7 +38,7 @@
 
             .button {
 
-                button {
+                a {
                     border: 3px solid #bfa37c;
                     background-color: #141A1C;
                     font-family: 'Times New Roman', Times, serif;
@@ -56,23 +54,15 @@
                     color: #fff;
                     margin-bottom: 5rem;
                     margin-top: 15px;
-    
+                    text-decoration: none;
+
                     span {
                         i {
                             margin-right: 5px;
                         }
                     }
-    
                 }
             }
-
-
         }
-
-       
-
-
-
     }
-
 }

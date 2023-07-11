@@ -306,7 +306,7 @@ footer #down-footer .footer-bottom-area .content {
 #cart-table .table-content .cart-page-total ul li span {
   float: right;
 }
-#cart-table .table-content .cart-page-total .button button {
+#cart-table .table-content .cart-page-total .button a {
   border: 3px solid #bfa37c;
   background-color: #141A1C;
   font-family: "Times New Roman", Times, serif;
@@ -320,6 +320,7 @@ footer #down-footer .footer-bottom-area .content {
   color: #fff;
   margin-bottom: 5rem;
   margin-top: 15px;
+  text-decoration:none;
 }
 #cart-table .table-content .cart-page-total .button button span i {
   margin-right: 5px;

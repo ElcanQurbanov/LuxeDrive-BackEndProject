@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Data;
+using System.Formats.Asn1;
 
 namespace Final_Project_RentApp.Areas.Admin.Controllers
 {
@@ -141,23 +142,25 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 }
 
 
-                foreach (var photo in model.Photos)
-                {
+                //foreach (var photo in model.Photos)
+                //{
 
-                    if (!photo.CheckFileType("image/"))
-                    {
-                        ModelState.AddModelError("Photos", "File type must be image");
-                        return View();
+                //    if (!photo.CheckFileType("image/"))
+                //    {
+                //        ModelState.AddModelError("Photos", "File type must be image");
+                //        return View();
 
-                    }
+                //    }
 
-                    if (!photo.CheckFileSize(200))
-                    {
-                        ModelState.AddModelError("Photos", "Image size must be max 200kb");
-                        return View();
-                    }
+                //    if (!photo.CheckFileSize(200))
+                //    {
+                //        ModelState.AddModelError("Photos", "Image size must be max 200kb");
+                //        return View();
+                //    }
 
-                }
+                //}
+
+
 
                 List<CarTag> tags = new();
 
@@ -189,6 +192,7 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
                 List<CarImage> carImages = new();
 
+
                 foreach (var photo in model.Photos)
                 {
                     string fileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
@@ -209,9 +213,9 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 }
 
                 carImages.FirstOrDefault().IsMain = true;
-                carImages.Skip(1).FirstOrDefault().IsPreview = true;
+                //carImages.Skip(1).FirstOrDefault().IsPreview = true;
 
-                decimal convertedPrice = decimal.Parse(model.Price);
+                decimal convertedPrice = decimal.Parse(model.Price.Replace(".", ","));
 
                 Car newCar = new()
                 {
@@ -227,9 +231,10 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 };
 
 
-
                 await _context.CarImages.AddRangeAsync(carImages);
+
                 await _context.Cars.AddAsync(newCar);
+
                 await _context.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
@@ -355,9 +360,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
                 tags.Add(tag);
             }
 
-
-
-
             List<CarCategory> categories = new();
 
             foreach (var categoryId in updatedCar.CarCategoriesId)
@@ -370,8 +372,6 @@ namespace Final_Project_RentApp.Areas.Admin.Controllers
 
                 categories.Add(carCategory);
             }
-
-
 
 
             if (updatedCar.Photos != null)

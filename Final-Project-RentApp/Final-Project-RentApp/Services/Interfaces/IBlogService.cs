@@ -6,5 +6,6 @@ namespace Final_Project_RentApp.Services.Interfaces
     {
         Task<IEnumerable<Blog>> GetAllAsync();
         Task<Blog> GetByIdAsync(int id);
+        //Task<IEnumerable<Blog>> GetPaginatedDatas();
     }
 }

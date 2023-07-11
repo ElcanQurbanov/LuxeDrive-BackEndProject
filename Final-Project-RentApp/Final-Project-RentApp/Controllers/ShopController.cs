@@ -59,11 +59,11 @@ namespace Final_Project_RentApp.Controllers
             if (car == null) return NotFound();
 
 
-            CarDetailVM model = new CarDetailVM()
-            {
-                Car = car,
-                CarComments = car.CarComments
-            };
+            //CarDetailVM model = new CarDetailVM()
+            //{
+            //    Car = car,
+            //    CarComments = car.CarComments
+            //};
 
             return View(car);
         }

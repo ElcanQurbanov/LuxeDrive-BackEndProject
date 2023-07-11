@@ -22,6 +22,7 @@ namespace Final_Project_RentApp.Controllers
         {
             IEnumerable<Blog> blogs = await _blogService.GetAllAsync();
             Dictionary<string, string> sectionHeaders = _staticDataService.GetAllSectionHeader();
+            //IEnumerable<Blog> blo
 
             BlogVM model = new()
             {

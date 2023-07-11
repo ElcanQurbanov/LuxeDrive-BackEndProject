@@ -11,40 +11,40 @@
         <img class="mb-3" style="width: 300px; height: 300px; border-radius: unset; object-fit: cover" src="~/assets/img/home//@image" />
     }
 
-    <div class="mb-3">
-        <label asp-for="Name"></label>
-        <input class="form-control" disabled asp-for="Name">
+    <div class="my-3">
+        <h4>Name</h4>
+        <input class="form-control" id="customFile" asp-for="Name" disabled="disabled" />
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Price"></label>
-        <input class="form-control" disabled asp-for="Price">
+    <div class="my-3">
+        <h4>Price</h4>
+        <input class="form-control" id="customFile" asp-for="Price" disabled="disabled" />
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Description"></label>
-        <input class="form-control" disabled asp-for="Description">
+    <div class="my-3">
+        <h4>Description</h4>
+        <input class="form-control" id="customFile" asp-for="Description" disabled="disabled" />
     </div>
 
-    <div class="mb-3">
-        <label>ShortDescription</label>
-        <input class="form-control" disabled asp-for="ShortDescription">
+    <div class="my-3">
+        <h4>ShortDescription</h4>
+        <input class="form-control" id="customFile" asp-for="ShortDescription" disabled="disabled" />
     </div>
 
-    <div class="mb-3">
-        <label>Extra</label>
-        <input class="form-control" disabled asp-for="Extra">
+    <div class="my-3">
+        <h4>Extra</h4>
+        <input class="form-control" id="customFile" asp-for="Extra" disabled="disabled" />
     </div>
 
-    <div class="mb-3">
-        <label asp-for="CarClass"></label>
-        <input class="form-control" disabled asp-for="CarClass.Name">
+    <div class="my-3">
+        <h4>Class</h4>
+        <input class="form-control" id="customFile" asp-for="CarClass.Name" disabled="disabled" />
     </div>
 
 
-    <div class="mb-3">
+    <div class="my-3">
 
-        <label asp-for="Categories"></label>
+        <h4>Categories</h4>
 
         @foreach (var category in Model.Categories)
         {
@@ -53,9 +53,9 @@
 
     </div>
 
-    <div class="mb-3">
+    <div class="my-3">
 
-        <label asp-for="Tags"></label>
+        <h4>Tags</h4>
 
         @foreach (var tag in Model.Tags)
         {
@@ -65,11 +65,17 @@
     </div>
 
  
-    <div class="mb-3">
-        <label>Create Time</label>
+    <div class="my-3">
+
+        <h4>Create Time</h4>
         <input class="form-control" disabled asp-for="CreatedAt">
+
     </div>
 
-    <a class="btn mt-5" style="color: white;background-color: gray" asp-area="Admin" asp-controller="Car" asp-action="Index">Back</a>
+
+    <a class="btn btn-info mt-3" asp-action="Index">
+        Back
+    </a>
+
 </div>
 

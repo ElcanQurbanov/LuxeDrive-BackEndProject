@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<OrderItem>
 
+@{
+    ViewData["Title"] = "Order - LuxeDrive";
+}
+
 @section Style{
 
     <link rel="stylesheet" href="~/assets/css/cart/cart.css">
@@ -48,52 +52,66 @@
 
         <div class="container mt-5">
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Image</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Class</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Date</th>
-                        <th scope="col">IsAccepted</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (OrderItem order in Model)
-                    {
+            @if (Model.Count() > 0)
+            {
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td><img style="width: 100px;" src="~/assets/img/home/@order.Car.CarImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt=""></td>
-                            <td>@order.Car.Name</td>
-                            <td>@order.Car.CarClass.Name</td>
-                            <td>$@order.Car.Price</td>
-                            <td>@order.Date.ToString("dd/MM/yyyy")</td>
-                            <td>@order.Status</td>
+                            <th scope="col">Image</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Class</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">IsAccepted</th>
                         </tr>
-                    }
-                </tbody>
-            </table>
-            <div class="table-content">
+                    </thead>
+                    <tbody>
+                        @foreach (OrderItem order in Model)
+                        {
+                            <tr>
+                                <td><img style="width: 100px;" src="~/assets/img/home/@order.Car.CarImages.FirstOrDefault(x=>x.IsMain==true)?.Image" alt=""></td>
+                                <td>@order.Car.Name</td>
+                                <td>@order.Car.CarClass.Name</td>
+                                <td>$@order.Car.Price</td>
+                                <td>@order.Date.ToString("dd/MM/yyyy")</td>
+                                <td>@order.Status</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
 
-                <div class="col-5">
-                    <div class="cart-page-total">
+                <div class="table-content">
 
-                        <h2>Cart totals</h2>
+                    <div class="col-5">
+                        <div class="cart-page-total">
 
-                        <ul>
-                            <li>Total <span>$@Model.Sum(x=>x.Car.Price)</span></li>
-                        </ul>
+                            <h2>Total Orders</h2>
 
-                        <div class="button">
-                            <button type="submit"><span><i class="fa-solid fa-plus"></i>Proceed to checkout</span></button>
+                            <ul>
+                                <li>Total <span>$@Model.Sum(x=>x.Car.Price)</span></li>
+                            </ul>
+
+                            <div class="button">
+                                <a asp-controller="Shop" asp-action="Index" type="submit"><span><i class="fa-solid fa-plus"></i>Proceed to checkout</span></a>
+                            </div>
+
                         </div>
+                    </div>
 
+
+
+                </div>
+            }
+            else
+            {
+                <div class="container">
+                    <div style="margin-bottom: 53px;" class="alert alert-warning" role="alert">
+                        You have no order!
                     </div>
                 </div>
+            }
 
-
-
-            </div>
+           
 
         </div>
 

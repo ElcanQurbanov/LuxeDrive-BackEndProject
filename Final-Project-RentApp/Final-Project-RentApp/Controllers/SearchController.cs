@@ -15,9 +15,13 @@ namespace Final_Project_RentApp.Controllers
 
         public async Task<IActionResult> SearchByCars(string searchText)
         {
+
             if (searchText == null) return BadRequest();
 
+            ViewData["SearchText"] = searchText;
+
             return View(await _carService.SearchAsync(searchText));
+
         }
 
     }
